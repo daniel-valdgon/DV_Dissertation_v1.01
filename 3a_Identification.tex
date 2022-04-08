@@ -1,0 +1,78 @@
+\documentclass[dv_diss_main.tex]{subfiles}
+
+\begin{document}
+
+\section{Identification}
+
+This section explains how my identification strategy allows me to estimate the effect of political alignment between municipality-mayors and state-governors on a wide variety of economic and public finance outcomes. 
+
+Political alignment is not random,  as an electoral outcome is a direct result of the aggregation of voters' decisions when casting their ballots. Since these decisions are influenced by a myriad of political and economic factors that also affect the outcomes of interest, I should expect strong biases from any naive OLS  estimate.\footnote{For example, state governors can invest in winning specific municipal elections; therefore, the effect of political alignment on economic growth could be confounded by the independent effect of past governor's efforts on economic growth. Also, if voters who live in municipalities that are in a downward economic trend tend to elect politically aligned candidates, the effects of alignment on economic growth could be downward biased.}  To address this identification problem, I exploit variation from razor-close elections, a research design known as close election regression discontinuity design (RDD). 
+
+\subsection{Identification Assumption}
+This identification strategy takes advantage of the variation provided by close elections to obtain causal estimates of political alignment.  To implement the estimator, I compute the vote margin for every municipal election indexed by municipality $m$ and election cycle $e$. The vote margin is defined as the difference in votes between the candidate of the governor's party---$v^g_{m,e}$, and the main opposition's party--- $v^o_{m,e}$, normalized by the total number of votes---$v_{m,e}$.\footnote{I consider both individual candidates and coalitions to define political alignment. When a political coalition forms the governor's party, I consider any mayoral candidate that belongs to any of the parties that are part of the political coalition to be politically aligned. Moreover, the main opposition's candidate is the candidate/coalition that does not belong to the governor's party/coalition and has the highest number of votes. This implies that the vote margin is not necessarily computed as the difference between the winner and the runner-up.} 
+% When a political coalition forms the governor's party, I consider politically aligned, any mayor that belongs to any of the parties that are part of the political coalition. For example, The governor of the state of Puebla ran in 2001 under a PAN-PRD coalition. Consequently, any elected mayor in Puebla between 2001-2006 is labeled as politically aligned if it belongs to either PAN or PRD.}
+
+\begin{equation}\label{eq:margin}
+VM_{m,e}=\frac{v^g_{m,e}-v^o_{m,e}}{v_{m,e}}
+\end{equation}
+Consequently, a vote margin above (below) zero corresponds to municipalities where the elected candidate does (does not) belong to the state governor's party. A candidate's political affiliation is measured before the election takes place, which rules out any concern regarding unobserved characteristics affecting the running variable. 
+
+As explained by \cite{hahn2001identification} and \cite{de2016misunderstandings} the identification assumption is continuity of the potential outcomes at the cut-off.\footnote{ This assumption simply states that  $\expect{y(1)_{m,e}|VM_{m,e}}$  and $\expect{y(0)_{m,e}|VM_{m,e}}$ are continuous at the cut-off (i.e. $VM_{m,e}=0$) where $y_{m,e}(1)$ is the value of $y$ when the candidate elected is politically aligned with the central government, and $y_{m,e}(0)$ when is not politically aligned. See \cite{de2016misunderstandings} for a clear explanation of why the \textit{continuity} assumption is weaker than the usually claimed \textit{local unconfoundedness} within a bandwidth} The main intuition of the \textit{continuity} assumption is that municipalities where the politically aligned candidate narrowly lost are valid counterfactuals for municipalities where the politically aligned candidate narrowly won. 
+
+This identification assumption has three critical implications for validating, interpreting, and computing the parameter of interest. 
+First, any confounder that systematically correlates with alignment should vary smoothly around the cut-off. 
+Second, in the presence of heterogeneous treatment effects, the estimate obtained should be interpreted as a local average treatment effect (the effect of alignment at the cut-off). 
+Third, the sample analog estimator can be computed as the difference between the sample mean of aligned and misaligned municipalities at the cut-off. Therefore, the precision of the estimates will increase with the number of observations at the cut-off. 
+\subsection{Difference in Discontinuities Specification}
+I estimate the parameter of interest using local linear regression \citep{gelman2019high} with triangular kernel weights \citep{calonico2020optimal} over the sub-sample of close elections (i.e. $VM_{m,e} \in (-h, h)$), defined as those with a  vote margin whose absolute value is less than or equal to five percentage points.\footnote{ The preference for an ad-hoc bandwidth (h=5) lies in the fact that any data-driven bandwidth \citep{calonico2020optimal} would lead to compositional problems when comparing results across different outcomes or subsamples. In the presentation of my results, I also show estimates with an 11 percentage points bandwidth defined by \cite{calonico2020optimal}. The Appendix shows that results are qualitatively similar when using alternative bandwidth sizes and kernel weights.} The regression pools the observations of the post-electoral years that correspond to the mayor's ruling span during our period of study (1998-2006). In particular, I estimate the following equation: 
+%random RCT RDD
+
+\begin{equation}
+\clr{
+\begin{split}
+  \Delta^3 y_{m,e,k} =  &\; \alpha + \beta\; aligned_{m,e}  \\ 
+   & + \theta VM_{m,e}\times aligned_{m,e} + \gamma  VM_{m,e} \times (1-aligned_{m,e})  \\
+   & + \delta_{s(m)} + \xi_{e,k} +  \psi X_{m,e-1} + \epsilon_{m,e,k} \;\; \;\forall \;\; VM_{m,e} \in (-h, h) \label{eq:didrdd}
+\end{split}
+}
+\end{equation}
+\non where  $\Delta^3 y_{ m,e,k}$ is a three-year log points difference of the outcome $y$ measured $k$ years after the latest election indexed by municipality--$m$ and year $e$; the three-year difference corresponds to the three-year mayoral.\footnote{ Most of the mayoral elections have a three-year term limit with few exceptions (2 percent of the elections have a 4 years term limit). When municipalities have larger term limits, I normalize the difference to be a three-year growth rate equivalent. Also, results are qualitatively similar when either I re-weight our estimates by the inverse of the term limit or when I focus only on the sub-sample of municipalities with a three-year term limit.}
+ $aligned_{m,e}$ is an indicator variable that identifies whether the current mayor belongs to the governor's party and does not vary across $k$. The specification also includes a linear function of the running variable, estimated separately on either side of the cut-off. Finally, I control for state fixed effects ($\delta_{s(m)}$) and the interaction of election and election-time ($\xi_{e,k}$) fixed effects. Also, I control for the vector $X_{m,e-1}$, which contains a set of political characteristics from the previous election cycle: political alignment, political party, and the governor's vote margin. 
+ %This last control provides a growth rate interpretation to our estimates, improves efficiency, controls by mean reversion, and the political business cycle.  
+I cluster standard errors at the municipality level to allow for correlation over time within a municipality, the level at which treatment occurs. \citep{abadie2017should, bertrand2004much}.
+
+In this specification, $\beta$  measures the effect of political alignment across all $k$ post-election years and is identified from variation in political alignment across municipalities that had a close election within the same state and during the same election cycle.\footnote{The standard approach in the empirical literature is to exploit the richness of the cross-sectional variation to properly estimate the effect of political alignment at the cut-off; some examples: \cite{brollo2012tying,curto2018does,asher2017politics}. Including municipality fixed effects while holding the bandwidth would limit inference to municipalities with more than one close election, changing political status  (aligned, not-aligned) over time, and small sample biases emerge. The dynamic specification that I propose next includes municipality-election fixed effects after recasting the data to provide the variance needed.} 
+\subsection{Dynamic Difference in Discontinuities}
+ 
+To observe the dynamics of the effect of political alignment and support the identification assumption, I follow \cite{cellini2010value} and frame the close election RDD as an event study. This specification allows me to disentangle the contemporary from the lagged effects of alignment and indirectly test the presence of the parallel trends assumption. 
+%In our setting, treatment is allowed to change over time, i.e. and aligned municipality in the electoral cycle $e$ can become misaligned in the next electoral cycle $e+1$. 
+
+
+This specification recast the dataset such that the unit of observation is a close election, defined  by a municipality-electoral cycle pair for which the election's vote margin satisfies a specific threshold. For each observation, I proceed to track the evolution of the outcomes of interest three years before and four years after the year of the election.\footnote{ More formally, if the same municipality has two close elections, I duplicate all its observations and follows the outcomes of interest over a specific window. This implies each copy (municipality-electoral cycle) as a separate unit that gets treated only once.} With this new dataset I estimate the following equation: 
+
+%This specification also controls for the running variable. Different to the other specification I allow the  the effect of the running variable to be different for each election-year $k$, which means that each . Also I limit the inference to the subsample of close elections, which make of this estimation a dynamic regression discontinuity design. The dynamic specification I estimate is the following: 
+
+
+\begin{equation}
+\begin{split}
+y_{m,e,k}= &\; \alpha + \sum_{j=-3, j\neq -1}^3  \beta^j \; \mathbbm{1}{(k=j)}\times aligned_{m,e} \\
+& + \sum_{j=-3, j\neq -1}^3 \mathbbm{1}{(k=j)} \Big[ \theta^j VM_{m,e} \times aligned_{m,e} +   \gamma^j \; VM_{m,e}\times(1-aligned_{m,e}) \Big] \\
+& +  \delta_{m,e} + \psi_{e,k}  + \epsilon_{m,e,k} \;\; \;\forall \;\; VM_{m,e} \in (-h, h) \label{eq:event}
+\end{split}
+\end{equation}
+
+
+\noindent where  $y_{m,e,k}$ is the inverse hyperbolic sine transformation of outcome $y$ measure at $k$ years from the election cycle $e$. Notice that this specification includes years before and after the election took place, while in equation (2) I focus only on growth rates in the post-election period.  
+Correspondingly, $\delta_{m,e}$ are municipality-election cycle fixed effects, while $\psi_{k,e}$ controls non-linearly for macroeconomic shocks and the trend of each election cycle $e$. Similar to the main specification, I estimate equation (3) using a local linear regression of the running variable with triangular kernel weights and a five percentage point bandwidth. Standard errors are clustered at the municipality level to account for the serial correlation of political alignment over time \citep{bertrand2004much}. 
+
+Notice that the identifying variation comes from variation in trends among the subset of close elections that took place within a specific election cycle (i.e. cohort). This ensures that my estimates do not suffer from the standard critiques that apply to two-way fixed effects models. This estimator can also be seen as an analog of the identification strategy proposed by \citep{cengiz2019effect} that circumvents problems related to event studies with staggered adoption, which is relevant in this case because the timing of elections is staggered across states. 
+
+%This is not entirely correlated with the literature of staggered differences and differences because I limit my observations to  could potentially suffer from 
+
+% These municipalities with multiple close elections may represent a problem as long as i) the alignment affects a persistent over the long run, and ii) having a close election during the election cycle $e$ affects the probability of a close election in $e+1$. Table XX shows that successive close elections are only XX\% of our estimates and Appendix XX\% show our main results using only information from the first close election are qualitatively similar.
+
+The identification assumption of this specification is that conditional on the election cycle, the trends among aligned and non-aligned municipalities are continuous at the alignment threshold.\footnote{Notice that this is a weaker identification assumption than the standard parallel trends assumption, which states that aligned and misaligned municipalities would have the same trends in the absence of the treatment. This setting allows these trends to be systematically different as long as they are continuous at the  cut-off.} Although one cannot test this assumption directly, it is possible to perform indirect tests to support their plausibility. Section 5 presents the results of such examinations. 
+
+\end{document}
+
+  %the inference to municipalities with more than one close election and I do not include fixed effect in this panel dataset because it will limit the inference to municipalities that There is no need to include municipality fixed effects for several reasons: First, I  already controlled by the difference in levels using the pre-policy value of the outcome of interest, doing both things will lead to a Nickel bias in our estimates; Second, the identification assumption makes the estimates robust to the presence of unobserved heterogeneity; Third, the RDD requires a good estimate of the function between the running variable and the outcome, by including unit fixed effects, one severely limit the observations used to estimate such function and also the alignment dummy.}}

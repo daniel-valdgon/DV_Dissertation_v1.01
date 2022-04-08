@@ -1,0 +1,209 @@
+\documentclass[dv_diss_main.tex]{subfiles}
+
+\begin{document}
+
+\section{Introduction}
+
+\noindent Public-sector spending can be an effective tool to boost economic growth in distressed economic areas or in places that suffer from temporary economic downturns \citep{chodorow2019geographic}.
+However, everyday public spending is not targeted to maximize the efficiency of fiscal policy.  A large body of research on political economy documents that political factors drive the allocation of public spending \citep{golden2013distributive}.
+Despite the ubiquitous role of political factors in defining the allocation of public-sector spending, there is limited evidence on how politically motivated spending affects local economic activity.
+
+In this paper, I take advantage of the unique context of Mexico and focus on a salient political factor that distorts the allocation of public resources to ask: How does partisan favoritism affect local economic activity? Understanding the effects of public spending when it is channeled through partisan favoritism is essential to see if the problem of unequal allocation of public resources goes beyond equity concerns and creates its own distortions.
+
+Two reasons may explain the scant evidence on the economic effects of politically motivated spending. First, the redistributive and countercyclical nature of fiscal policy makes it difficult to obtain causal estimates. The targeting of these policies implies that one would typically observe public spending directed to places already in a downward economic trend or affected by a temporary economic shock, which would bias any OLS estimate.\footnote{An OLS estimate would be downward bias if the confounder is related to the deep economic factors behind the downward economic trend; also, it would be upward biased if a mean reversion component confounds the policy impact.}
+Second, politically induced spending is everywhere but hard to detect; most of the research that manages to identify the causal effect of political factors on public spending tends to do it over a fraction of public resources that are not sufficiently large to affect local economic aggregates.\footnote{\cite{curto2018does} focus on regional capital transfers (8\% of total spending); while \cite{brollo2012tying} focus on federal infrastructure transfers (15\% of infrastructure investment). The effects found in both papers imply relatively low increases in total spending.}
+
+I circumvent these problems by taking advantage of the political economy behind the expansion of intergovernmental transfers in Mexico. In 1998, the government of Mexico created Ramo-33, a law that expanded intergovernmental transfers to local governments, leading to an unexpected and economically sizable increase in local public spending. Although Ramo-33 transfers were earmarked and designed to be allocated based on an objective formula, politics did have a sharp influence on where and when these transfers were distributed. It has been documented that state-governors took advantage of their role in allocating the transfers to skew public resources towards municipalities with political traits that offer them high political returns.\footnote{
+Several studies about Ramo-33 transfers have suggested that turnout, political competition and political alignment resulted in a higher allocation of Ramo-33 \citep{diaz2004descentralizacion,langston2010governors,trillo2007transferences}. One of the goals of this paper is to obtain a causal estimate of the effect of political alignment on the allocation of Ramo 33 transfers.}
+
+This evidence motivates the empirical strategy deployed in this paper. I study the effect of politically motivated spending by leveraging variation in political alignment between governor and mayor during the period of expansion of Ramo-33 transfers. To do so, I use a regression discontinuity design that takes advantage of plausibly exogenous variation in political alignment that occurs when elections are decided by a close margin.\footnote{
+This research design is known as a close election regression discontinuity design and it has been widely used to uncover the effects of partisan favoritism on the allocation of public resources on Brazil \citep{brollo2012tying}, Italy \citep{bracco2015intergovernmental}, Spain \citep{curto2018does}, and U.S. \citep{albouy2013partisan}
+} My identification assumption is that municipalities where the governor's party candidate narrowly won are valid counterfactuals to municipalities where the candidate narrowly lost.
+The fact that political alignment is unpredictable among razor-close elections implies that aligned municipalities are not systematically different from unaligned municipalities in terms of unobservables (e.g. economic shocks or particular political traits) that explain the current economic activity, intergovernmental transfers, or public spending patterns.
+
+As a first step toward understanding how political alignment affects local economic activity, I assemble a unique dataset that provides information at the municipality-year level on several measures of local economic activity and public finance. This level of disaggregation allows me to precisely measure the dynamics of the economy before and after a municipality becomes politically aligned. To construct my primary measure of economic activity, I use the employer-employee data to measure total employment and average wages for the universe of formal sector workers. I combine this with additional information on employment in the informal sector (household surveys and economic censuses), consumption  (night lights and electricity consumption), public employment (social security records of public employees) corruption (audit reports from an anti-corruption agency), and homicides (vital statistics). I also use public finance data to observe how alignment increases public revenues and spending; the detailed nature of this data allows me to decompose  revenues and spending into a wide set of subcategories. 
+
+I study the economic consequences of politically motivated spending in three steps. In the first step,  I provide causal evidence that politically aligned mayors receive higher intergovernmental transfers and increased total public spending than municipalities that are not politically aligned. The second step studies the effects of political alignment on private-sector employment and wages. I find that the growth rate of private-sector employment slows down in politically aligned municipalities. I rule out that this result is explained by workers moving from the formal to the informal sector, implying that total employment is lower in politically aligned municipalities. In the third step, I investigate the potential channels that may explain these results. I rule out that additional resources increased violence or corruption due to interest groups or politicians trying to capture the additional intergovernmental transfers. I find suggestive evidence that this increase in public spending leads to higher rents for public sector contractors—the reallocation of production factors to rent-seeking activities has negative externalities on total employment growth.
+
+
+The first part of the paper focuses on the political economy behind the allocation of the earmarked transfers and its effects on total spending.
+I find that the three-year growth rate of intergovernmental transfers increased by 46 percentage points in municipalities where the mayor belongs to the governor's party compared to where the mayor belongs to the opposition's. 
+I do not find that this increase in transfers crowds-out alternative revenue sources (other intergovernmental transfers, taxes, or debt), implying that total revenues should increase.
+In line with this logic, political alignment increases the three-year growth rate of public revenues/spending (local governments run a balanced budget) by 10 percentage points.
+
+The second part of the paper explores how politically motivated spending affects private-sector economic activity.
+My primary measures of economic activity are employment and the average wages of the universe of formal sector workers.
+I find political alignment affects employment but not wages. In particular, the three-year employment growth rate is 12 percentage points lower in politically aligned municipalities. This negative coefficient is explained by a slowdown, rather than a reduction, of private-sector jobs in politically aligned municipalities. The point estimates are equivalent to a decline in the employment rate of 2.8  percentage points, assuming that neither public nor informal sector employment is affected by political alignment.\footnote{The formal employment ratio in our sample is about 28\%, which suggests that the observed decline in formal employment is equivalent to a reduction.}
+
+Before exploring the mechanisms, I evaluate to what extent the reduction of formal employment is explained by a shift from the formal to the informal sector. 
+To do so, I use two coarser data sources of local employment: household surveys and the quinquennial economic census. 
+The results from the household surveys suggest that alignment reduces the probability of being employed by 3.4 percentage points. This decline in total employment seems to be driven by declines in the formal sector. In particular, the likelihood of being employed in the formal sector explains about two-thirds of this decline (2.1 percentage points).
+The results from the economic census, although not precisely estimated, confirm a negative effect of political alignment on total employment. 
+Overall, I cannot rule out an increase in informality. Still, I can confidently say that shifts towards the informal sector cannot explain the bulk of my results.
+
+I explore three potential mechanisms that may explain my results. First, I ask whether public spending crowded out private-sector jobs. This mechanism would suggest that the slowdown in private-employment results from production factors (labor and capital) being diverted towards goods and services provided to the public sector.\footnote{
+This crowding-out effect could lead to lower aggregate employment when the activities demanded by the government are less labor-intensive and have lower employment multipliers than the activities from which the resources are drawn. Despite being less productive, they may provide sufficient rents to attract entrepreneurs and capital investment \citep{torvik2002natural}.} 
+Second, I use homicide data to test whether the reduction in total employment is driven by an increase in violence that results from interest groups fighting to capture economic rents provided by the higher public spending.
+Third, I use data on audits of local governments to test whether the additional rents increased the probability of elected politicians engaging in corrupt behavior; undermining local economic growth. 
+
+I find pieces of evidence suggesting that the crowding-out effect is explained by the reallocation of production factors towards rent-seeking activities that deter aggregate employment. A crowding-out effect occurs only when the economy is at full capacity and in sectors that benefit less from increases in local demand due to higher public sector spending. Specifically, the effect of political alignment on employment is stronger on tight labor markets, the tradable sector, and economies with a low share of government-dependent sectors.  
+I do not find evidence that the slowdown in job creation results from increases in violence\footnote{ 
+This result is consistent with the fact that the period studied, 1998-2006, had historically low levels of homicides, and it was before the well-documented increase in violence that took place after 2006.} or corruption.\footnote{ 
+I use data on anti-corruption audits performed by an autonomous watchdog agency (Auditoria Superior de la Federación) to test whether the fiscal windfalls spur higher levels of corruption. I do not observe that aligned municipalities are more likely to be accused of malfeasance or corruption. On the contrary, conditional on being audited, politically aligned municipalities are less likely to be accused of malfeasance.}
+
+Moreover, consistent with a crowding-out effect, I do not observe a decline in citizens' welfare. I use three indirect measures of welfare all of which suggest that citizens are better off despite the decline in private-sector jobs. In particular, I find that the incumbent party is  40\% (13 percentage points) more likely to be re-elected in the subsequent election when it is politically aligned. Also, I find that two-thirds of the decrease in the formal employment rate (2.8 out of 3.4 percentage points) is explained by decreased labor force participation rather than an increase in unemployment. This implies that people are not losing jobs as would be the case if politically aligned municipalities were experiencing heightened violence or corruption shocks. Third, I do not find statistically significant evidence that neither the growth rate of night lights nor electricity consumption is lower in politically aligned municipalities. If anything, the point estimates suggest positive and economically significant effects.
+
+A unique feature of this finding is that I can rule out the traditional ways in which theory argues that crowding out occurs, namely through higher taxes or interest rates. The disproportional amount of transfers is nationally funded, and interest rates are only affected at the national level. I explore three mechanisms by which crowding-out can happen around this context: public sector enlargement, economic disruption caused by infrastructure investment, and increase in rent-seeking contracts which I measure as spending that is not backed up by proportional increases in employment.
+
+I rule out that the crowding is caused by a disproportionate increase in public sector employment\footnote{ This is consistent with evidence that the size of the public sector is relatively stable in Mexico and difficult to be affected by local politicians.} or by construction projects disrupting economic activity.\footnote{ 
+Infrastructure spending could decrease total employment through the negative spillovers of building infrastructure projects \cite{ramey2020macroeconomic}. I rule out this mechanism because I fail to find statistically or economically significant increases on either construction jobs or public capital stock. Therefore, I cannot conclude that more construction projects are taking place in politically aligned municipalities.
+} 
+I suggest that the rise in rent-seeking activities could explain the findings. In particular, I find that politically aligned municipalities experience a disproportionate increase in the growth rate of infrastructure investment (40 percentage points) and general service contracts (25 percentage points). When looking at the growth rate of private-sector jobs in construction or government-dependent industries, I fail to find statistically or economically significant changes. This implies that additional contracts do not generate jobs and are more likely to provide rents to citizens. This result is consistent with people leaving the labor force and citizens being more willing to re-elect the politically aligned candidate. 
+
+\vspace{2mm}
+\subsection{Related Literature} This paper contributes to several strands of the literature. 
+First, it contributes to the literature that asks about the local employment effects of infrastructure spending. 
+Most of the studies that focus on the short-run find that employment dips negative during the first few years after the infrastructure spending took place \citep{garin2019putting,leduc2013roads,dupor2017so,buchheim2017employment}, but increases in the long run as higher stock of public capital can boost labor productivity
+\citep{kline2014local, yaffe2020essays,leduc2013roads,allen2019welfare}.
+This literature suggests that the construction of infrastructure projects disrupts economic activity and delays private investment. Although I find negative effects on employment after an exogenous increase in infrastructure spending, I fail to find concrete evidence that construction is increasing, which suggests that other mechanisms could be at play. In particular, infrastructure spending may allow politicians to divert resources to unproductive activities, which may deter private investment. 
+
+Second, it contributes to the literature of distributive politics that focuses on how partisan favoritism affects the allocation of public resources. The bulk of the literature has found that central politicians skew resources to politically aligned municipalities \citep{brollo2012tying,curto2018does,bracco2015intergovernmental,fiva2016local, albouy2013partisan}. While this literature focuses on discretionary transfers, I provide suggestive evidence that political alignment can substantially distort the allocation of resources even in circumstances where transfers are meant to be allocated with a predetermined allocation formula. Also, different from this literature, I focus on the economic consequences of political alignment. 
+
+Third, I contribute to the literature that studies the economic effects of political favoritism. 
+This literature agrees that ethnic and regional favoritism generally leads to higher economic growth \citep{hodler2014regional,alesina2016ethnic}, but has conflicting findings regarding the effects of partisan favoritism. 
+On one hand, \cite{cohen2011powerful} find that political alignment with the chair of any congressional committee  \textit{decreases} employment in private-sector firms in the U.S. The authors argue that this effect is explained by larger public spending crowding out private-sector economic activity. On the other hand, \cite{asher2017politics}, using data from India, finds that employment \textit{increases} more in districts that are politically aligned with the state ruling party compared to unaligned districts. They argue that the main mechanism is the discretionary power that politicians have over-regulation. 
+My findings are similar to \cite{cohen2011powerful} because I also focus on the same policy lever, namely, public spending. In this sense, my results show that the effect of political alignment on economic growth is sensitive to the policy lever that the politicians manipulate, implying that the context on which one decides to focus defines the answer one gets.  
+
+This paper also revisits the literature on the resource curse. 
+There is an established consensus that fiscal windfalls can negatively impact political institutions and increase conflict. Independent of their origin, higher fiscal resources tend to soar corruption and deteriorate the quality of political candidates \citep{brollo2013political,asher2018rent,chen2016land,vogel2021effect}.
+This paper proposes a different channel by which fiscal windfalls may negatively affect local economies.  In a similar fashion that the \textit{Dutch disease} reallocates labor towards resource-extractive industries, the politically motivated fiscal windfalls reallocate labor towards the non-tradable sector, which tend to be less productive and suffer from higher informality rates. 
+The most impressive decline in the formal sector has two principal negative consequences; it mechanically reduces taxes and the capacity of the workforce to contribute to the health and pension system. 
+
+Finally, I contribute to the literature on distributive politics in Mexico. The literature that focuses on intergovernmental transfers has documented strong correlations between the allocation of transfers and several political variables like political competition, partisan alignment, and voter turnout \citep{diaz2004descentralizacion,langston2010governors,trillo2007transferences}. My contribution to this extensive literature is to quantify the \textit{causal} effect of political alignment on the allocation of Ramo 33 transfers. Another strand of literature uses the same research design employed in this paper to study the consequences of political alignment on access to loans and the implementation of crackdowns \citep{de2020political,dell2015trafficking}. These studies focus on the effects of political alignment with the president. My paper centers on the role of state governors in the discretionary allocation of intergovernmental transfers which, according to my results, has a large impact on economic outcomes. 
+
+
+
+\end{document}
+
+%scarce and the demand shock impose by higher stop working for the private-sector that would be otherwise employed in in tight labor markets and sectors that do not directly benefit from increases in public spending because the main channel through which it affects them is through competition for production factors
+
+%First, I find that the effect of political alignment on private-sector jobs is stronger in municipalities where production factors are scarce ((())) compared to municipalities where production factors are iddle ().Second, the cost of alignment in job creation is borne by industries that are not benefited by increases in local demand but affected by the competition for production factors. In particular, political alignment reduced much more the employment growth rate of tradable sector (XXX) than the non-tradeable sector. Third, I find that alignment reduce private employment in economies with a relative small share of industries that supply the public sector compared to economies with a large share of industries supplying the public sector.
+
+
+
+%Additional to the results of \cite{cohen2011powerful} I find that the politically motivated spending could lead to negative effects because the money may not necesarily be used to generate jobs and it may lead to the money may be channeled to voters. %Different to regulation, public spending affects local demand and the sectoral composition of economic activity, which may undermine growth if the sectors more affected by public spending are less productive. Regulation affects the supply of firms undermine growth. Regulation, is , while regulation the composition of the local demand Second, I find that labor misallocation is an unintended and overlooked cost of politically-induced benefits which could deter growth. %We expect these distortion at large public spending shocks create more distortions on private sector that is cost to be less relevant in India, an economy with high levels of factor misallocation relative to an economy with low levels of misallocation as U.S.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%for channels section 
+%The increase of intergovermental transfers could be seen as a resources windfall similar to discovering a new natural resource or a increase of international aid. All these types of windfalls are free from the recipient's perspective and administered by local governments. A large body of literature has explained why additional windfalls are not necessarily beneficial for the whole economy. 
+
+%Several economic and non-economic channels have been proposed to explain why higher fiscal windfalls can deter economic growth. 
+%All economic mechanisms are all related to crowding-out effects. That is, an decline in private economic activity that occurs because production factors are reallocated towards economic activities funded by the additional transfers. This crowding-out effect could lead to lower aggregate economic growth when the activities demanded by the government are less productive but generate sufficient rents to attract entrepreneurs, which otherwise would be doing more productive activities. 
+
+%negatively political institutions and spur corruption \citep{brollo2013political}, which has been proven can deter local economic growth \citep{colonnelli2020corruption}
+%I also evaluate two prominent non-economic mechanisms. It may be that violence increase as a result of interest groups fighting for capturing the economic rents. The reduction in governance due to a increase in corruption from politicians who aim to capture a higher fraction of economic rents. 
+
+
+
+%The negative effect suggest that the expected positive effects from exogenous increase in demand for goods and services is offset by other factors that deter private sector growth.  two of most prominent mechanisms through which fiscal windfalls can deter private sector economic growth: the excess of public resourcesTransfer can create agency The increase in windfalls can reduce lead to rent-seeking effect, that may affect which would suggest that fiscal windfalls affect negatively political institutions and spur corruption \citep{brollo2013political}, which has been proven can deter local economic growth \citep{colonnelli2020corruption}. The second is that public spending crowds out private sector economic activity, competing for production factors that otherwise would have been employed in the private sector. 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{comment}
+Domestic violence is an extreme form of gender inequality and a global health problem of epidemic proportions (WHO, 2013). About 1 in every 3 women worldwide have experienced either physical
+and/or sexual violence from their partners in their lifetime (World Bank, 2015). To address domestic violence, the economics literature focuses on laws, enforcement, shelters, education, cash
+transfers, unemployment benefits and job opportunities for women. Although there is evidence on
+the effects of the former policies (Stevenson and Wolfers 2006, Aizer and Dal Bo´ 2009, Anderson
+and Genicot 2015, Brassiolo 2016, Chin and Cunningham 2019, Garc´ıa-Ramos 2021, Sanin 2021,
+Miller and Segal 2019, Sviatschi and Trako 2021, Farmer and Tiefenthaler 1997, Erten and Keskin
+2018, Green et al. 2020, Angelucci 2008, Bobonis et al. 2013, Hidrobo et al. 2016, Haushofer et al.
+2019, Bhalotra et al. 2021), there is limited causal evidence on the effects of increased paid job
+availability for women on domestic violence.1
+
+Understanding the relationship between women’s employment and domestic violence is particularly crucial for Sub-Saharan Africa. Since the 1990s, the region has the highest female labor
+force participation rates globally, where more than 60\% of the employed women work in agriculture and are often unpaid family workers in their family plots (FAO, 2010). Recently, the region is
+under a large-scale economic transition. Between 2000 and 2018, 9 million paid jobs are created
+per year, mostly in agriculture where women work dominantly (IMF, 2018).
+
+This paper investigates whether providing paid employment opportunities to women decrease
+the violence they face from their partners. I use government-induced rapid expansion of the coffee
+mills in Rwanda in the 2000s. A mill provides paid job opportunities to women who reside in
+its catchment area, a 4 km buffer zone, during the harvest months. I first provide causal evidence
+that mill exposure increases women’s paid employment, women’s and their husbands’ earnings
+and decreases domestic violence. Then I show that the decline in violence is plausibly driven by
+women’s paid employment, not an increase in husbands’ earnings. I provide suggestive evidence
+that women’s employment affects violence via an increase in women’s outside option and thus
+bargaining power, not a reduction in couples’ exposure to each other. To establish the results, I
+uniquely perform two empirical strategies using two different sources of domestic violence data,
+nationally representative self-reports and the universe of monthly hospitalizations.
+
+\end{comment}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{comment}
+
+Violence related to the drug trade has escalated dramatically in Mexico since
+2007, claiming over 60,000 lives and raising concerns about the capacity of the
+state to monopolize violence. Recent years have also witnessed large-scale efforts
+to combat drug trafficking, spearheaded by Mexico’s conservative National Action
+Party (PAN). These efforts have cost around 9 billion USD per annum, nearly as
+much as the government expends on social development.1 Yet there is limited causal
+evidence about the impacts of crackdowns. This study uses plausibly exogenous
+variation from close Mexican mayoral elections, a network model of drug trafficking, and confidential data on the drug trade to identify how crackdowns have
+affected violence and trafficking. It examines both the direct effects of crackdowns
+in the places experiencing them and the spillover effects they exert by diverting drug
+traffic elsewhere.
+
+
+Mexico is the largest supplier to the U.S. illicit drug market, with Mexican traffickers
+earning approximately 25 billion USD each year in wholesale U.S. drug markets (U.N. World
+Drug Report, 2011). Official data described later in this study document that in 2008, drug
+trafficking organizations maintained operations in two thirds of Mexico’s municipalities, and
+illicit drugs were cultivated in 14\% of municipalities.
+
+While Mexico is a major player in the drug trade, its high levels of drug violence and
+drug enforcement expenditures are not unique. Global annual drug enforcement spending
+exceeds 100 billion USD, and traffickers in Central America, West Africa, and elsewhere
+use violent tactics and often belong to the same transnational trafficking organizations that
+operate in Mexico (Economics Briefing, 2013). Because law enforcement does not randomly
+decide where to crack down, the existing evidence on drug enforcement impacts consists
+primarily of correlations. While often the best evidence available, these can be non-trivial
+to interpret. For example, a positive cross-sectional correlation between violence and drug
+enforcement could result because areas with higher violence attribute it to drug consumption
+and thus expend more fighting the drug trade, and a positive correlation in a panel could
+occur because governments crack down in places where they expect violence to later increase.
+
+This study isolates plausibly exogenous variation in drug enforcement policy by exploiting
+the outcomes of 2007-2010 close mayoral elections involving the PAN party.2 The PAN
+federal government’s role in spearheading the war on drug trafficking, as well as qualitative
+evidence that PAN mayors have contributed to these efforts, motivate this empirical strategy.
+While municipalities where PAN candidates win and lose by wide margins are likely to be
+
+
+
+%A recent report of The World Health Organization (WHO) defines violence against women as a global public health problem of epidemic proportions (WHO, 2013). It is estimated that approximately one-third of women worldwide have experienced either physical and/or sexual violence from their partners at some point in their lives (World Bank, 2015). Of the women who were intentionally killed in 2017 globally, more than a third were killed by their intimate partners (UNODC, 2019). These statistics cast doubt on the effectiveness of domestic violence laws. Do domestic violence laws protect women from domestic violence?
+
+%This paper studies the impact of a domestic violence legislation in Rwanda on men’s decision to exert domestic violence and women’s decision to divorce. In 2008, Rwanda became the first country in Sub-Saharan Africa to pass a comprehensive domestic violence law (Hebert, 2015). All forms of domestic violence, including marital rape are criminalized. Domestic violence became grounds for fault-divorce, which enabled women to divorce their husbands unilaterally, if their husbands exercise violence on them.3 Befor
+
+%The main effect of the Great Depression of the 1930s on today’s fiscal policy is the
+
+
+\end{comment}
+
+
+%This paper use 420 close elections that were held during the weak enforcement of the implementation of a nation-wide infrastructure transfer to understand transfers can affect the political economy shed light on the effects of infrastructure spending on local economies. Municipal elections,  detailed public finance data, and administrative records of public and private formal employment\footnote{This implies that our results can only speak about the formal private employment and are mute regarding what happens in the informal sector: I use other strategies to capture what is happening in total economic such as night light measures, household surveys, and establishment information from the economic census. However, they did not offer reliable estimates. The formal economy explains about 70\% of total production, although only 40\% of the workers.}  to shed light on the effects: First, the political economy behind the allocation of this transfers across municipalities in Mexico; particularly I document the extent to which political alignment between state-governors and municipal-mayors affect the spatial distribution of the placed-based infrastructure transfers. Second, I explore the dynamics of local economies where the politically induced transfer took place.
+% I use variation from 467 close elections that took place between 1998 and 2003, out of which 226 elected a mayor from the same party as the state governor's party, while the other 241 elections elected a mayor from the other political parties.
+%To close up the political economy equilibrium, I ask if the voters reward the politicians' effort in skewing the transfers . I find that partisan alignment translated into local and state incumbency advantage. The probability of an aligned mayor winning the next election increases by 17 percentage points compared to the counterfactual of not being aligned.
+ 
+%While the negative short term effects are consistent with the nascent literature on relative infrastructure multipliers in U.S \cite{garin2019putting, leduc2017state, dupor2017local}, but this is not the case for the lack of long term effects. I argue that this is explained by the fact that infrastructure spending did not translate into higher stock of public capital. Particularly, I do not find that politically aligned municipalities have different levels of coverage to electricity, access to water, sanitation or roads than the politically aligned counterparts. This is  expected in the context of a developing country where corruption and lack of state capacity lead to high inefficiencies in spending. 

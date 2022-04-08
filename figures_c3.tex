@@ -1,0 +1,168 @@
+\documentclass[dv_diss_main.tex]{subfiles}
+\input{notestables.tex}
+
+\begin{document}
+
+\begin{figure}[H]
+\begin{center}
+    \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Aggregate Spending} & & \normalsize{\bf Panel B: Shares by Categories} \\
+    {\includegraphics[height=1.8in,width=2.9in]{figures/graph_milspend_aggregate.png}} & & {\includegraphics[height=1.8in,width=2.9in]{figures/graph_composition_shares.png}} \\[0.1in]
+    
+    \end{tabular}
+   \caption{Military Spending}
+\end{center}
+    
+    
+    \footnotesize{\textit{Note. } The national level statistics are calculated by aggregating the microdata on military procurement contracts available from NARA and USASpending. Spending is in real terms by deflating the nominal value of a contract by the CPI. The classification of the spending into the three categories is based on the Federal supply classification code. The statistics are calculated by using more than $20$ millions of new contracts or modifications of existing contracts.}
+
+    \label{fig:share_comp}
+\end{figure}
+\newpage
+
+\begin{figure}[H]
+\begin{center}
+    \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Total Spending} & & \normalsize{\bf Panel B: Spending in Goods} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/map_cbsa_totspend.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/map_cbsa_goodsspend.png}} \\[0.1in]
+    
+    \normalsize{\bf Panel C: Spending in Services} & & \normalsize{\bf Panel D: Spending in R\&D} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/map_cbsa_servicesspend.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/map_cbsa_rdspend.png}} \\[0.1in]
+    
+    \multicolumn{3}{c}{\includegraphics[height=0.2in,width=3.8in]{figures/map_cbsa_legspend.png}} \\[0.1in]
+      \end{tabular}
+\end{center}
+    \caption{Military Spending - Geographic Distribution}
+    \footnotesize{\textit{Note. } The quartile to which a MSA belongs is assigned based on the average military spending in real terms that the MSA receives over the period $1966-2019$. The classification of the spending into the three categories is based on the Federal supply classification code. The maps only show the $296$ MSAs included in our sample.}
+    \label{fig:map_spend}
+\end{figure}
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+    \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Total Spending} & & \normalsize{\bf Panel B: Spending in Goods} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_Rn_ms_lv.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_Rn_ms_goods_lv.png}} \\[0.1in]
+    
+    \normalsize{\bf Panel C: Spending in Services} & & \normalsize{\bf Panel D: Spending in R\&D} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_Rn_ms_services_lv.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_Rn_ms_rd_lv.png}} \\[0.1in]
+    
+    
+    
+    \end{tabular}
+    \end{center}
+    
+    \caption{Fiscal Multipliers - Earnings}
+ 
+    \footnotesize{\textit{Note. } Panel A reports the estimates from equation \eqref{eq:fm_base}. The remaining panels the estimates from equation \eqref{eq:fm_comp}. We use the instrumental variable approach with the instrument calculated as in equation \eqref{eq:fm_iv}. The unit of observations are MSAs in different years. The balanced panel used for computing the estimates includes $296$ MSAs for the period $1980-2015$. The instrument is calculated using observations between $1966$ and $1980$. Standard errors are clustered at MSA-level. The shaded areas report the $90\%$ confidence intervals.}
+
+    \label{fig:fm_earnings}
+\end{figure}
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+    \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Total Spending} & & \normalsize{\bf Panel B: Spending in Goods} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_emp_lv_Rn_ms_lv.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_emp_lv_Rn_ms_goods_lv.png}} \\[0.1in]
+    
+    \normalsize{\bf Panel C: Spending in Services} & & \normalsize{\bf Panel D: Spending in R\&D} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_emp_lv_Rn_ms_services_lv.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_emp_lv_Rn_ms_rd_lv.png}} \\[0.1in]
+    
+    \end{tabular}
+    \end{center}
+    \caption{Fiscal Multipliers - Employment}
+    \footnotesize{\textit{Note. } Panel A reports the estimates from equation \eqref{eq:fm_base}. The remaining panels the estimates from equation \eqref{eq:fm_comp}. We use the instrumental variable approach with the instrument calculated as in equation \eqref{eq:fm_iv}. The unit of observations are MSAs in different years. The balanced panel used for computing the estimates includes $296$ MSAs for the period $1980-2015$. The instrument is calculated using observations between $1966$ and $1980$. Standard errors are clustered at MSA-level. The shaded areas report the $90\%$ confidence intervals.}
+    \label{fig:fm_employment}
+\end{figure}
+\newpage
+
+\begin{figure}[H]
+    \begin{center}
+        \begin{tabular}[c]{c}
+   
+    {\includegraphics[height=2.5in,width=4.5in]{figures/graph_share_laborintensity.png}} \\[0.1in]
+
+    
+    \end{tabular}
+    \end{center}
+    
+    \caption{Share of Spending in Labor-intensive Industries}
+    \footnotesize{\textit{Note. } The classification of the spending into the three categories is based on the Federal supply classification code. The classification between low and high labor-intensive industries is based on the value added data collected from the BEA.}
+    \label{fig:shlabint_comp}
+\end{figure}
+\newpage
+
+\begin{figure}[ht]
+    \begin{center}
+    \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Total Spending} & & \normalsize{\bf Panel B: Spending in Goods} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_spill100_Rn_ms_lv_spill100.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_spill100_Rn_ms_goods_lv_spill100.png}} \\[0.1in]
+    
+    \normalsize{\bf Panel C: Spending in Services} & & \normalsize{\bf Panel D: Spending in R\&D} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_spill100_Rn_ms_services_lv_spill100.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_wages_lv_spill100_Rn_ms_rd_lv_spill100.png}} \\[0.1in]
+    
+    \end{tabular}
+    \end{center}
+    
+    
+    \caption{``Outflow'' Effects - Earnings}
+    \footnotesize{\textit{Note. } Estimates are computed from  equation \eqref{eq:fm_spill}. We use the instrumental variable approach with the instrument calculated as in equation \eqref{eq:fmspill_iv}. The unit of observations are MSAs in different years. The balanced panel used for computing the estimates includes $284$ MSAs for the period $1980-2015$. The instrument is calculated using observations between $1966$ and $1980$. Standard errors are clustered at MSA-level. The shaded areas report the $90\%$ confidence intervals.}
+    \label{fig:earn_spill}
+\end{figure}
+\newpage
+
+\begin{figure}[ht]
+    \begin{center}
+        \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Total Spending} & & \normalsize{\bf Panel B: Spending in Goods} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_consexp_lv_Rn_ms_lv.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_consexp_lv_Rn_ms_goods_lv.png}} \\[0.1in]
+    
+    \normalsize{\bf Panel C: Spending in Services} & & \normalsize{\bf Panel D: Spending in R\&D} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_consexp_lv_Rn_ms_services_lv.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_Rn_consexp_lv_Rn_ms_rd_lv.png}} \\[0.1in]
+
+    
+    \end{tabular}
+    \end{center}
+    
+    
+    \caption{Private Consumption Crowding-out Effect}
+    
+    \footnotesize{\textit{Note. } The unit of observations are states in different years. The balanced panel used for computing the estimates includes $51$ states for the period $1998-2015$. The instrument is calculated using observations between $1966$ and $1980$. Standard errors are clustered at state-level. The shaded areas report the $90\%$ confidence intervals.}
+
+    \label{fig:crowd_privcons}
+\end{figure}
+\newpage
+
+\begin{figure}[ht]
+    \begin{center}
+        \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Total Spending} & & \normalsize{\bf Panel B: Spending in Goods} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_mpc_ms.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_mpc_goods.png}} \\[0.1in]
+    
+    \normalsize{\bf Panel C: Spending in Services} & & \normalsize{\bf Panel D: Spending in R\&D} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_mpc_services.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_mpc_rd.png}} \\[0.1in]
+    
+    \multicolumn{3}{c}{\includegraphics[height=0.15in,width=2.8in]{figures/graph_mpc_legend.png}} \\[0.1in]
+
+    
+    \end{tabular}
+    \end{center}
+    
+    
+    
+    \caption{Fiscal Multiplier by High- vs. Low-MPC States}
+    
+    \footnotesize{\textit{Note. } The unit of observations are states in different years. The balanced panel used for computing the estimates includes $27$ states for the period $1980-2015$. The instrument is calculated using observations between $1966$ and $1980$. Standard errors are clustered at state-level. The shaded areas report the $90\%$ confidence intervals.}
+
+    \label{fig:mpc}
+\end{figure}
+\newpage
+\end{document}

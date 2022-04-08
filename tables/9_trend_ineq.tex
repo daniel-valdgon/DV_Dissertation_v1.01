@@ -1,0 +1,203 @@
+\begin{tabular}{lcccc}
+
+\toprule
+
+
+
+%\multicolumn{1}{l}{} & \multicolumn{1}{c}{\substack{\text{\it Observed} \\ \text{\it FISM transfers} }}
+%					 & \multicolumn{1}{c}{\substack{\text{\it Law-implied} \\ \text{\it FISM transfers}}}
+%					 & \multicolumn{3}{c}{\substack{\text{\it Observed} \\ \text{\it FISM transfers} }} 
+%					  \\ 
+
+%This p option in multicolumn help with miktex but do the same as substack that works on overleaf. Worse to make aligments of title so we end up doing manually 
+%\multicolumn{1}{l}{} & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Observed \\ FISM transfers}}}
+%					 & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Law-implied \\  FISM transfers}}}
+%					 & \multicolumn{3}{p{2cm}}{\centering{\scriptsize{ Observed FISM \\  transfers}}}
+%					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ Observed   }}
+					 & \multicolumn{1}{c}{\scriptsize{ Law-implied }}
+					 & \multicolumn{3}{c}{\scriptsize{ Observed   }}
+					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ FISM  }}
+					 & \multicolumn{1}{c}{\scriptsize{ FISM  }}
+					 & \multicolumn{3}{c}{\scriptsize{ FISM  }}
+					 \\ 
+					 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\footnotesize{(OLS)}}
+					 & \multicolumn{1}{c}{\footnotesize{(RF)}}
+					 & \multicolumn{3}{c}{\footnotesize{(2SLS)}} 
+					  \\ 
+
+
+
+
+
+\cmidrule(lr{1mm}){2-2} 
+\cmidrule(lr{1mm}){3-3} 
+\cmidrule(lr{1mm}){4-6}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)} & 
+						\multicolumn{1}{c}{$$name_c5$$}  \\ 
+
+
+\midrule
+
+%\multicolumn{7}{c}{\textit{Panel   A: Direct policy outcomes on infrastructure}} \\                                                          
+
+% 1st row 
+\textit{Gini}   &  1.903***   &
+						   1.837***   &
+						   2.318***   &  
+   						   2.444***   \\
+
+\vspace{4pt} &  \footnotesize{(0.439)}  &
+			    \footnotesize{(0.436)}  &
+			    \footnotesize{(0.681)}  &
+				\footnotesize{(0.555)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[881]} &
+				\footnotesize{[396]} &
+				\footnotesize{[586]} \\
+				
+
+
+
+
+% 2nd row 
+\textit{Ratio 80/20}   &  0.119**   &
+						   0.120**   &
+						   0.153**   &  
+   						   0.139**   \\
+
+\vspace{4pt} &  \footnotesize{(0.049)}  &
+			    \footnotesize{(0.049)}  &
+			    \footnotesize{(0.077)}  &
+				\footnotesize{(0.060)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[881]} &
+				\footnotesize{[396]} &
+				\footnotesize{[591]} \\
+				
+
+
+% 3rd row  			
+\textit{Ratio 90/10}   &  0.238   &
+						   0.239   &
+						   0.380   &  
+   						   0.272   \\
+
+\vspace{4pt} &  \footnotesize{(0.150)}  &
+			    \footnotesize{(0.151)}  &
+			    \footnotesize{(0.239)}  &
+				\footnotesize{(0.186)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[883]} &
+				\footnotesize{[396]} &
+				\footnotesize{[592]} \\
+				
+
+% 4th row  				
+\textit{Ratio 50/10}   &  0.030   &
+						   0.029   &
+						   0.083*   &  
+   						   0.037   \\
+
+\vspace{4pt} &  \footnotesize{(0.028)}  &
+			    \footnotesize{(0.028)}  &
+			    \footnotesize{(0.044)}  &
+				\footnotesize{(0.035)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[876]} &
+				\footnotesize{[396]} &
+				\footnotesize{[593]} \\
+				
+
+
+% 5th row 
+\textit{Ratio 90/50}   &  0.111***   &
+						   0.110***   &
+						   0.108**   &  
+   						   0.137***   \\
+
+\vspace{4pt} &  \footnotesize{(0.030)}  &
+			    \footnotesize{(0.030)}  &
+			    \footnotesize{(0.047)}  &
+				\footnotesize{(0.037)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[882]} &
+				\footnotesize{[396]} &
+				\footnotesize{[586]} \\
+				
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    \\
+
+\textit{Fiscal revenues}  	& 	$\checkmark$    &    
+								$\checkmark$    &  
+								$\checkmark$    &  
+								$\checkmark$    \\
+
+{\bf Pre-trends Control}       &	   &   
+									   & 
+									   &
+									   \\
+
+
+\textit{y90s $\times$ 1(year=t)}  & 				&   
+								$\checkmark$	& 
+												& 
+												\\
+
+
+\textit{Formula inputs $\times$ 1(year=t)} 		& 				&   
+																& 
+												$\checkmark$	& 
+												\\
+
+\textit{$y_{mt-1}$}  				& 				&   
+												& 
+												& 
+								$\checkmark$	\\
+
+
+
+\midrule		
+
+
+Observations 			&	 6123   &   
+							 6123   & 
+							 6107   & 
+							 6107   \\
+
+Municipalities  		&    2119   &   
+							 2119   & 
+							 2118   & 
+							 2118   \\
+
+\bottomrule
+
+\end{tabular}%

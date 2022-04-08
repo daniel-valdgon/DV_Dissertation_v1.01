@@ -1,0 +1,497 @@
+\documentclass[dv_diss_main.tex]{subfiles}
+\input{notestables.tex}
+
+\begin{document}
+
+
+%\addcontentsline{toc}{subsection}{Online Appendix}
+%\renewcommand{\thesubsubsubsection}{\Alph{subsubsubsection}}
+%\counterwithin{figure}{subsubsubsection}
+%\counterwithin{table}{subsubsubsection}
+
+\normalsize
+%\lmr
+\normalfont
+
+
+
+\subsection{Fondo de Aportaciones para la Infraestructura Social - FAIS}
+
+\subsubsubsection{FAIS spending rules}\label{ap:faisspending}
+
+Local governments can use FAIS resources in a wide array of public investment projects. These projects are listed in the operational guideline of the FAIS. The list covers more than 200 different projects under several modalities that are classified in 7 categories: education, health, housing, social assistance, urbanization, water and sanitation and others. 
+
+The following table groups the potential projects by category, modality and associated social deprivation from the FAIS' service Catalog. For some spending categories marked with * (medical stall, equipment and medicine supply), the fund can be invested  if resources for the operation of the dental or health centers are provided by the federal government. Municipalities must spend at least 40 percent of the fund in direct projects (listed in Panel A) while the rest can be invested under their discretion.
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{FAIS Spending Rules Catalog}\label{fig:discon}
+	\label{trends_inf}
+	\resizebox{\textwidth}{!}{
+		\input{tables/table_programs.tex}
+				}		
+\parbox{\textwidth}{\small 
+\vspace{2eX}
+\footnotesize	
+ \spendingcatalog
+  
+}
+\end{table}
+
+\subsubsubsection{FAIS Allocation Formula} \label{ap:faisformula}
+
+This annex describes the details about the formula presented in the Article 34 added to the Fiscal coordination law in December 29 of 1997. The formula computes for every household a deprivation mass index that is based on the nonlinear combination of 5 dimensions indexed by $g=\{1,2,3,4,5\}$. The formula will be computed every year $t$ using the latest available population census indexed by $k$. This implies a one to one mapping between $t$ and $k$ defined by $k(t)$. Although in our identification strategy we use this notation, for simplicity we will drop any time subscript that index the round of population census used for the computations.
+
+
+The formula that describes the deprivation mass at household level from the latest population census is as follows
+
+$$D_{j} = \sum_{g} \omega^{g} f_{g} (W_{j}^{g}) $$
+
+
+
+Where $D_{j}}$ is the deprivation mass of household $j$ in the population census. $\omega^g$ is the policy weight for characteristic $g$ and $W_{j}^{g}$ is a vector of household characteristics used to compute the dimension $g$ for household $j$. A specific function $f_{g}(.)$ is applied to $W_{j}^{g}$. Below we describe for each dimension the weights--$\omega_{g}$, functions--$f_{g}(.)$, and variables--$W_{j}^{g}$ employed to compute the household deprivation mass for each dimension
+\\	
+\\
+{\bf Household per-capita income}-- This dimension has a weight of $\omega^{1}=0.46$. It use as characteristic the household per-capita income as input and compute a poverty gap measure. To do so, it requires an extreme poverty line defined every year $t$ by the Secretary of Development $l^_{t}$. This line is expressed in real values of the year of the latest population census available $k(t)$. We apply the formula as follows:
+
+$$\frac{l_{t} - W_{j}^{1}}{l_{t}}$$
+
+Where $W_{j}^{1}$ correspond to household per-capita income. Then we apply the following stepwise function to the poverty gap
+
+$$
+f_{1}(W_{j}^{1})= \left\{ \begin{array}{ccc}
+	-0.5 &   if & $$\frac{l_{t} - W_{j}^{1}}{l_{t}}$$ <- 9 \\
+	\\ $$\frac{l_{t} - W_{j}^{1}}{l_{t}}$$ \times \frac{1}{18} &  if & -9 <$$\frac{l_{t} - W_{j}^{1}}{l_{t}}$$<0 \\
+	\\ $$\frac{l_{t} - W_{j}^{1}}{l_{t}}$$ &  if  & $$\frac{l_{t} - W_{j}^{1}}{l_{t}}$$ \geq 0
+	%\left\{
+\end{array}
+$$
+\\
+\\
+{\bf Household education level}-- This dimension has a weight of $\omega^{2}=0.125$. It is built with the relation between the education of each household member $ij$ with respect to its age as follows 
+
+$$E_{ij} =  \frac{yrs\; of\; education_{ij}}{Norm\;(\;age_{ij}) } \times 1(literacy_{ij})$$
+
+where  $Norm(age_{ij})$ is the normative of the years of education an individual of a specific age should have. $E_{ij}$ is equal to zero for iliterate household members older than 15 years old. Once $1-E_{ij}$ is obtained for each individual $ij$, it is evaluated in their corresponding step function $f_2()$ defined below:
+
+$$ f_2(E_{ij})= \left\{ \begin{array}{ccc}
+(1-E_{ij}) \times \frac{1}{7.33} &   if & 1-E_{ij} < 0\\
+\\ 	1-E_{ij} & if & 1-E_{ij} \geq 0
+% \left\{
+\end{array}$$
+
+To aggregated at household level, we take the average of household members for who  $E_{ij}$ has been computed. When controlling for these characteristics in our main estimates, we will control for the average years of education of people higher than 15 years old and for proportion of illiterate people. 
+\\
+\\
+{\bf Household crowding}-- This indicator has a weight of $\omega^{3} = 0.2386$. It measures whether the occupancy of a dwelling exceeds a benchmark capacity, defined as three people per bedroom. The dimension measure is defined as follows
+
+$$W_{j}^{3} = \frac{3 B_{j}}{N_{j}}$$
+
+where $B_{j}$ and $N_{j}$ is the number of bedrooms and household members in household $j$. This measure is normalized by the following step-wise function:
+
+$$f_{3}(W_{j}^{3})= \left\{ 
+\begin{array}{lcl}
+    -\frac{0.5}{75}\times W_{j}^{3}  &   if  & 1-W_{j}^{3} < 0 \\
+    \\ 	1- W_{j}^{3}                 &   if  & 1-W_{j}^{3} \geq 0
+\end{array}$$
+\\
+{\bf Access to Sewerage}-- This indicator has a weight of $\omega^{4}=0.0608$. It creates a mapping between each type of sewerage connection $W^{4}_j$ into a score as follows: 
+
+$$f_{4}(W_{j}^{4})= \left\{ 
+\begin{array}{lcl}
+    1-1.5    &   if  &  main\; network \\
+    1-1      &   if  & septic\; tank \\
+    1-0.5    &   if  & tubewell\; or \; borehole \\
+    1-0.3    &   if  & surface\; water\; (river,\; dam,\;etc\; ) \\
+    1-0      &   if  & not sewearage\; system 
+\end{array}$$
+\\
+\\
+\newpage
+\noindent{\bf Electricity or gas to cook}-- This indicator has a weight of $\omega^{5}=0.114$. This indicator measures whether the household has either electricity or an adequate fuel to cook. The vector of characteristics that are used for this indicator is $W^{5}_j$. Each household is assigned an specific numeric value according to the following mapping: 
+
+
+$$f_{5}(W_{j}^{5})= \left\{ 
+\begin{array}{lcl}
+    1-1      &   if  & access\; to\; electricity \\
+    1-1      &   if  & cook\; with\; gas \\
+    1-0.5    &   if  & cook\; with\; oil \\
+    1-0.3    &   if  & cook\; with\; wood \\
+    1-0      &   if  & cook\; with\; charcoal
+\end{array}$$
+
+
+To aggregate at municipality level, the formula compute a weighted aggregate of the deprivation mass of each household only for those households which are considered poor under the deprivation mass measured
+
+$$D_{m} = \sum_{j\in m} D_j^2 \times \;members_{j} \times 1(D_j>0) $$
+
+\subsubsubsection{Sources of Variation in FAIS Formula}\label{ap:overtime}
+
+The change of the formula over time is due to three sources of variation: First, the total FAIS pot at national level; second, changes in the poverty line that affects the formula; third, changes in round of the population census used to compute the formula. 
+
+\begin{figure}[H] 
+		\centering
+		
+		\includegraphics[width=0.67\linewidth]{figures/distribution_states.png}
+		\caption{Deviation from Historical Share of FAIS Across States (2001-2015)}\label{fig:B1}
+		
+		\parbox{\textwidth}{\small 
+		\vspace{2eX}
+		\footnotesize	
+		\faisvariation
+		}
+	
+\end{figure}
+
+The above shows the time variation at state level of the share of FAIS transfers. By plotting the shares we isolate over time variation that we obtain from changes in the FAIS' pot at national level. In case the census shock were the only important source of variation we should observe a bi-modal distribution, with two points, before and after the census shock. As it can be seen this is not the case, which means we also get identification from variation in the national poverty line that affects the formula.
+
+Notice that our specification we control by formula's inputs, which means that the variation that we exploit from changing the population census used to compute the formula correspond to the non-linear implications of changing formula's inputs. 
+
+Figure below shows the value of the poverty line updated every year by the Federal government. This update affects differently each municipality according to the height of the household income distribution around the poverty line.\footnote{ Remember the poverty defines the first dimension score, which has the largest weight in the deprivation mass at the household level.} 
+
+\begin{figure}[H] 
+	\centering 
+	
+		\centering
+		\includegraphics[width=\linewidth]{figures/Poverty_line.png}
+		\vspace{0.1cm}
+		\caption{Poverty Line Used to Allocate FAIS Transfers}\label{fig:B2}
+		
+		\parbox{\textwidth}{\small 
+		\vspace{2eX}
+		\footnotesize	
+		\povertylineformula 
+		}
+	
+\end{figure}
+
+\subsection{Public Finance in Mexico}
+    
+\subsubsubsection{Revenues and Spending Categories in Public Finance Data} \label{Ap:fiscalcategories}
+
+The National Institute of Statistics and Geography (INEGI) compiles all administrative records on the source and use of all financial resources in municipalities. This information is openly available through the State and Municipal System Databases (SIMBAD) on the INEGI website. The Figure below presents the maximum degree of disaggregation of public accounts at the municipal level available in SIMBAD. 
+\begin{figure}[H] 
+	\centering 
+	
+		\centering
+		\includegraphics[width=0.8\linewidth]{figures/FAIS_in_local_finances.png}
+		\caption{Fiscal Accounts, Municipal Level}\label{fig:discon}
+	\vspace{0.1cm}
+\parbox{\textwidth}{\small 
+	\footnotesize	
+	\textit{Note. }Constructed using SIMBAD (State and Municipal System Databases), National Institute of Statistics and Geography (INEGI).
+	}
+\end{figure}
+
+\newpage
+
+In our estimations we control for all other sources of fiscal revenues groped in the following categories:
+
+\begin{itemize}
+    \item Own revenues: Includes revenues from taxes, contributions to social security, products, and uses fees and charges
+    \item Unconditional transfers: federal participation resources (known as Ramo 28)
+    \item Conditional transfers: federal contribution (known as Ramo 33), here we include all transfer from Ramo 33 except those that correspond to FAIS.
+    \item Other revenues: They usually come from resources not spent in previous years or other financial instruments
+\end{itemize}
+
+
+\subsubsubsection{Intergovernmental Transfers}\label{intertransfer}
+
+Below a short description of how the main intergovernmental transfers work in Mexico. The idea is to provide evidence that the bulk of public spending allocated to municipalities does not follow similar rules than FAIS providing arguments for a exclusion restriction of our the FAIS formula.
+\\
+\\
+{\bf Non-earmarked Transfers: Ramo 28 - Participaciones Federales}
+
+\begin{itemize}
+    \item 	Fondo General de Participaciones (FGP) - General Participation Fund. Allocation of resources to states, based on:
+    \begin{itemize}
+        \item Allocation received in 2007
+        \item Economic growth
+        \item Tax collection effort
+        \item Size of the population
+    \end{itemize}
+    
+    At least 20\% of the fund allocated to the state will be directly for the municipalities.
+    
+    \item Fondo de Fomento Municipal (FFM) - Municipal Development Fund. Allocation of resources is based on:
+
+    \begin{itemize}
+        \item Allocation received in 2013
+        \item The surplus of each year with respect to 2013 is assigned:
+        \begin{itemize}
+            \item 70\% according to the growth in local collection of property taxes, water rights and the size of the population
+            \item 30\% according to the growth in the collection of the property tax for municipalities where the state government of was responsible for the administration of the tax on behalf of the municipality
+        \end{itemize}
+        
+    \end{itemize}
+    
+    \item Fondo de Fiscalización y Recaudación - Audit and Collection Fund Allocation of resources to states, based on:
+    
+   \begin{itemize}
+   \item Allocation received in 2013
+   \item The surplus of each year with respect to 2013 is allocated according to the evolution of:
+        \begin{itemize}
+            \item Audit indicators
+            \item Tax collection growth in each state
+        \end{itemize}
+   At least 20\% of the fund allocated to the state will be directly for the municipalities.
+   \end{itemize}
+   
+    \item 	Fondo de Extracción de Hidrocarburos (FEXHI) - Fuel Extraction Fund. The fund is distributed to oil-producing states according to:
+    
+   \begin{itemize}
+   \item share of the total value of the gross extraction of fuel
+   \item extraction value of associated gas and non-associated gas
+        
+   At least 20\% of the fund allocated to the state will be directly for the municipalities.
+   \end{itemize}
+   
+\end{itemize}
+
+{\bf Earmarked Transfers: Ramo 33 - Aportaciones Federales}
+\begin{itemize}
+
+\item 	Fortalecimiento de los Municipios (FORTAMUN) - Strengthening of Municipalities Fund
+Allocation of resources to states, based on:
+   \begin{itemize}
+   \item 75\% is assigned according to the resident population
+   \item 25\% based on the floating population 
+        
+   \end{itemize}
+
+\item Earmarked Transfers: Conditional Cash Transfer - Prospera
+   \begin{itemize}
+   \item Selection of localities based on the marginalization index and social backwardness index (education, health, basic services and quality of the dwelling)
+   \item Selection of eligible households within selected localities using proxy means test. The set of variables include: demographics, schooling, labor, access to social security, food access, access to health services, other income, characteristics of the dwelling, assets and social backwardness index at the municipal level. 
+   
+   Although it also focus on measures alike to FAIS index its computation is based on principal components with several different components than FAIS. Also since it use a PCA, it results form a linear o=combination of household characteristics.  
+
+   \end{itemize}
+
+\end{itemize}
+
+\subsection{Pre-trends}\label{ap:c}
+
+%Impact of FAIS on Social Infrastructure
+%Impact of FAIS on Poverty and Mean Income
+%Impact of FAIS on Inequality
+%Impact of FAIS on the Income Distribution Percentiles
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{Pre-trends: Impact of FAIS on Social Infrastructure}
+	\label{trends_inf}
+	\resizebox{11cm}{!}{
+		\input{tables/9_trends_inf.tex}
+				}		
+\parbox{\textwidth}{\small 
+\vspace{2eX}
+\footnotesize	
+ \maintable
+ \trend 
+}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{Pre-trends: Impact of FAIS on Poverty and Mean Income}
+	\label{trends_pov}
+	\resizebox{11cm}{!}{
+			\input{tables/9_trends_pov.tex}
+	}		
+\parbox{\textwidth}{\small 
+\vspace{2eX}
+\footnotesize	
+ \maintable
+ \trend 
+}
+
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{Pre-trends: Impact of FAIS on Inequality}
+	\label{trends_ineq}
+
+	\resizebox{11cm}{!}{
+		
+			
+			\input{tables/9_trends_ineq.tex}
+			
+			}		
+	\parbox{\textwidth}{\small 
+\vspace{2eX}
+	\footnotesize	
+ \maintable
+ \trend 
+}
+
+	
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{External Validity}\label{ap:D}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{Descriptive Statistics of Baseline Characteristics by Weighting Schemes}
+	\label{fs}
+	
+	\resizebox{\textwidth}{!}{
+		\input{tables/Summary.tex}
+	}		
+	
+	\parbox{\textwidth}{\small 
+		\vspace{2eX}
+		\footnotesize	
+		\sammidescrip
+	}
+	
+\end{table}
+
+
+
+\begin{figure}[H] 
+		\centering 
+		
+		\begin{subfigure}[t]{0.77\textwidth} 
+			\centering
+			\includegraphics[width=\linewidth]{figures/obs_res_ols_sc_tr.png}
+			\caption*{\footnotesize A. Observational vs OLS weights} 
+		\end{subfigure} 
+	\vspace{0.1cm} %\hfill
+		\begin{subfigure}[t]{0.77\textwidth} 
+			\centering
+			\includegraphics[width=\linewidth]{figures/obs_res_cf_sc_tr.png}
+			\caption*{\footnotesize B. Observational vs IV weights} 
+		\end{subfigure}
+		\caption{Difference in Means of Baseline Characteristics: Observational vs Effective sample}\label{fig:late}
+	
+		\parbox{\textwidth}{\small 
+			\vspace{2eX}
+			\footnotesize	
+			\sammi
+		}
+\end{figure}
+
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{Descriptive Statistics of Main Sample}
+	\label{poly_inf}
+	\resizebox{\textwidth}{!}{
+		\input{tables/Out_sample.tex}
+	}		
+	\parbox{\textwidth}{\small 
+		\vspace{2eX}
+		\footnotesize	
+		\maintable
+		\polynomial 
+	}
+	
+	
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{MHT}\label{ap:E}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{FWER p-values: Impact of FAIS on All Outcomes by Family Type}
+	\label{ap:E.1}
+	
+	\resizebox{!}{!}{
+		
+		
+		\input{tables/9_mht.tex}
+		
+	}		
+	\parbox{\textwidth}{\small 
+		\vspace{2eX}
+		\footnotesize	
+		\mhtnote 
+	}
+	
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\caption{Indeces: Impact of FAIS on ICW Index by Family type}
+	\label{ap:E.2}
+	
+	\resizebox{11cm}{!}{
+		
+		
+		\input{tables/9_index.tex}
+		
+	}		
+	\parbox{\textwidth}{\small 
+		\vspace{2eX}
+		\footnotesize	
+		\indicestables
+	}
+	
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsubsubsection{Migration}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{table}[H]
+%	\centering
+%	\small
+%	\caption{The Impact of FAIS on Migration}
+%	\label{mig}
+%	\resizebox{11cm}{!}{
+%		\input{FISM_annex/tables/9_pop.tex}
+%	}		
+%	\parbox{\textwidth}{\small 
+%		\vspace{2eX}
+%		\footnotesize	
+%		\maintable
+%		\polynomial 
+%	}
+%\end{table}
+
+
+
+
+%\subsubsubsection{Estimates by deciles (upon request)}
+%\begin{table}[H]
+%	\centering
+%	\small
+%	\caption{Heterogeneity: Impact of FAIS on the Income Distribution Percentiles by Urban/Rural}
+%	\label{ineq_urb}
+%	\resizebox{0.6\textwidth}{!}{
+%		\input{tables/9_dec_urb.tex}
+%	}		
+%	\parbox{\textwidth}{\small 
+%		\vspace{2eX}
+%		\footnotesize	
+%		\maintable
+%		\urban 
+%	}
+%\end{table}
+
+\end{document}

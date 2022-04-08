@@ -1,0 +1,706 @@
+\documentclass[dv_diss_main.tex]{subfiles}
+\input{notestables.tex}
+
+\begin{document}
+
+
+
+\subsection{Military Spending Validation}
+\label{sec:app_data}
+
+This section discusses the quality of the DoD military procurement contract microdata, and we compare them with data previously used in the literature. Figure \ref{fig:spend_comparison} compares the aggregate military spending in nominal terms at national level by fiscal years. We compare the aggregate military procurement spending derived from our microdata with the ones calculated by \cite{Nakamura2014}, \cite{Dupor2017}, and \cite{Demyanyk2019}. Overall, we conclude our data match well the trend and the level of aggregate spending used in previous works. 
+
+\begin{figure}[ht]
+    \begin{center}
+       \begin{tabular}[c]{c}
+    
+    {\includegraphics[height=3.5in,width=5.5in]{figures/graph_milspend_comparison.png}} \\[0.1in]
+
+    
+    \end{tabular}
+     
+    \end{center}
+    \caption{Military Spending Comparisons}
+   
+    \footnotesize{\textit{Note.} The period for the comparison matches the research design of the comparison studies. Data for the comparison studies have been downloaded from their journal's data repository.}
+    \label{fig:spend_comparison}
+\end{figure}
+
+As our empirical specification uses variation in military spending at local level, we also compare the level of spending at different geographically-disaggregated areas. To this end, we regress
+\begin{equation*}
+    Spend^{ours}_{l,t} = \beta Spend^{comp}_{l,t} + \alpha_l + \delta_{t} + \varepsilon_{l,t}
+\end{equation*}
+where $Spend^{ours}_{l,t}$ represents the military spending from our data in locality $l$ at time $t$; $Spend^{comp}_{l,t}$ is the spending for one of the comparison datasets; and $\alpha_l$ and $\delta_{t}$ are locality and time fixed effects, respectively.
+
+Table \ref{tab:comp_geo} reports the results of our comparison. In column 1, we disaggregate the spending at state-level and compare our calculations with the data used by \cite{Nakamura2014}. Column 2 shows the comparison between our state-level aggregation and the ones constructed by \cite{Dupor2017}. Finally, in column 3, we show the CBSA-level comparison between our data and \cite{Demyanyk2019}.
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Military Spending Comparisons by Geography}
+\label{tab:comp_geo}
+\resizebox{\textwidth}{!}{
+    \begin{tabular}{l ccc} \hline 
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    & (1) & (2) & (3) \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    & \cite{Nakamura2014} & \cite{Dupor2017} & \cite{Demyanyk2019} \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    \cmidrule{2-4}
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    
+    $\beta$ & 1.12 & 0.94 & 0.98 \\
+    $95\%$ C. I. for $\beta$ & (1.02 - 1.21) & (0.89 - 0.99) & (0.89 - 1.07) \\
+    \vspace{-0.7pt} & \vspace{-0.7pt} & \vspace{-0.7pt} & \vspace{-0.7pt} \\
+    Observations & 2,050 & 2,200 & 10,636 \\
+    \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt}& \vspace{-3pt} \\
+    Geographic Unit & State & State & CBSA \\
+    \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt}& \vspace{-3pt} \\
+    Number Localities & 50 & 50 & 862 \\
+    \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} \\
+    Period & $1966-2006$ & $1966-2009$ & $2000-2012$ \\
+    \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} \\
+    Locality FE & Yes & Yes & Yes \\
+    \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} \\
+    Time FE & Yes & Yes & Yes \\
+    \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} & \vspace{-3pt} \\
+    $Within-R^{2}$ & 0.97 & 0.96 & 0.79 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\ \hline 
+    
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    
+
+\end{tabular}
+}
+    
+    
+\end{center}
+\footnotesize{\textit{Note. } The values in the brackets report the $95\%$ confidence interval. Standard errors are clustered at the geographic unit level. The period of analysis and the geographic aggregation are chosen to match the research design of the comparison studies. Data for the comparison studies have been downloaded from their journal's data repository.}
+\end{table} 
+
+
+We focus on two tests to evaluate the quality of the geographic distribution of our data compared to previous studies. First, as there were a one-to-one relationship between the geographic allocation between our data and previously used data, then $\beta$ should be equal or close to one. Second, if there is a strong similarity between our data and the others, then the within-$R^{2}$ should be high. The results show that the value of one is either included in the $95\%$ confidence interval or it is close the either upper or lower bound. The largest discrepancy is between our data and the ones from \cite{Nakamura2014}. This discrepancy, as showed in Figure \ref{fig:spend_comparison}, comes from the years between $2000$ and $2006$. The data collected by \cite{Nakamura2014} underestimate the aggregate spending, while ours are similar to the other sources of comparison. The within-$R^{2}$ are over $0.95$ for the comparison with \cite{Nakamura2014} and \cite{Dupor2017}, and it is a little bit lower in the comparison with \cite{Demyanyk2019}. As our data are constructed until $2006$ using NARA and USASpending after that year and \cite{Demyanyk2019} use only USASpending starting from $2001$, these tests also confirm the comparability between the information provided by NARA and USASpending. Overall, these results suggest our data are highly comparable with the ones used in previous studies.
+
+\subsection{Additional Empirical Results}\label{sec:app_empres}
+\subsubsection{List of Major product Codes in each Category of Spending}\label{tab:cat_list}
+
+
+%%%%%%%%% LIST OF PRODUCT CODES %%%%%%%%%%
+\textbf{Products classified as R\&D: }
+
+AA Agriculture, AB Community Services \& Development, AC Defense Equipment, AD Defense - Other, AE & Economic Growth \& Productivity, AF Education, AG Energy, AH Environment, AJ  General Science \& Technology, AK Housing, AL Income Security, AM International Affairs \& Cooperation,
+AN Medical, AP Natural Resources, AQ Social Services, AR Space, AS Transportation - Modal AT Transportation - General, AU  Transportation - Commodity, AV  Mining Activities, AZ  Other Research \& Development
+
+\bigskip
+\newline
+\vspace{4}
+\textbf{Products classified as Services:}
+
+B Special Studies \& Analyses - Not R\&D, C Architect \& Engineering Services, D  Automatic Data Processing \& Telecommunication Services, E  Purchase of Structures \& Facilities, F Natural Resources \& Conservation Services, G Social Services, H Quality Control, Testing Inspection Services, J Maintenance, Repair \& Rebuilding of Equipment, K Modification of Equipment, L Technical Representative Services, M Operation of Government-Owned Facilities, N Installation of Equipment, P Salvage Services, Q  Medical Services, R Professional, Administrative \& Management Support Services, S Utilities \& Housekeeping Services, T  Photographic, Mapping, Printing \& Publication Services, U  Educational \& Training Services, V & Transportation, Travel, \& Relocation Services, W \& Lease or Rental of Equipment, X  Lease or Rental of Facilities, Y  Construction of Structures \& Facilities, Z  Maintenance, Repair or Alteration of Real Property
+
+\newline
+\bigskip
+\textbf{Products classified as Goods: }
+
+10 Weapons, 11	Nuclear Ordnance, 12	Fire Control Equipment, 13	Ammunition \& Explosives,	14	Guide Missiles		15		Aircraft \& Airframe Structural Components,	16	&	Aircraft Components \& Accessories	,	17	&	Aircraft Launching, Landing \& Ground Handling Equipment	,	18	&	Space Vehicles, 19	Ships, Small Craft, Pontoons Floating Docks	20	Ships \& Marine Equipment,
+22	&	Railway Equipment,
+23	&	Ground Effect Vehicles, Motor Vehicles, Trailers \& Cycles;
+24	Tractors;
+25	Vehicular Equipment Components;
+26	Tires \& Tubes
+28	Engines, Turbines \& Components	
+29	&	Engine Accessories
+30	&	Mechanical Power Transmission Equipment
+31	&	Bearings
+32	&	Woodworking Machinery \& Equipment	
+34	&	Metalworking Machinery	
+35	&	Service \& Trade Equipment
+36	&	Special Industry Machinery	
+37	&	Agricultural Machinery \& Equipment	
+38	&	Construction, Mining, Excavation \& Highway Maintenance Equipment	
+39	&	Materials Handling Equipment
+40	&	Rope, Cable, Chain \& Fittings	
+41	&	Refrigeration, Air Conditionning \& Air Circulation
+42	&	Fire Fighting, Rescue \& Safety Equipment	
+43	&	Pumps \& Compressors
+44	&	Furnace, Steam Plant \& Drying Equipment
+45	&	Plumbing, Heating \& Sanitation Equipment
+46	&	Water Purification \& Sewage Treatment Equipment
+47	&	Pipe, Tubing, Hose \& Fittings	
+48	&	Valves
+49	&	Maintenance \& Repair Shop Equipment	
+51	&	Hand Tools
+52	&	Measuring Tools
+53	&	Hardware \& Abrasives
+54	&	Prefabricated Structures \& Scaffolding
+55	&	Lumber, Millwork, Plywood \& Veneer	
+56	&	Construction \& Building Materials
+58	&	Communication, Detection \& Coherent Radiation Systems	
+59	&	Electrical \& Electronic Equipment Components
+60	&	Fiber Optics Materials, Components, Assemblies \& Accessories	61	&	Electric Wire \& Power Distribution Equipment
+62	&	Lighting Fixtures \& Lamps	
+63	&	Alarm, Signal \& Security detection Systems
+65	&	Medical, Dental, \& Veterinary Equipment \& Supplies	
+66	&	Instruments \& Laboratory Equipment
+67	&	Photographic Equipment
+68		Chemicals \& Chemical Products	
+69		Training Aids \& Devices	
+70		Automatic Data Processing Equipment	
+71		Furniture	
+72		Household \& Commercial Furnishings \& Appliances	
+73		Food Preparation \& Serving Equipment	
+74		Office Machines, text Processing Systems \& Visible Record Equipment	
+75		Office Supplies \& Devices	
+76		Books, Maps \& Other Publications	
+77		Musical Instruments, Phonographs \& Home-Type Radios	
+78		Recreational \& Athletic Equipment	
+79		Cleaning Equipment \& Supplies	
+80		Brushes, Paints, Sealers \& Adhesives	
+81		Containers, Packaging \& Packing Supplies	
+83		Textiles, Leather, Furs, Apparel \& Shoe	
+84		Clothing, Individual Equipment \& Insignia	
+85		Toiletries	
+87		Agricultural Supplies	
+88		Live Animals	
+89		Subsistence	
+91		Fuels, Lubricants, Oils \& Waxes	
+93		Nonmetallic Fabricated Materials	
+94		Nonmetallic Crude Materials	
+95		Metal Bars, Sheets \& Shapes	
+96		Ores, Minerals \& Their Primary Products	
+99		Miscellaneous	 
+
+%%%%%%%%% LEVEL AND SHARE FOR MSA SAMPLE %%%%%%%%%%
+\newpage 
+Figure \ref{fig:share_comp_sample} replicates Figure \ref{fig:share_comp} only using the $326$ MSAs in the sample. Results are in line with the ones presented in the main body of the paper. There are two minor differences that we would like to pint out. First, the time series for the aggregate spending in Figure \ref{fig:share_comp_sample} is less smooth than the one that includes all contracts. This finding suggests there is between periods some spending reallocation from (or to) the MSAs in our sample to (or from) counties excluded from the analysis. In principle, as we exploit between periods geographic variation in spending, these movements from (and to) the MSAs in our sample might help in identifying the causal effects. 
+
+\begin{figure}[ht]
+    \begin{center}
+        \begin{tabular}[c]{ccc}
+    
+    \normalsize{\bf Panel A: Aggregate Spending} & & \normalsize{\bf Panel B: Shares by Categories} \\
+    {\includegraphics[height=1.8in,width=2.9in]{figures/graph_milspend_aggregate_sample.png}} & & {\includegraphics[height=1.8in,width=2.9in]{figures/graph_composition_shares_sample.png}} \\[0.1in]
+    
+    
+    
+    \end{tabular}
+    \end{center}
+    
+    \caption{Military Spending - Sample of Analysis}
+    \footnotesize{\textit{Note. } The national level statistics are calculated by aggregating the microdata on military procurement contracts available from NARA and USASpending.gov. Spending is in real terms by deflating the nominal value of a contract by the CPI. The classification of the spending into the three categories is based on the Federal supply classification code. The statistics are calculated by using only contracts allocated to the $296$ MSAs in our sample of analysis.}
+    \label{fig:share_comp_sample}
+\end{figure}
+
+The second minor difference to highlight is that in the first couple of decades the contracts awarded to the MSAs in our sample contain a higher share of R\&D spending and a lower share of service spending than the full universe of procurement contracts.
+
+%%%%%%%%% PER CAPITA MSA RESULTS %%%%%%%%%%
+\newpage 
+
+Table \ref{tab:fm_percapita} carries out a robustness check to the main results in which we use in the empirical specification  per capita variables at MSA-level rather than aggregate variables.
+
+\begin{table}[H]
+    \begin{center}
+    \caption{Fiscal Multipliers - Earnings Per Capita}
+    \begin{tabular}{lccccc} \hline
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+     & (1) & (2) & (3) & (4) & (5) \\
+     & t & t+1 & t+2 & t+3 & t+4 \\ 
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+    Military Spending & 0.382** & 0.967*** & 0.997*** & 1.208** & 1.196** \\
+    & \begin{footnotesize}(0.179)\end{footnotesize} & \begin{footnotesize}(0.366)\end{footnotesize} & \begin{footnotesize}(0.365)\end{footnotesize} & \begin{footnotesize}(0.482)\end{footnotesize} & \begin{footnotesize}(0.502)\end{footnotesize} \\
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    R\&D Spending & 0.367 & 1.613 & 2.793 & 6.169* & 6.088* \\
+    \vspace{4pt} & \begin{footnotesize}(0.472)\end{footnotesize} & \begin{footnotesize}(1.321)\end{footnotesize} & \begin{footnotesize}(1.713)\end{footnotesize} & \begin{footnotesize}(3.655)\end{footnotesize} & \begin{footnotesize}(3.447)\end{footnotesize} \\
+    Services Spending & 0.748* & 1.166** & 1.259** & 1.093** & 1.247** \\
+    \vspace{4pt} & \begin{footnotesize}(0.436)\end{footnotesize} & \begin{footnotesize}(0.543)\end{footnotesize} & \begin{footnotesize}(0.530)\end{footnotesize} & \begin{footnotesize}(0.526)\end{footnotesize} & \begin{footnotesize}(0.565)\end{footnotesize} \\
+    Goods Spending & 0.369 & 0.645 & 0.310 & -0.511 & -0.388 \\
+     & \begin{footnotesize}(0.344)\end{footnotesize} & \begin{footnotesize}(0.537)\end{footnotesize} & \begin{footnotesize}(0.496)\end{footnotesize} & \begin{footnotesize}(1.003)\end{footnotesize} & \begin{footnotesize}(0.844)\end{footnotesize} \\
+
+    \vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+    Observations & 10,656 & 10,656 & 10,656 & 10,656 & 10,656 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    MSA FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Year FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Number MSA & 296 & 296 & 296 & 296 & 296 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Instrument Period & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Analysis Period & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 \\ 
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\ \hline
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    
+    
+    \end{tabular}
+    \label{tab:fm_percapita}
+    \end{center}
+        
+    \footnotesize{\textit{Note. }Panel A reports the estimates from equation \eqref{eq:fm_base}. Panel B reports the estimates from equation \eqref{eq:fm_comp}. Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
+\end{table}
+
+%%%%%%%%% REMOVING ZEROS MSA RESULTS %%%%%%%%%%
+\newpage 
+Table \ref{tab:fm_restricted} reports the point estimates for a subsample of MSAs with complete histories in any spending category.
+
+\begin{table}[H]
+    \begin{center}
+    \caption{Fiscal Multipliers - Removing Zero Spending in Any Category}
+    \resizebox{0.6\columnwidth}{!}{
+    \begin{tabular}{lccccc} \hline
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+     & (1) & (2) & (3) & (4) & (5) \\
+     & t & t+1 & t+2 & t+3 & t+4 \\ 
+     
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{1-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \multicolumn{6}{c}{\textit{\textbf{Part 1: Earnings}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+     Military Spending & 0.268** & 0.671*** & 0.721*** & 0.875*** & 0.798*** \\
+     & \begin{footnotesize}(0.103)\end{footnotesize} & \begin{footnotesize}(0.177)\end{footnotesize} & \begin{footnotesize}(0.184)\end{footnotesize} & \begin{footnotesize}(0.224)\end{footnotesize} & \begin{footnotesize}(0.201)\end{footnotesize} \\
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    R\&D Spending & 0.279 & 0.971** & 1.594* & 1.948 & 2.286* \\
+    \vspace{4pt} & \begin{footnotesize}(0.205)\end{footnotesize} & \begin{footnotesize}(0.400)\end{footnotesize} & \begin{footnotesize}(0.822)\end{footnotesize} & \begin{footnotesize}(1.245)\end{footnotesize} & \begin{footnotesize}(1.268)\end{footnotesize} \\
+    Services Spending & 0.522* & 1.182*** & 1.116*** & 1.430*** & 1.348*** \\
+    \vspace{4pt} & \begin{footnotesize}(0.309)\end{footnotesize} & \begin{footnotesize}(0.331)\end{footnotesize} & \begin{footnotesize}(0.420)\end{footnotesize} & \begin{footnotesize}(0.429)\end{footnotesize} & \begin{footnotesize}(0.387)\end{footnotesize} \\
+    Goods Spending & 0.060 & 0.154 & 0.088 & 0.122 & 0.068 \\
+     & \begin{footnotesize}(0.117)\end{footnotesize} & \begin{footnotesize}(0.217)\end{footnotesize} & \begin{footnotesize}(0.261)\end{footnotesize} & \begin{footnotesize}(0.380)\end{footnotesize} & \begin{footnotesize}(0.325)\end{footnotesize} \\
+
+     
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{1-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \multicolumn{6}{c}{\textit{\textbf{Part 2: Employment}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+    Military Spending & 0.127** & 0.297*** & 0.321*** & 0.380*** & 0.343*** \\
+     & \begin{footnotesize}(0.052)\end{footnotesize} & \begin{footnotesize}(0.086)\end{footnotesize} & \begin{footnotesize}(0.096)\end{footnotesize} & \begin{footnotesize}(0.115)\end{footnotesize} & \begin{footnotesize}(0.102)\end{footnotesize} \\
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    R\&D Spending & 0.285** & 0.516** & 0.879** & 1.124* & 1.235** \\
+    \vspace{4pt} & \begin{footnotesize}(0.142)\end{footnotesize} & \begin{footnotesize}(0.199)\end{footnotesize} & \begin{footnotesize}(0.420)\end{footnotesize} & \begin{footnotesize}(0.572)\end{footnotesize} & \begin{footnotesize}(0.621)\end{footnotesize} \\
+    Services Spending & 0.042 & 0.348** & 0.339* & 0.454** & 0.383* \\
+    \vspace{4pt} & \begin{footnotesize}(0.120)\end{footnotesize} & \begin{footnotesize}(0.165)\end{footnotesize} & \begin{footnotesize}(0.185)\end{footnotesize} & \begin{footnotesize}(0.196)\end{footnotesize} & \begin{footnotesize}(0.199)\end{footnotesize} \\
+    Goods Spending & 0.080 & 0.152 & 0.097 & 0.110 & 0.103 \\
+     & \begin{footnotesize}(0.066)\end{footnotesize} & \begin{footnotesize}(0.124)\end{footnotesize} & \begin{footnotesize}(0.149)\end{footnotesize} & \begin{footnotesize}(0.210)\end{footnotesize} & \begin{footnotesize}(0.182)\end{footnotesize} \\
+
+    \vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+    Observations & 4,068 & 4,068 & 4,068 & 4,068 & 4,068 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    MSA FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Year FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Number MSA & 113 & 113 & 113 & 113 & 113 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Instrument Period & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Analysis Period & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 \\ 
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\ \hline
+    
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    
+    
+    \end{tabular}
+    }
+    \label{tab:fm_restricted}
+    \end{center}
+       
+    \footnotesize{\textit{Note. }Panel A reports the estimates from equation \eqref{eq:fm_base}. Panel B reports the estimates from equation \eqref{eq:fm_comp}. Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
+\end{table}
+
+%%%%%%%%%%%%%%%%5 INDUSTRY CLASSIFICATION ISSUE %%%%%%%%%%%%%
+
+%
+%
+%
+%
+%%%%%%%%%%%%%% INDUSTRY CLASSIFICATION %%%%%%%%%%%%%%%%%
+\newpage
+\begin{table}[H]
+\begin{center}
+\caption{Industry Classification by Labor Intensity}
+\label{tab:indlabint_list}
+\resizebox{0.7\textwidth}{0.46\textheight}{
+\begin{tabular}{ccc} \hline
+\vspace{-3pt} & \vspace{-3pt} \\
+& NAICS Code & Sector \\ 
+\vspace{-3pt} & \vspace{-3pt} \\ \hline
+\vspace{-3pt} & \vspace{-3pt} \\
+\multirow{30}{*}{\makecell{Low \\Labor \\Intensity}} & 111-112 & Farms \\
+& 113-115 & Forestry, fishing, and related activities \\ 
+& 211 & Oil and gas extraction \\ 
+& 212 & Mining, except oil and gas \\ 
+& 22 & Utilities \\
+& 311-312 & Food and beverage and tobacco products \\ 
+& 322 & Paper products \\
+& 324 & Petroleum and coal products \\ 
+& 325 & Chemical products \\ 
+& 327 & Nonmetallic mineral products \\ 
+& 331 & Primary metals \\ 
+& 334 & Computer and electronic products \\ 
+& 3361-3363 & Motor vehicles, bodies and trailers, and parts \\
+& 42 & Wholesale trade \\ 
+& 44-45 & Retail trade \\ 
+& 481 & Air transportation \\ 
+& 483 & Water transportation \\ 
+& 485 & Transit and ground passenger transportation \\ 
+& 486 & Pipeline transportation \\
+& 512 & Motion picture and sound recording industries \\ 
+& 515; 517 & Broadcasting and telecommunications \\
+& 521-522 & Federal Reserve banks, credit intermediation, and related activities \\ 
+& 524 & Insurance carriers and related activities \\
+& 525 & Funds, trusts, and other financial vehicles \\ 
+& 531 & Real estate \\ \
+& 532-533 & Rental and leasing services and lessors of intangible assets \\
+& 5411 & Legal services \\
+& 562 & Waste management and remediation services \\
+& 711-712 & Performing arts, spectator sports, museums, and related activities \\ 
+& 721 & Accommodation \\ 
+\vspace{-3pt} & \vspace{-3pt} \\ \hline
+\vspace{-3pt} & \vspace{-3pt} \\
+\multirow{28}{*}{\makecell{High \\Labor \\Intensity}} & 213 & Support activities for mining \\
+& 23 & Construction \\ 
+& 313-314 & Textile mills and textile product mills \\ 
+& 315-316 & Apparel and leather and allied products \\ 
+& 321 & Wood products \\
+& 323 & Printing and related support activities \\ 
+& 326 & Plastics and rubber products \\ 
+& 332 & Fabricated metal products \\ 
+& 333 & Machinery \\
+& 335 & Electrical equipment, appliances, and components \\ 
+& 3364-3366; 3369 & Other transportation equipment \\ 
+& 337 & Furniture and related products \\ 
+& 339 & Miscellaneous manufacturing \\ 
+& 482 & Rail transportation \\ 
+& 484 & Truck transportation \\ 
+& 487-488; 492 & Other transportation and support activities \\ 
+& 493 & Warehousing and storage \\ 
+& 523 & Securities, commodity contracts, and investments \\
+& 5412-5414; 5416-5419 & Miscellaneous professional, scientific, and technical services \\
+& 5415 & Computer systems design and related services \\ 
+& 55 & Management of companies and enterprises \\ 
+& 561 & Administrative and support services \\ 
+& 61 & Educational services \\
+& 621 & Ambulatory health care services \\ 
+& 624 & Social assistance \\ 
+& 713 & Amusements, gambling, and recreation industries \\ 
+& 722 & Food services and drinking places \\
+& 81 & Other services, except government \\ 
+\vspace{-3pt} & \vspace{-3pt} \\ \hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+
+
+
+
+%%%%%%%%% STATE RESULTS %%%%%%%%%%
+\newpage 
+Table \ref{tab:fm_state} reports the point estimates computed by aggregating military spending at state-level rather than MSA-level.
+\begin{table}[H]
+    \begin{center}
+    \caption{Fiscal Multipliers - State Aggregation}
+    \resizebox{0.6\columnwidth}{!}{
+    \begin{tabular}{lccccc} \hline
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+     & (1) & (2) & (3) & (4) & (5) \\
+     & t & t+1 & t+2 & t+3 & t+4 \\ 
+     
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{1-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \multicolumn{6}{c}{\textit{\textbf{Part 1: Earnings}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+     Military Spending & 0.449* & 1.341** & 1.294** & 1.813** & 1.544** \\
+    & \begin{footnotesize}(0.253)\end{footnotesize} & \begin{footnotesize}(0.601)\end{footnotesize} & \begin{footnotesize}(0.575)\end{footnotesize} & \begin{footnotesize}(0.730)\end{footnotesize} & \begin{footnotesize}(0.642)\end{footnotesize} \\
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    R\&D Spending & -0.708 & 3.812 & 5.380 & 9.514 & 9.784* \\
+    \vspace{4pt} & \begin{footnotesize}(1.594)\end{footnotesize} & \begin{footnotesize}(3.642)\end{footnotesize} & \begin{footnotesize}(4.569)\end{footnotesize} & \begin{footnotesize}(6.146)\end{footnotesize} & \begin{footnotesize}(5.361)\end{footnotesize} \\
+    Services Spending & 4.567* & 6.475* & 5.030* & 4.621* & 4.380* \\
+    \vspace{4pt} & \begin{footnotesize}(2.559)\end{footnotesize} & \begin{footnotesize}(3.811)\end{footnotesize} & \begin{footnotesize}(2.508)\end{footnotesize} & \begin{footnotesize}(2.682)\end{footnotesize} & \begin{footnotesize}(2.497)\end{footnotesize} \\
+    Goods Spending & 0.024 & -0.381 & -0.645 & -0.997 & -1.133 \\
+     & \begin{footnotesize}(0.293)\end{footnotesize} & \begin{footnotesize}(0.699)\end{footnotesize} & \begin{footnotesize}(0.899)\end{footnotesize} & \begin{footnotesize}(1.075)\end{footnotesize} & \begin{footnotesize}(1.016)\end{footnotesize} \\
+
+     
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{1-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \multicolumn{6}{c}{\textit{\textbf{Part 2: Employment}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+     Military Spending & 0.219** & 0.723** & 0.826** & 1.168** & 1.065** \\
+     & \begin{footnotesize}(0.108)\end{footnotesize} & \begin{footnotesize}(0.355)\end{footnotesize} & \begin{footnotesize}(0.332)\end{footnotesize} & \begin{footnotesize}(0.472)\end{footnotesize} & \begin{footnotesize}(0.415)\end{footnotesize} \\
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    R\&D Spending & 0.465 & 2.086* & 2.883** & 5.294** & 5.049** \\
+    \vspace{4pt} & \begin{footnotesize}(0.379)\end{footnotesize} & \begin{footnotesize}(1.094)\end{footnotesize} & \begin{footnotesize}(1.418)\end{footnotesize} & \begin{footnotesize}(2.124)\end{footnotesize} & \begin{footnotesize}(2.110)\end{footnotesize} \\
+    Services Spending & 1.205** & 1.638* & 1.523 & 1.082 & 0.895 \\
+    \vspace{4pt} & \begin{footnotesize}(0.569)\end{footnotesize} & \begin{footnotesize}(0.874)\end{footnotesize} & \begin{footnotesize}(1.035)\end{footnotesize} & \begin{footnotesize}(1.140)\end{footnotesize} & \begin{footnotesize}(1.133)\end{footnotesize} \\
+    Goods Spending & 0.060 & 0.260 & 0.222 & 0.308 & 0.367 \\
+     & \begin{footnotesize}(0.155)\end{footnotesize} & \begin{footnotesize}(0.371)\end{footnotesize} & \begin{footnotesize}(0.457)\end{footnotesize} & \begin{footnotesize}(0.667)\end{footnotesize} & \begin{footnotesize}(0.715)\end{footnotesize} \\
+
+
+    \vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+    Observations & 1,836 & 1,836 & 1,836 & 1,836 & 1,836 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    State FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Year FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Number State & 51 & 51 & 51 & 51 & 51 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Instrument Period & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Analysis Period & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 \\ 
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\ \hline
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    
+    
+    \end{tabular}
+    }
+    \label{tab:fm_state}
+    \end{center}
+        
+    \footnotesize{\textit{Note. }Panel A reports the estimates from equation \eqref{eq:fm_base}. Panel B reports the estimates from equation \eqref{eq:fm_comp}. Standard errors are clustered at state level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
+\end{table}
+
+\newpage 
+Table \ref{tab:earn_spill} reports the point estimates of the effects of local government spending on earnings in the neighboring locations.
+\begin{table}[H]
+
+    \begin{center}
+    \caption{Fiscal Multiplier in the Neighboring Locations - Earnings}
+    \begin{tabular}{lccccc} \hline
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+     & (1) & (2) & (3) & (4) & (5) \\
+     & t & t+1 & t+2 & t+3 & t+4 \\ 
+     
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+    Military Spending & 0.010 & 0.002 & 0.003 & 0.007 & 0.014 \\
+    & \begin{footnotesize}(0.009)\end{footnotesize} & \begin{footnotesize}(0.012)\end{footnotesize} & \begin{footnotesize}(0.012)\end{footnotesize} & \begin{footnotesize}(0.012)\end{footnotesize} & \begin{footnotesize}(0.014)\end{footnotesize} \\
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    R\&D Spending & -0.052** & -0.246 & -0.536* & -1.023 & -0.357 \\
+    \vspace{4pt} & \begin{footnotesize}(0.023)\end{footnotesize} & \begin{footnotesize}(0.243)\end{footnotesize} & \begin{footnotesize}(0.280)\end{footnotesize} & \begin{footnotesize}(0.671)\end{footnotesize} & \begin{footnotesize}(0.350)\end{footnotesize} \\
+    Services Spending & 0.037*** & 0.054*** & 0.110* & 0.283 & 0.146 \\
+    \vspace{4pt} & \begin{footnotesize}(0.007)\end{footnotesize} & \begin{footnotesize}(0.015)\end{footnotesize} & \begin{footnotesize}(0.057)\end{footnotesize} & \begin{footnotesize}(0.195)\end{footnotesize} & \begin{footnotesize}(0.147)\end{footnotesize} \\
+    Goods Spending & 0.019 & 0.044 & 0.082 & 0.103 & 0.037 \\
+     & \begin{footnotesize}(0.030)\end{footnotesize} & \begin{footnotesize}(0.096)\end{footnotesize} & \begin{footnotesize}(0.094)\end{footnotesize} & \begin{footnotesize}(0.074)\end{footnotesize} & \begin{footnotesize}(0.056)\end{footnotesize} \\
+
+    \vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+    Observations & 10,224 & 10,224 & 10,224 & 10,224 & 10,224 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    MSA FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Year FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Number MSA & 284 & 284 & 284 & 284 & 284 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Instrument Period & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Analysis Period & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 \\ 
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\ \hline
+    
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    
+    \end{tabular}
+    \label{tab:earn_spill}
+    \end{center}
+       
+    \footnotesize{\textit{Note. }Estimates are computed from  equation \eqref{eq:fm_spill}. The unit of observations are MSAs in different years. Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
+
+\end{table}
+
+%%%%%%%%%% PRIVATE CONSUMPTION EXPENDITURE %%%%%%%%%%%%%%
+\newpage
+Table \ref{tab:crowd_privcons} reports the crowding out effect of government spending on private consumption expenditure.
+
+\begin{table}[H]
+    \begin{center}
+    \caption{Private Consumption Expenditure Crowding-out Effect}
+    \begin{tabular}{lccccc} \hline
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+     & (1) & (2) & (3) & (4) & (5) \\
+     & t & t+1 & t+2 & t+3 & t+4 \\ 
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+    Military Spending & 0.071 & 0.054 & -0.013 & -0.169 & -0.192 \\
+    & \begin{footnotesize}(0.067)\end{footnotesize} & \begin{footnotesize}(0.229)\end{footnotesize} & \begin{footnotesize}(0.299)\end{footnotesize} & \begin{footnotesize}(0.526)\end{footnotesize} & \begin{footnotesize}(0.505)\end{footnotesize} \\
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
+    \cmidrule{2-6}
+    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    R\&D Spending & -0.591 & -0.208 & 0.435 & 0.365 & 0.820 \\
+    \vspace{4pt} & \begin{footnotesize}(1.061)\end{footnotesize} & \begin{footnotesize}(1.185)\end{footnotesize} & \begin{footnotesize}(2.178)\end{footnotesize} & \begin{footnotesize}(2.107)\end{footnotesize} & \begin{footnotesize}(2.273)\end{footnotesize} \\
+    Services Spending & 0.624 & 0.504 & -0.049 & -0.261 & -0.373 \\
+    \vspace{4pt} & \begin{footnotesize}(0.747)\end{footnotesize} & \begin{footnotesize}(1.119)\end{footnotesize} & \begin{footnotesize}(1.637)\end{footnotesize} & \begin{footnotesize}(1.572)\end{footnotesize} & \begin{footnotesize}(1.694)\end{footnotesize} \\
+    Goods Spending & 0.088 & -0.056 & -0.164 & -0.328 & -0.493 \\
+     & \begin{footnotesize}(0.164)\end{footnotesize} & \begin{footnotesize}(0.281)\end{footnotesize} & \begin{footnotesize}(0.558)\end{footnotesize} & \begin{footnotesize}(0.868)\end{footnotesize} & \begin{footnotesize}(0.851)\end{footnotesize} \\
+
+    \vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+    Observations & 918 & 918 & 918 & 918 & 918 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    State FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Year FE & Yes & Yes & Yes & Yes & Yes \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Number State & 51 & 51 & 51 & 51 & 51 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Instrument Period & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    Analysis Period & 1998-2015 & 1998-2015 & 1998-2015 & 1998-2015 & 1998-2015 \\ 
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\ \hline
+
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    
+    
+    \end{tabular}
+    \label{tab:crowd_privcons}
+    \end{center}
+        
+    \footnotesize{\textit{Note. }Standard errors are clustered at state-level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
+
+\end{table}
+
+
+%%%%%%%%%% SCATTERPLOT GOV SPENDIGN AND MPC %%%%%%%%%%%%%%
+\newpage
+Table \ref{fig:scatter_spendmpc} reports the scatter plot between the state MPC and the average state government spending.
+
+\begin{figure}[ht]
+    \begin{center}
+     
+    \begin{tabular}[c]{ccc}
+    
+    \normalsize{Panel A: Total Spending} & & \normalsize{Panel B: Spending in Goods} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_spendtot_mpc.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_spendgood_mpc.png}} \\[0.1in]
+    
+    \normalsize{Panel C: Spending in Services} & & \normalsize{Panel D: Spending in R\&D} \\
+    {\includegraphics[height=1.5in,width=2.8in]{figures/graph_spendservice_mpc.png}} & & {\includegraphics[height=1.5in,width=2.8in]{figures/graph_spendrd_mpc.png}} \\[0.1in]
+    
+    
+    \end{tabular} 
+     \caption{Scatter Plot between Government Spending and MPC}
+    \end{center}
+    
+    \label{fig:scatter_spendmpc}
+    
+    \footnotesize{\textit{Note. } The unit of observations are states in different years. The balanced panel used for the scatter plot includes $27$ states. The average spending by state is calculated over the period $1980-2015$.}
+
+\end{figure}
+
+ 
+
+
+
+\end{document}

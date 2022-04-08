@@ -1,0 +1,263 @@
+\begin{tabular}{lccccc}
+
+\toprule
+
+
+
+%\multicolumn{1}{l}{} & \multicolumn{1}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }}
+%					 & \multicolumn{1}{c}{\substack{\text{\it Law-implied} \\ \text{\it FAIS transfers}}}
+%					 & \multicolumn{3}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }} 
+%					  \\ 
+
+%This p option in multicolumn help with miktex but do the same as substack that works on overleaf. Worse to make aligments of title so we end up doing manually 
+%\multicolumn{1}{l}{} & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Observed \\ FAIS transfers}}}
+%					 & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Law-implied \\  FAIS transfers}}}
+%					 & \multicolumn{3}{p{2cm}}{\centering{\scriptsize{ Observed FAIS \\  transfers}}}
+%					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ Observed   }}
+					 & \multicolumn{1}{c}{\scriptsize{ Law-implied }}
+					 & \multicolumn{3}{c}{\scriptsize{ Observed   }}
+					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{3}{c}{\scriptsize{ FAIS  }}
+					 \\ 
+					 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\footnotesize{(OLS)}}
+					 & \multicolumn{1}{c}{\footnotesize{(RF)}}
+					 & \multicolumn{3}{c}{\footnotesize{(2SLS)}} 
+					  \\ 
+
+
+
+
+
+\cmidrule(lr{1mm}){2-2} 
+\cmidrule(lr{1mm}){3-3} 
+\cmidrule(lr{1mm}){4-6}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)} & 
+						\multicolumn{1}{c}{(5)}  \\ 
+
+
+\midrule
+
+%\multicolumn{7}{c}{\textit{Panel   A: Direct policy outcomes on infrastructure}} \\                                                          
+
+% 1st row 
+\textit{Total Population}   &  -0.009   &
+						   -0.158***   &
+						   -0.213***   &  
+   						   -0.169***   &  
+						   -0.193***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.006)}  &
+			    \footnotesize{(0.024)}  &
+			    \footnotesize{(0.027)}  &
+				\footnotesize{(0.026)}  &
+				\footnotesize{(0.032)}  \\
+
+\vspace{4pt} &  \footnotesize{[--]}  &
+			    \footnotesize{[--]}  &
+			    \footnotesize{[844]}  &
+				\footnotesize{[809]}  &
+				\footnotesize{[590]}  \\
+
+% 2nd row 
+\textit{Adult population}   &  -0.008**   &
+						   -0.084***   &
+						   -0.147***   &  
+   						   -0.090***   &  
+						   -0.104***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.004)}   &
+			    \footnotesize{(0.014)}   &
+			    \footnotesize{(0.017)}   &
+				\footnotesize{(0.015)}   &
+				\footnotesize{(0.018)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[688]}   &
+				\footnotesize{[559]}   \\
+
+% 3rd row  			
+\textit{Primary or less}   &  -0.003   &
+						   -0.054***   &
+						   -0.102***   &  
+   						   -0.057***   &  
+						   -0.066***   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.004)}   &
+			    \footnotesize{(0.014)}   &
+			    \footnotesize{(0.014)}   &
+				\footnotesize{(0.014)}   &
+				\footnotesize{(0.017)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[786]}   &
+				\footnotesize{[605]}   \\
+
+% 4th row  				
+\textit{Secondary education}   &  -0.004   &
+						   -0.085***   &
+						   -0.108***   &  
+   						   -0.093***   &  
+						   -0.104***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.006)}   &
+			    \footnotesize{(0.019)}   &
+			    \footnotesize{(0.021)}   &
+				\footnotesize{(0.021)}   &
+				\footnotesize{(0.024)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[816]}   &
+				\footnotesize{[615]}   \\
+
+% 5th row  				
+\textit{College}   &  0.062***   &
+						   0.071**   &
+						   0.069*   &  
+   						   0.066*   &  
+						   0.088**   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.013)}   &
+			    \footnotesize{(0.034)}   &
+			    \footnotesize{(0.037)}   &
+				\footnotesize{(0.036)}   &
+				\footnotesize{(0.043)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[838]}   &
+				\footnotesize{[822]}   &
+				\footnotesize{[584]}   \\
+
+% 6th row  				
+\textit{Young (15-25)}   &  -0.017***   &
+						   -0.113***   &
+						   -0.172***   &  
+   						   -0.118***   &  
+						   -0.137***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.005)}   &
+			    \footnotesize{(0.016)}   &
+			    \footnotesize{(0.019)}   &
+				\footnotesize{(0.017)}   &
+				\footnotesize{(0.020)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[774]}   &
+				\footnotesize{[606]}   \\
+
+
+% 7th row  				
+\textit{Prime age (15-55)}   &  -0.007*   &
+						   -0.083***   &
+						   -0.148***   &  
+   						   -0.089***   &  
+						   -0.102***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.004)}   &
+			    \footnotesize{(0.015)}   &
+			    \footnotesize{(0.019)}   &
+				\footnotesize{(0.017)}   &
+				\footnotesize{(0.020)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[745]}   &
+				\footnotesize{[594]}   \\
+
+% 8th row  				
+\textit{Old (+55)}   &  -0.006   &
+						   -0.079***   &
+						   -0.129***   &  
+   						   -0.082***   &  
+						   -0.098***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.004)}   &
+			    \footnotesize{(0.011)}   &
+			    \footnotesize{(0.013)}   &
+				\footnotesize{(0.012)}   &
+				\footnotesize{(0.014)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[802]}   &
+				\footnotesize{[583]}   \\
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   &
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   &
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Dep. var pre-trends}  & 			    &   
+												& 
+												& 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Fiscal revenues}  	& 					&   
+												& 
+												& 
+												&
+								$\checkmark$   \\
+
+
+\midrule		
+
+
+Observations 			&	 6143   &   
+							 6143   & 
+							 6123   & 
+							 6123   &
+							 6107   \\
+
+Municipalities  		&   2154   &   
+							 2154   & 
+							 2119   & 
+							 2119   &
+							 2118   \\
+
+
+\bottomrule
+
+\end{tabular}%

@@ -1,0 +1,129 @@
+\begin{tabular}{lcccc}
+
+\toprule
+
+
+
+\multicolumn{1}{l}{} & \multicolumn{4}{c}{\footnotesize{Observed FAIS Transfers (2SLS)}} \\ 
+
+\cmidrule(lr{1mm}){2-5}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)}  \\ 
+
+\midrule
+
+
+% 1st row 
+\textit{Social infrastructure index}   &  0.102***   &
+						   0.077***   &
+						   0.109***   &  
+   						   0.098***   \\
+
+\vspace{4pt} &  \footnotesize{(0.020)}  &
+			    \footnotesize{(0.019)}  &
+			    \footnotesize{(0.025)}  &
+				\footnotesize{(0.022)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[841]} &
+				\footnotesize{[595]} &
+				\footnotesize{[594]} \\
+				
+
+
+
+
+% 2nd row 
+\textit{Poverty and mean income index}   &  -0.001   &
+						   0.021   &
+						   0.009   &  
+   						   -0.029   \\
+
+\vspace{4pt} &  \footnotesize{(0.046)}  &
+			    \footnotesize{(0.046)}  &
+			    \footnotesize{(0.056)}  &
+				\footnotesize{(0.057)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[845]} &
+				\footnotesize{[593]} &
+				\footnotesize{[588]} \\
+				
+
+
+% 3rd row  			
+\textit{Inequality index}   &  0.193***   &
+						   0.196***   &
+						   0.244***   &  
+   						   0.244***   \\
+
+\vspace{4pt} &  \footnotesize{(0.072)}  &
+			    \footnotesize{(0.073)}  &
+			    \footnotesize{(0.090)}  &
+				\footnotesize{(0.090)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[836]} &
+				\footnotesize{[591]} &
+				\footnotesize{[588]} \\
+			
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    \\
+
+
+{\bf Pre-trends Control}       &	   &   
+									   & 
+									   &
+									   \\
+
+
+\textit{$\Delta Y^{2000}_m$ $\times$ $1(year=t)$}  & 	
+												   & $\checkmark$	
+												   & 
+												   & \\
+
+
+\textit{$\Delta Y^{t-1}_m$} 						&	
+													&   
+													& $\checkmark$	
+													& \\
+
+\textit{$Y_{m,t-1}$}  								&
+													& 
+													& 
+													& $\checkmark$	\\
+
+\midrule		
+
+
+Observations 			&	 6123   &   
+							 6123   & 
+							 6107   & 
+							 6107   \\
+
+Municipalities  		&    2119   &   
+							 2119   & 
+							 2118   & 
+							 2118   \\
+
+\bottomrule
+
+\end{tabular}%

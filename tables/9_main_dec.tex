@@ -1,0 +1,275 @@
+
+
+\begin{tabular}{lccccc}
+
+\toprule
+
+
+
+%\multicolumn{1}{l}{} & \multicolumn{1}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }}
+%					 & \multicolumn{1}{c}{\substack{\text{\it Law-implied} \\ \text{\it FAIS transfers}}}
+%					 & \multicolumn{3}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }} 
+%					  \\ 
+
+%This p option in multicolumn help with miktex but do the same as substack that works on overleaf. Worse to make aligments of title so we end up doing manually 
+%\multicolumn{1}{l}{} & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Observed \\ FAIS transfers}}}
+%					 & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Law-implied \\  FAIS transfers}}}
+%					 & \multicolumn{3}{p{2cm}}{\centering{\scriptsize{ Observed FAIS \\  transfers}}}
+%					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ Observed   }}
+					 & \multicolumn{1}{c}{\scriptsize{ Law-implied }}
+					 & \multicolumn{3}{c}{\scriptsize{ Observed   }}
+					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{3}{c}{\scriptsize{ FAIS  }}
+					 \\ 
+					 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\footnotesize{(OLS)}}
+					 & \multicolumn{1}{c}{\footnotesize{(RF)}}
+					 & \multicolumn{3}{c}{\footnotesize{(2SLS)}} 
+					  \\ 
+
+
+
+\cmidrule(lr{1mm}){2-2} 
+\cmidrule(lr{1mm}){3-3} 
+\cmidrule(lr{1mm}){4-6}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)} & 
+						\multicolumn{1}{c}{(5)} \\
+
+\midrule
+                                            
+
+% 1st row 
+\textit{10 pctle}   &  -0.023**   &
+						   -0.024   &
+						   -0.007   &  
+   						   -0.023   &  
+						   -0.030   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.011)}  &
+			    \footnotesize{(0.020)}  &
+			    \footnotesize{(0.021)}  &
+				\footnotesize{(0.020)}  &
+				\footnotesize{(0.025)}  \\
+
+\vspace{4pt} &  \footnotesize{[--]}  &
+			    \footnotesize{[--]}  &
+			    \footnotesize{[844]}  &
+				\footnotesize{[847]}  &
+				\footnotesize{[594]}  \\
+
+% 2nd row 
+\textit{20 pctle}   &  -0.010   &
+						   -0.023   &
+						   -0.005   &  
+   						   -0.020   &  
+						   -0.029   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.010)}   &
+			    \footnotesize{(0.018)}   &
+			    \footnotesize{(0.019)}   &
+				\footnotesize{(0.019)}   &
+				\footnotesize{(0.023)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[848]}   &
+				\footnotesize{[591]}   \\
+
+% 3rd row  			
+\textit{30 pctle}   &  0.000   &
+						   -0.017   &
+						   0.000   &  
+   						   -0.013   &  
+						   -0.022   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.009)}   &
+			    \footnotesize{(0.018)}   &
+			    \footnotesize{(0.018)}   &
+				\footnotesize{(0.018)}   &
+				\footnotesize{(0.022)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[847]}   &
+				\footnotesize{[590]}   \\
+
+
+% 4rd row  			
+\textit{40 pctle}   &  0.008   &
+						   -0.011   &
+						   0.006   &  
+   						   -0.006   &  
+						   -0.013   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.009)}   &
+			    \footnotesize{(0.017)}   &
+			    \footnotesize{(0.018)}   &
+				\footnotesize{(0.018)}   &
+				\footnotesize{(0.022)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[845]}   &
+				\footnotesize{[588]}   \\
+
+% 5th row  			
+\textit{50 pctle}   &  0.015*   &
+						   -0.003   &
+						   0.014   &  
+   						   0.003   &  
+						   -0.004   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.009)}   &
+			    \footnotesize{(0.018)}   &
+			    \footnotesize{(0.018)}   &
+				\footnotesize{(0.018)}   &
+				\footnotesize{(0.022)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[842]}   &
+				\footnotesize{[586]}   \\
+
+% 6th row  			
+\textit{60 pctle}   &  0.023**   &
+						   0.006   &
+						   0.022   &  
+   						   0.012   &  
+						   0.007   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.010)}   &
+			    \footnotesize{(0.018)}   &
+			    \footnotesize{(0.018)}   &
+				\footnotesize{(0.018)}   &
+				\footnotesize{(0.022)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[840]}   &
+				\footnotesize{[585]}   \\
+
+% 7th row  			
+\textit{70 pctle}   &  0.030***   &
+						   0.016   &
+						   0.032*   &  
+   						   0.023   &  
+						   0.019   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.010)}   &
+			    \footnotesize{(0.019)}   &
+			    \footnotesize{(0.019)}   &
+				\footnotesize{(0.019)}   &
+				\footnotesize{(0.023)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[837]}   &
+				\footnotesize{[584]}   \\
+
+% 8th row  			
+\textit{80 pctle}   &  0.037***   &
+						   0.029   &
+						   0.045**   &  
+   						   0.036*   &  
+						   0.035   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.010)}   &
+			    \footnotesize{(0.020)}   &
+			    \footnotesize{(0.020)}   &
+				\footnotesize{(0.020)}   &
+				\footnotesize{(0.024)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[835]}   &
+				\footnotesize{[582]}   \\
+
+% 9th row  			
+\textit{90 pctle}   &  0.045***   &
+						   0.046**   &
+						   0.065***   &  
+   						   0.055**   &  
+						   0.057**   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.011)}   &
+			    \footnotesize{(0.022)}   &
+			    \footnotesize{(0.022)}   &
+				\footnotesize{(0.022)}   &
+				\footnotesize{(0.027)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[833]}   &
+				\footnotesize{[581]}   \\
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   &
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   &
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Dep. var pre-trends}  & 			    &   
+												& 
+												& 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Other sources of public revenues}  	& 					&   
+												& 
+												& 
+												&
+								$\checkmark$   \\
+
+
+\midrule		
+
+
+Observations 			&	 6143   &   
+							 6143   & 
+							 6123   & 
+							 6123   &
+							 6107   \\
+
+Municipalities  		&    2154   &   
+							 2154   & 
+							 2119   & 
+							 2119   &
+							 2118   \\
+
+
+\bottomrule
+
+\end{tabular}%

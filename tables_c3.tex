@@ -1,0 +1,101 @@
+\documentclass[dv_diss_main.tex]{subfiles}
+\input{notestables.tex}
+
+\begin{document}
+
+%------------------------------
+\begin{table}[H]
+\begin{center}
+    \caption{Descriptive Statistics of Military Contracts by Components}\label{tab:desstats_contracts}
+	\resizebox{!}{!}{
+    \input{tables/stats_contract.tex}
+    }
+\end{center}
+   \\
+\footnotesize{\textit{Note.} The national level statistics are calculated by aggregating the microdata on military procurement contracts available from NARA and USASpending.gov. Spending is in real terms by deflating the nominal value of a contract by the CPI. The classification of the spending into the three categories is based on the Federal supply classification code. The statistics are calculated only using contracts in the $296$ MSAs that compose our sample of analysis.}
+
+\end{table} 
+\newpage
+
+%------------------------------
+\begin{table}[H]
+\begin{center}
+    \caption{Descriptive Statistics of the Geographic Allocation by Components}
+    \label{tab:desstats_cbsas}
+	\resizebox{!}{!}{
+    \input{tables/stats_MSA.tex}
+    }
+\end{center}
+    \\
+\footnotesize{\textit{Note. } These statistics are computed by using the $296$ MSAs included in our sample.}
+\end{table} 
+\newpage
+
+
+%------------------------------
+\begin{table}[H]
+    \begin{center}
+      \caption{Estimates of fiscal multiplier - earnings and employment}
+    \label{tab:fm_main}
+	\resizebox*{!}{0.9\textheight}	{
+    \input{tables/main_results.tex}
+    }  
+    \end{center}
+    \footnotesize{\textit{Note. } Panel A reports the estimates from equation \eqref{eq:fm_base}. Panel B reports the estimates from equation \eqref{eq:fm_comp}. Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
+\end{table}
+
+\newpage
+
+%------------------------------
+\begin{table}[H]
+    \begin{center}
+    \caption{Fiscal Multipliers by Labor Intensity - Earnings}
+    \label{tab:fm_labint}
+	\resizebox{\textwidth}{!}{
+    \input{tables/lab_int_W.tex}
+    }
+    \end{center}
+        
+    \footnotesize{\textit{Note. } Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively. The end-of-the-table statistics refer to both panels.}
+    
+\end{table}
+\newpage
+%------------------------------
+
+\begin{table}[H]
+    \begin{center}
+    \caption{Entry and Exit Rates}
+    \label{tab:entry_rate}
+	\resizebox{!}{!}{
+    \input{tables/entry_exit.tex}
+    }
+    \end{center}
+    \footnotesize{\textit{Note. } Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively. The end-of-the-table statistics refer to both panels.}
+\end{table}
+
+\newpage
+%------------------------------
+
+\begin{table}[H]
+    \begin{center}
+    \caption{Innovation - Number of Patents}
+    \label{tab:patent}
+	\resizebox{!}{!}{
+    \input{tables/patent.tex}
+    }
+    \end{center}
+    
+    \footnotesize{\textit{Note.} Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
+        
+    
+\end{table}
+
+
+
+
+%Table \ref{tab:fm_main} reports the point estimates corresponding to Figure \ref{fig:fm_earnings} and \ref{fig:fm_employment} in the main body of the paper. 
+
+
+
+
+\end{document}

@@ -1,0 +1,206 @@
+\begin{tabular}{lccccc}
+
+\toprule
+
+
+
+%\multicolumn{1}{l}{} & \multicolumn{1}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }}
+%					 & \multicolumn{1}{c}{\substack{\text{\it Law-implied} \\ \text{\it FAIS transfers}}}
+%					 & \multicolumn{3}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }} 
+%					  \\ 
+
+%This p option in multicolumn help with miktex but do the same as substack that works on overleaf. Worse to make aligments of title so we end up doing manually 
+%\multicolumn{1}{l}{} & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Observed \\ FAIS transfers}}}
+%					 & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Law-implied \\  FAIS transfers}}}
+%					 & \multicolumn{3}{p{2cm}}{\centering{\scriptsize{ Observed FAIS \\  transfers}}}
+%					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ Observed   }}
+					 & \multicolumn{1}{c}{\scriptsize{ Law-implied }}
+					 & \multicolumn{3}{c}{\scriptsize{ Observed   }}
+					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{3}{c}{\scriptsize{ FAIS  }}
+					 \\ 
+					 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\footnotesize{(OLS)}}
+					 & \multicolumn{1}{c}{\footnotesize{(RF)}}
+					 & \multicolumn{3}{c}{\footnotesize{(2SLS)}} 
+					  \\ 
+
+
+
+
+
+\cmidrule(lr{1mm}){2-2} 
+\cmidrule(lr{1mm}){3-3} 
+\cmidrule(lr{1mm}){4-6}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)} & 
+						\multicolumn{1}{c}{(5)}  \\ 
+
+
+\midrule
+
+%\multicolumn{7}{c}{\textit{Panel   A: Direct policy outcomes on infrastructure}} \\                                                          
+
+% 1st row 
+\textit{Access to electric lighting}   &  0.460**   &
+						   0.820**   &
+						   1.171***   &  
+   						   0.912***   &  
+						   1.003**   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.191)}  &
+			    \footnotesize{(0.357)}  &
+			    \footnotesize{(0.374)}  &
+				\footnotesize{(0.350)}  &
+				\footnotesize{(0.427)}  \\
+
+\vspace{4pt} &  \footnotesize{[--]}  &
+			    \footnotesize{[--]}  &
+			    \footnotesize{[844]}  &
+				\footnotesize{[830]}  &
+				\footnotesize{[598]}  \\
+
+
+
+% 2nd row 
+\textit{Connection to sewerage}   &  1.722***   &
+						   6.207***   &
+						   6.219***   &  
+   						   6.160***   &  
+						   7.698***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.486)}   &
+			    \footnotesize{(0.966)}   &
+			    \footnotesize{(0.978)}   &
+				\footnotesize{(0.975)}   &
+				\footnotesize{(1.170)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[850]}   &
+				\footnotesize{[600]}   \\
+
+
+
+% 3rd row  			
+\textit{Access piped water}   &  1.226***   &
+						   4.634***   &
+						   4.525***   &  
+   						   4.945***   &  
+						   5.729***   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.407)}   &
+			    \footnotesize{(0.954)}   &
+			    \footnotesize{(0.952)}   &
+				\footnotesize{(0.951)}   &
+				\footnotesize{(1.140)}   \\
+
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[855]}   &
+				\footnotesize{[596]}   \\
+
+
+% 4th row  				
+\textit{Housing (floor quality)}   &  3.843***   &
+						   3.816***   &
+						   4.792***   &  
+   						   4.175***   &  
+						   4.832***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.510)}   &
+			    \footnotesize{(0.700)}   &
+			    \footnotesize{(0.727)}   &
+				\footnotesize{(0.742)}   &
+				\footnotesize{(0.893)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[855]}   &
+				\footnotesize{[596]}   \\
+
+
+% 5th row 
+\textit{Access to sanitation}   &  -0.346   &
+						   -0.308   &
+						   -0.447   &  
+   						   -0.288   &  
+						   -0.388   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.265)}   &
+			    \footnotesize{(0.573)}   &
+			    \footnotesize{(0.550)}   &
+				\footnotesize{(0.586)}   &
+				\footnotesize{(0.721)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[815]}   &
+				\footnotesize{[582]}   \\
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   &
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   &
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Dep. var pre-trends}  & 			    &   
+												& 
+												& 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Fiscal revenues}  	& 					&   
+												& 
+												& 
+												&
+								$\checkmark$   \\
+
+
+\midrule		
+
+
+Observations 			&	 6143   &   
+							 6143   & 
+							 6123   & 
+							 6123   &
+							 6107   \\
+
+Municipalities  		&   2154   &   
+							 2154   & 
+							 2119   & 
+							 2119   &
+							 2118   \\
+\bottomrule
+
+\end{tabular}%

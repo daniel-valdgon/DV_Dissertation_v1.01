@@ -1,0 +1,203 @@
+\begin{tabular}{lcccc}
+
+\toprule
+
+
+
+%\multicolumn{1}{l}{} & \multicolumn{1}{c}{\substack{\text{\it Observed} \\ \text{\it FISM transfers} }}
+%					 & \multicolumn{1}{c}{\substack{\text{\it Law-implied} \\ \text{\it FISM transfers}}}
+%					 & \multicolumn{3}{c}{\substack{\text{\it Observed} \\ \text{\it FISM transfers} }} 
+%					  \\ 
+
+%This p option in multicolumn help with miktex but do the same as substack that works on overleaf. Worse to make aligments of title so we end up doing manually 
+%\multicolumn{1}{l}{} & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Observed \\ FISM transfers}}}
+%					 & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Law-implied \\  FISM transfers}}}
+%					 & \multicolumn{3}{p{2cm}}{\centering{\scriptsize{ Observed FISM \\  transfers}}}
+%					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ Observed   }}
+					 & \multicolumn{1}{c}{\scriptsize{ Law-implied }}
+					 & \multicolumn{3}{c}{\scriptsize{ Observed   }}
+					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ FISM  }}
+					 & \multicolumn{1}{c}{\scriptsize{ FISM  }}
+					 & \multicolumn{3}{c}{\scriptsize{ FISM  }}
+					 \\ 
+					 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\footnotesize{(OLS)}}
+					 & \multicolumn{1}{c}{\footnotesize{(RF)}}
+					 & \multicolumn{3}{c}{\footnotesize{(2SLS)}} 
+					  \\ 
+
+
+
+
+
+\cmidrule(lr{1mm}){2-2} 
+\cmidrule(lr{1mm}){3-3} 
+\cmidrule(lr{1mm}){4-6}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)} & 
+						\multicolumn{1}{c}{$$name_c5$$}  \\ 
+
+
+\midrule
+
+%\multicolumn{7}{c}{\textit{Panel   A: Direct policy outcomes on infrastructure}} \\                                                          
+
+% 1st row 
+\textit{Income per-capita (log points)}   &  0.040**   &
+						   0.026   &
+						   0.028   &  
+   						   0.058**   \\
+
+\vspace{4pt} &  \footnotesize{(0.019)}  &
+			    \footnotesize{(0.019)}  &
+			    \footnotesize{(0.029)}  &
+				\footnotesize{(0.024)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[885]} &
+				\footnotesize{[396]} &
+				\footnotesize{[592]} \\
+				
+
+
+
+
+% 2nd row 
+\textit{Poverty rate (FPL)}   &  -1.195   &
+						   -0.548   &
+						   0.355   &  
+   						   -2.465**   \\
+
+\vspace{4pt} &  \footnotesize{(0.865)}  &
+			    \footnotesize{(0.851)}  &
+			    \footnotesize{(1.318)}  &
+				\footnotesize{(1.108)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[893]} &
+				\footnotesize{[396]} &
+				\footnotesize{[598]} \\
+				
+
+
+% 3rd row  			
+\textit{Poverty rate (CPL)}   &  -1.352   &
+						   -0.774   &
+						   0.299   &  
+   						   -2.611**   \\
+
+\vspace{4pt} &  \footnotesize{(0.864)}  &
+			    \footnotesize{(0.853)}  &
+			    \footnotesize{(1.302)}  &
+				\footnotesize{(1.095)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[892]} &
+				\footnotesize{[396]} &
+				\footnotesize{[598]} \\
+				
+
+% 4th row  				
+\textit{Middle class (APL)}   &  -1.148   &
+						   -0.806   &
+						   -0.352   &  
+   						   -2.050**   \\
+
+\vspace{4pt} &  \footnotesize{(0.769)}  &
+			    \footnotesize{(0.770)}  &
+			    \footnotesize{(1.154)}  &
+				\footnotesize{(0.962)}  \\
+
+\vspace{4pt} &  \footnotesize{[889]} &
+				\footnotesize{[887]} &
+				\footnotesize{[396]} &
+				\footnotesize{[598]} \\
+				
+
+
+% 5th row 
+\textit{$$name5_p1$$}   &  $$c1_p1_v5_starbeta$$   &
+						   $$c2_p1_v5_starbeta$$   &
+						   $$c3_p1_v5_starbeta$$   &  
+   						   $$c4_p1_v5_starbeta$$   \\
+
+\vspace{4pt} &  \footnotesize{($$c1_p1_v5_se$$)}  &
+			    \footnotesize{($$c2_p1_v5_se$$)}  &
+			    \footnotesize{($$c3_p1_v5_se$$)}  &
+				\footnotesize{($$c4_p1_v5_se$$)}  \\
+
+\vspace{4pt} &  \footnotesize{[$$c1_p1_v5_wid$$]} &
+				\footnotesize{[$$c2_p1_v5_wid$$]} &
+				\footnotesize{[$$c3_p1_v5_wid$$]} &
+				\footnotesize{[$$c4_p1_v5_wid$$]} \\
+				
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    \\
+
+\textit{Fiscal revenues}  	& 	$\checkmark$    &    
+								$\checkmark$    &  
+								$\checkmark$    &  
+								$\checkmark$    \\
+
+{\bf Pre-trends Control}       &	   &   
+									   & 
+									   &
+									   \\
+
+
+\textit{y90s $\times$ 1(year=t)}  & 				&   
+								$\checkmark$	& 
+												& 
+												\\
+
+
+\textit{Formula inputs $\times$ 1(year=t)} 		& 				&   
+																& 
+												$\checkmark$	& 
+												\\
+
+\textit{$y_{mt-1}$}  				& 				&   
+												& 
+												& 
+								$\checkmark$	\\
+
+
+
+\midrule		
+
+
+Observations 			&	 6123   &   
+							 6123   & 
+							 6107   & 
+							 6107   \\
+
+Municipalities  		&    2119   &   
+							 2119   & 
+							 2118   & 
+							 2118   \\
+
+\bottomrule
+
+\end{tabular}%

@@ -1,0 +1,220 @@
+% File 'template.tex'
+
+\documentclass[12pt]{report}
+
+\usepackage{url}
+\usepackage[round, sort]{natbib}
+\usepackage[dvips]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ARR's Added            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[hyperfootnotes=false]{hyperref}
+        % See that the hyperfootnotes=false turns on and off the hyper-noted-footnotes. In this case, cause the hyperref package has issues with the hyper-noting of footnotes, i'll just turn it off. 
+\usepackage{xcolor}
+	\definecolor{gublue}{RGB}{4, 30, 66} % Georgetown's university blue
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=gublue,      
+    urlcolor=gublue,
+    pdftitle={Essay}, 
+        %title of the PDF output file, to be displayed in the title bar of the window. 
+    pdfpagemode=FullScreen,
+    citecolor=gublue,
+            % This changes the color of the citations.
+    }
+
+\usepackage{booktabs} 
+        % Enhanced tables
+\usepackage{subfiles}
+        % To create standalone documents
+\usepackage{ragged2e} 
+        % To set ragged text and to allow hyphenation
+\usepackage{tikz}
+        
+\usepackage{subcaption}
+        % Important so we could use the \begin{subfigures}<->\end{subfigures} command. 
+
+        %%%
+\usepackage[toc]{appendix}
+\usepackage{etoolbox}
+        %%% This line of code is used to fix the issue involving the hyperref package not working with the Appendix's TOC. 
+\patchcmd{\footref}{\ref}{\ref*}{}{}
+        % This line of code is used together with the [hyperfootnotes=false] command.
+%\usepackage[compatibility=false,labelfont=it,textfont={bf,it}]{caption}
+%\captionsetup{labelfont=bf,textfont=bf}
+\usepackage{titlefoot}
+        % To add the blind footnotes on chapter 2. Helps with giving credit to other authors. 
+
+\usepackage{multirow}
+        % Without this, the command \multirow won't work and the online appendix from chapter 3 would give us problems when compiling the document. 
+\usepackage{makecell}
+        % Without this, the command \makecell won't work and the online appendix from chapter 3 would give us problems in formatting. 
+
+
+
+
+
+
+
+% If there are any other \usepackage commands, put them here
+
+\newtheorem{theorem}{Theorem}[section]
+\newenvironment{proof}[0]{\textit{Proof.}}{}
+\newcommand{\qed}{\hfill $\Box$}
+
+% To comment out multiple lines of text.
+\long\def\comment#1{}
+
+\usepackage{guthesis}
+
+
+
+\title{Essays in (we need a title for the whole dissertation)}
+
+\author{Daniel Valderrama}
+
+\previousdegree{M.Sc.}
+
+\thisdegree{Doctor of Philosophy}  % or Doctor of Philosophy, etc.
+
+\thisdiscipline{Economics}
+
+\thesistype{Dissertation}     % or Dissertation
+
+% defense or approval date, not today's date...
+\thesisday{19}
+\thesismonth{Apr}
+\thesisyear{2022}
+
+\professor{Laurent Bouton}
+%\secondprofessor{First I.\ Last}   % Only if you have 2 major professors!
+
+\fulltitle{Full Title}
+
+\indexwords{word1, word2, word3}
+
+\dean{Timothy A.\ Barbari}
+
+\memberi{First I.\ Last}
+\memberii{First I.\ Last}
+% Use \memberiii, \memberiv, \memberv for up to 3 more members if needed.
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\maketitle    % Creates title page, copyright page if any, and approval page.
+
+\begin{abstract}
+This is the abstract, a brief summary of the contents of the entire thesis.
+It is limited to 350 words.
+
+
+\end{abstract}
+
+
+\chapter*{Dedication}
+
+The Dedication is optional.
+
+
+\chapter*{Acknowledgments}
+
+I am indebted to Laurent Bouton for multiple discussions on this project. I am also grateful to Martin
+Ravallion, Garance Genicot and Toshihiko Mukoyama for detailed comments to this document. I also want
+to give special thanks for detailed comments to Carlos Rodriguez-Castellan, Jorge P ́erez P ́erez, Pedro Juarros,
+Mary Ann Bronson, Frank Vella, Maria Hernandez de Benito, Carolina Concha Arraigada, Ana Maria Mayda,
+Andrew Zeitlin, Rodimiro Rodrigo, Umberto Muratori, Juan Margitic, JJ Nadeo, Kevin Ankey, Minji Kim, Lina
+Yu, Deniz Sanin, Carlo Alcaraz, Lorenzo Aldeco, David Jaume, Maria Jos ́e Orraca, Alejandrina Salcedo, Enrico
+Moretti, Dix Carneiro, Vincent Pons, Paul Novosad, Leopoldo Fergusson, Alberto Bisin.
+
+
+%\pseudochapter{Preface}
+
+%A preface is not an introduction, and most theses do not need them.
+
+
+\tableofcontents
+
+\listoffigures  % Optional - Omit this line if you don't want a list of figures.
+\listoftables   % Optional - Omit this line if you don't want a list of tables.
+
+\newpage
+
+\pagenumbering{arabic}  % Ordinary pages have Arabic numerals.
+
+\chapter{Politics, Spending and Local Economics Growth:
+Evidence From Mexico}\label{chap:c1}
+
+\subfile{1_introduction.tex}
+\subfile{2_Institutional_Context.tex}\label{sec:context}
+\subfile{3a_Identification.tex}\label{sec:identification}
+\subfile{4_Data.tex}\label{sec:data}
+\subfile{3b_validity.tex}\label{sec:validity}
+\subfile{5_Results.tex}\label{sec:results}
+\subfile{5c_alt_emp.tex}
+\subfile{6_Channels.tex}\label{sec:channels}
+\subfile{6a_Economic_channels.tex}\label{sec:channels}
+\subfile{6b_Channels.tex}\label{sec:channels}
+\subfile{7_Conclusions.tex}
+
+
+\chapter{Distributional Effects of Intergovernmental Transfers in Mexico}\label{chap:c2}
+    \unmarkedfntext{This second chapter of my dissertation is part of a joint research project with Kiyomi Cadena, Laura Moreno-Herrera \& Carlos Rodríguez-Castelán.}
+
+\subfile{Chapter_2.tex}
+
+\chapter{Heterogeneous Spending, Heterogeneous Multipliers}\label{chap:c3}
+
+\subfile{Chapter_3.tex}
+
+
+
+\appendixtocoff
+\appendices
+
+\chapter{Appendix Chapter 1}
+\section{Figures \& Tables}
+\subfile{figures_c1.tex}\label{FirstAppendixC1}
+\subfile{tables_c1.tex}\label{SecondAppendixC1}
+
+\chapter{Appendix Chapter 2}
+\section{Figures \& Tables}
+\subfile{figures_c2.tex}\label{FirstAppendixC2}
+\subfile{tables_c2.tex}\label{SecondAppendixC2}
+\section{Online Appendix}
+\subfile{online_appendix_c2.tex}\label{ThirdAppendixC2}
+
+\chapter{Appendix Chapter 3}
+\section{Figures \& Tables}
+\subfile{figures_c3.tex}
+\subfile{tables_c3.tex}
+\section{Online Appendix}
+\subfile{online_appendix_c3.tex}
+
+
+
+\nocite{*} 
+        % To show all references. (not cited on the document, ideally it's just to show them initially.)
+
+
+
+    \bibliographystyle{plainnat}
+    \bibliography{BibFile}  % thesis.bib
+
+
+
+\typeout{***}
+\typeout{*** Note!}
+\typeout{*** Because this document has a table of contents,}
+\typeout{*** you must run LaTeX TWICE to get it to print correctly.}
+\typeout{***}
+
+\end{document}
+

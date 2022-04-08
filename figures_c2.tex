@@ -1,0 +1,103 @@
+\documentclass[dv_diss_main.tex]{subfiles}
+\input{notestables.tex}
+
+\begin{document}
+
+\begin{figure}[H] 
+	\centering 
+	
+	\includegraphics[width=\linewidth]{figures/Descriptives_2.png}
+	\caption{Sources of Fiscal Revenues by Deciles of Total Revenues in 2015}\label{fig:des4}
+
+\parbox{\textwidth}{\small 
+	\vspace{2eX}
+	\scriptsize	
+	\revenuebydecil 
+}
+	
+\end{figure}
+
+\begin{figure}[H] 
+	\centering 
+	
+	\begin{subfigure}[t]{0.9\textwidth} 
+		\centering
+		\includegraphics[width=\linewidth]{figures/Share_FAISnonrecipients_trend.png}
+		\caption*{\footnotesize A. Share of Municipalities not Receiving Transfers by Type} 
+	\end{subfigure} 
+	\vspace{0.1cm}
+	%\hfill
+	\begin{subfigure}[t]{0.9\textwidth} 
+		\centering
+		\includegraphics[width=\linewidth]{figures/PerCapitaIncome_pertrack.png}
+		\caption*{\footnotesize B. Average Local Revenues Per-capita by Source} 
+	\end{subfigure}
+	\caption{FAIS Transfers 1990-2015}\label{fig:des1A}
+	\parbox{\textwidth}{\small 
+		\vspace{2eX}
+		\scriptsize	
+		\figurefaistrends 		
+	}
+\end{figure}
+
+
+\begin{figure}[H] 
+	\centering 
+	
+	\includegraphics[width=0.8\linewidth]{figures/FAIS_des_income.png}
+	\caption{Per-capita Household Income Growth Across Municipalities, Various Percentiles of the Distribution, 2000–14}\label{fig:des2}
+	
+	\parbox{\textwidth}{\small 
+	\vspace{2eX}
+	\scriptsize	
+	\pcincomegrowth
+	}
+\end{figure}
+	
+\begin{figure}[H] 
+	\centering 
+	
+	\includegraphics[width=\linewidth]{figures/descriptives_1.png}
+	\caption{Percentage of Municipalities that Reduced Inequality, by Income Group, 2000–14}\label{fig:des3}
+	
+	\parbox{\textwidth}{\small 
+	\vspace{2eX}
+	\scriptsize	
+	\pcinequality
+	}
+\end{figure}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Instrument Variables Strategy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H] 
+	\centering 
+	
+	\begin{subfigure}[t]{0.67\textwidth} 
+		\centering
+		\includegraphics[width=\linewidth]{figures/First_Stage_G1_v2.png}
+		\caption*{\footnotesize A. Prediction of Law Implied Transfer on Actual Transfers} 
+	\end{subfigure} 
+	\vspace{0.1cm}
+	
+	%\hfill
+	\begin{subfigure}[t]{0.67\textwidth} 
+		\centering
+		\includegraphics[width=\linewidth]{figures/First_Stage_G3_v2.png}
+		\caption*{\footnotesize B. Distribution of the Mean-standardized Residual of Law-implied FAIS Transfers} 
+	\end{subfigure}
+	\caption{Descriptive Statistics and Cross-Sectional Correlations}\label{fig:des5}
+\parbox{\textwidth}{\small 
+	\vspace{2eX}
+	\scriptsize	
+	\firststage
+
+}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

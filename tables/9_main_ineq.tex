@@ -1,0 +1,182 @@
+\begin{tabular}{lccccc}
+
+\toprule
+
+
+
+%\multicolumn{1}{l}{} & \multicolumn{1}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }}
+%					 & \multicolumn{1}{c}{\substack{\text{\it Law-implied} \\ \text{\it FAIS transfers}}}
+%					 & \multicolumn{3}{c}{\substack{\text{\it Observed} \\ \text{\it FAIS transfers} }} 
+%					  \\ 
+
+%This p option in multicolumn help with miktex but do the same as substack that works on overleaf. Worse to make aligments of title so we end up doing manually 
+%\multicolumn{1}{l}{} & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Observed \\ FAIS transfers}}}
+%					 & \multicolumn{1}{p{2cm}}{\centering{\scriptsize{ Law-implied \\  FAIS transfers}}}
+%					 & \multicolumn{3}{p{2cm}}{\centering{\scriptsize{ Observed FAIS \\  transfers}}}
+%					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ Observed   }}
+					 & \multicolumn{1}{c}{\scriptsize{ Law-implied }}
+					 & \multicolumn{3}{c}{\scriptsize{ Observed   }}
+					 \\ 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{1}{c}{\scriptsize{ FAIS  }}
+					 & \multicolumn{3}{c}{\scriptsize{ FAIS  }}
+					 \\ 
+					 
+\multicolumn{1}{l}{} & \multicolumn{1}{c}{\footnotesize{(OLS)}}
+					 & \multicolumn{1}{c}{\footnotesize{(RF)}}
+					 & \multicolumn{3}{c}{\footnotesize{(2SLS)}} 
+					  \\ 
+
+
+
+
+
+\cmidrule(lr{1mm}){2-2} 
+\cmidrule(lr{1mm}){3-3} 
+\cmidrule(lr{1mm}){4-6}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)} & 
+						\multicolumn{1}{c}{(5)}  \\ 
+
+
+\midrule
+
+%\multicolumn{7}{c}{\textit{Panel   A: Direct policy outcomes on infrastructure}} \\                                                          
+
+% 1st row 
+\textit{Gini index}   &  1.113***   &
+						   1.658***   &
+						   1.870***   &  
+   						   1.805***   &  
+						   2.053***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.222)}  &
+			    \footnotesize{(0.433)}  &
+			    \footnotesize{(0.447)}  &
+				\footnotesize{(0.443)}  &
+				\footnotesize{(0.545)}  \\
+
+\vspace{4pt} &  \footnotesize{[--]}  &
+			    \footnotesize{[--]}  &
+			    \footnotesize{[844]}  &
+				\footnotesize{[836]}  &
+				\footnotesize{[584]}  \\
+
+% 2nd row 
+\textit{Income Ratio 90/10}   &  0.388***   &
+						   0.195   &
+						   0.229   &  
+   						   0.231   &  
+						   0.242   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.078)}   &
+			    \footnotesize{(0.150)}   &
+			    \footnotesize{(0.154)}   &
+				\footnotesize{(0.154)}   &
+				\footnotesize{(0.186)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[838]}   &
+				\footnotesize{[592]}   \\
+
+% 3rd row  			
+\textit{Income Ratio 50/10}   &  0.082***   &
+						   0.021   &
+						   0.028   &  
+   						   0.028   &  
+						   0.026   \\  
+						   
+\vspace{4pt} &  \footnotesize{(0.015)}   &
+			    \footnotesize{(0.028)}   &
+			    \footnotesize{(0.029)}   &
+				\footnotesize{(0.029)}   &
+				\footnotesize{(0.035)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[832]}   &
+				\footnotesize{[586]}   \\
+
+% 4th row  				
+\textit{Income Ratio 90/50}   &  0.071***   &
+						   0.100***   &
+						   0.109***   &  
+   						   0.108***   &  
+						   0.124***   \\  
+						   
+
+\vspace{4pt} &  \footnotesize{(0.015)}   &
+			    \footnotesize{(0.030)}   &
+			    \footnotesize{(0.031)}   &
+				\footnotesize{(0.031)}   &
+				\footnotesize{(0.037)}   \\
+
+\vspace{4pt} &  \footnotesize{[--]}   &
+			    \footnotesize{[--]}   &
+			    \footnotesize{[844]}   &
+				\footnotesize{[837]}   &
+				\footnotesize{[591]}   \\
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   &
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   &
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Dep. var pre-trends}  & 			    &   
+												& 
+												& 
+								$\checkmark$    &
+								$\checkmark$    \\
+
+\textit{Fiscal revenues}  	& 					&   
+												& 
+												& 
+												&
+								$\checkmark$   \\
+
+
+\midrule		
+
+
+Observations 			&	 6143   &   
+							 6143   & 
+							 6123   & 
+							 6123   &
+							 6107   \\
+
+Municipalities  		&   2154   &   
+							 2154   & 
+							 2119   & 
+							 2119   &
+							 2118   \\
+
+
+\bottomrule
+
+\end{tabular}%

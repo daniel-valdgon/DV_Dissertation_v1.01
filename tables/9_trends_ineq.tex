@@ -1,0 +1,149 @@
+\begin{tabular}{lcccc}
+
+\toprule
+
+
+
+\multicolumn{1}{l}{} & \multicolumn{4}{c}{\footnotesize{Observed FAIS Transfers (2SLS)}} \\ 
+
+\cmidrule(lr{1mm}){2-5}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)}  \\ 
+
+\midrule
+
+
+% 1st row 
+\textit{Gini index}   &  1.870***   &
+						   1.805***   &
+						   2.499***   &  
+   						   2.395***   \\
+
+\vspace{4pt} &  \footnotesize{(0.447)}  &
+			    \footnotesize{(0.443)}  &
+			    \footnotesize{(0.563)}  &
+				\footnotesize{(0.561)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[836]} &
+				\footnotesize{[584]} &
+				\footnotesize{[584]} \\
+				
+
+
+
+
+% 2nd row 
+\textit{Income Ratio 90/10}   &  0.229   &
+						   0.231   &
+						   0.308   &  
+   						   0.262   \\
+
+\vspace{4pt} &  \footnotesize{(0.154)}  &
+			    \footnotesize{(0.154)}  &
+			    \footnotesize{(0.190)}  &
+				\footnotesize{(0.189)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[838]} &
+				\footnotesize{[590]} &
+				\footnotesize{[591]} \\
+				
+
+
+% 3rd row  			
+\textit{Income Ratio 50/10}   &  0.028   &
+						   0.028   &
+						   0.041   &  
+   						   0.035   \\
+
+\vspace{4pt} &  \footnotesize{(0.029)}  &
+			    \footnotesize{(0.029)}  &
+			    \footnotesize{(0.036)}  &
+				\footnotesize{(0.036)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[832]} &
+				\footnotesize{[590]} &
+				\footnotesize{[591]} \\
+				
+
+% 4th row  				
+\textit{Income Ratio 90/50}   &  0.109***   &
+						   0.108***   &
+						   0.142***   &  
+   						   0.134***   \\
+
+\vspace{4pt} &  \footnotesize{(0.031)}  &
+			    \footnotesize{(0.031)}  &
+			    \footnotesize{(0.038)}  &
+				\footnotesize{(0.038)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[837]} &
+				\footnotesize{[587]} &
+				\footnotesize{[584]} \\
+				
+
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    \\
+
+
+{\bf Pre-trends Control}       &	   &   
+									   & 
+									   &
+									   \\
+
+
+\textit{$\Delta Y^{2000}_m$ $\times$ $1(year=t)$}  & 	
+												   & $\checkmark$	
+												   & 
+												   & \\
+
+
+\textit{$\Delta Y^{t-1}_m$} 						&	
+													&   
+													& $\checkmark$	
+													& \\
+
+\textit{$Y_{m,t-1}$}  								&
+													& 
+													& 
+													& $\checkmark$	\\
+
+\midrule		
+
+
+Observations 			&	 6123   &   
+							 6123   & 
+							 6107   & 
+							 6107   \\
+
+Municipalities  		&    2119   &   
+							 2119   & 
+							 2118   & 
+							 2118   \\
+
+\bottomrule
+
+\end{tabular}%

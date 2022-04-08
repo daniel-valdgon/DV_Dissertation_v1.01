@@ -1,0 +1,149 @@
+\begin{tabular}{lcccc}
+
+\toprule
+
+
+
+\multicolumn{1}{l}{} & \multicolumn{4}{c}{\footnotesize{Observed FAIS Transfers (2SLS)}} \\ 
+
+\cmidrule(lr{1mm}){2-5}  % \\ was before, it was creating an extra additional line
+
+
+\multicolumn{1}{l}{} &  \multicolumn{1}{c}{(1)} &
+						\multicolumn{1}{c}{(2)} & 
+						\multicolumn{1}{c}{(3)} & 
+						\multicolumn{1}{c}{(4)}  \\ 
+
+\midrule
+
+
+% 1st row 
+\textit{Mean household income (log)}   &  0.041**   &
+						   0.027   &
+						   0.047*   &  
+   						   0.060**   \\
+
+\vspace{4pt} &  \footnotesize{(0.020)}  &
+			    \footnotesize{(0.019)}  &
+			    \footnotesize{(0.024)}  &
+				\footnotesize{(0.024)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[837]} &
+				\footnotesize{[590]} &
+				\footnotesize{[590]} \\
+				
+
+
+
+
+% 2nd row 
+\textit{Food poverty rate}   &  -1.196   &
+						   -0.542   &
+						   -1.605   &  
+   						   -2.493**   \\
+
+\vspace{4pt} &  \footnotesize{(0.883)}  &
+			    \footnotesize{(0.868)}  &
+			    \footnotesize{(1.112)}  &
+				\footnotesize{(1.124)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[845]} &
+				\footnotesize{[598]} &
+				\footnotesize{[597]} \\
+				
+
+
+% 3rd row  			
+\textit{Capabilities poverty rate}   &  -1.378   &
+						   -0.795   &
+						   -1.911*   &  
+   						   -2.675**   \\
+
+\vspace{4pt} &  \footnotesize{(0.880)}  &
+			    \footnotesize{(0.869)}  &
+			    \footnotesize{(1.100)}  &
+				\footnotesize{(1.110)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[844]} &
+				\footnotesize{[596]} &
+				\footnotesize{[597]} \\
+				
+
+% 4th row  				
+\textit{Assets poverty rate}   &  -1.219   &
+						   -0.875   &
+						   -1.752*   &  
+   						   -2.174**   \\
+
+\vspace{4pt} &  \footnotesize{(0.783)}  &
+			    \footnotesize{(0.784)}  &
+			    \footnotesize{(0.966)}  &
+				\footnotesize{(0.971)}  \\
+
+\vspace{4pt} &  \footnotesize{[844]} &
+				\footnotesize{[839]} &
+				\footnotesize{[594]} &
+				\footnotesize{[597]} \\
+				
+
+
+
+\midrule
+{\bf Controls}    					&	   &   
+										   & 
+										   & 
+										   \\
+
+
+\textit{Municipality and year FE}    &	$\checkmark$   &   
+										$\checkmark$   & 
+										$\checkmark$   & 
+										$\checkmark$   \\
+
+\textit{Formula inputs}  	& 	$\checkmark$    &   
+								$\checkmark$    & 
+								$\checkmark$    & 
+								$\checkmark$    \\
+
+
+{\bf Pre-trends Control}       &	   &   
+									   & 
+									   &
+									   \\
+
+
+\textit{$\Delta Y^{2000}_m$ $\times$ $1(year=t)$}  & 	
+												   & $\checkmark$	
+												   & 
+												   & \\
+
+
+\textit{$\Delta Y^{t-1}_m$} 						&	
+													&   
+													& $\checkmark$	
+													& \\
+
+\textit{$Y_{m,t-1}$}  								&
+													& 
+													& 
+													& $\checkmark$	\\
+
+\midrule		
+
+
+Observations 			&	 6123   &   
+							 6123   & 
+							 6107   & 
+							 6107   \\
+
+Municipalities  		&    2119   &   
+							 2119   & 
+							 2118   & 
+							 2118   \\
+
+\bottomrule
+
+\end{tabular}%
