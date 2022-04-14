@@ -53,17 +53,17 @@ This specification recast the dataset such that the unit of observation is a clo
 %This specification also controls for the running variable. Different to the other specification I allow the  the effect of the running variable to be different for each election-year $k$, which means that each . Also I limit the inference to the subsample of close elections, which make of this estimation a dynamic regression discontinuity design. The dynamic specification I estimate is the following: 
 
 
-\begin{equation}
+\begin{equation}\label{eq:event}
 \begin{split}
 y_{m,e,k}= &\; \alpha + \sum_{j=-3, j\neq -1}^3  \beta^j \; \mathbbm{1}{(k=j)}\times aligned_{m,e} \\
 & + \sum_{j=-3, j\neq -1}^3 \mathbbm{1}{(k=j)} \Big[ \theta^j VM_{m,e} \times aligned_{m,e} +   \gamma^j \; VM_{m,e}\times(1-aligned_{m,e}) \Big] \\
-& +  \delta_{m,e} + \psi_{e,k}  + \epsilon_{m,e,k} \;\; \;\forall \;\; VM_{m,e} \in (-h, h) \label{eq:event}
+& +  \delta_{m,e} + \psi_{e,k}  + \epsilon_{m,e,k} \;\; \;\forall \;\; VM_{m,e} \in (-h, h)
 \end{split}
 \end{equation}
 
 
-\noindent where  $y_{m,e,k}$ is the inverse hyperbolic sine transformation of outcome $y$ measure at $k$ years from the election cycle $e$. Notice that this specification includes years before and after the election took place, while in equation (2) I focus only on growth rates in the post-election period.  
-Correspondingly, $\delta_{m,e}$ are municipality-election cycle fixed effects, while $\psi_{k,e}$ controls non-linearly for macroeconomic shocks and the trend of each election cycle $e$. Similar to the main specification, I estimate equation (3) using a local linear regression of the running variable with triangular kernel weights and a five percentage point bandwidth. Standard errors are clustered at the municipality level to account for the serial correlation of political alignment over time \citep{bertrand2004much}. 
+\noindent where  $y_{m,e,k}$ is the inverse hyperbolic sine transformation of outcome $y$ measure at $k$ years from the election cycle $e$. Notice that this specification includes years before and after the election took place, while in equation \eqref{eq:didrdd} I focus only on growth rates in the post-election period.  
+Correspondingly, $\delta_{m,e}$ are municipality-election cycle fixed effects, while $\psi_{k,e}$ controls non-linearly for macroeconomic shocks and the trend of each election cycle $e$. Similar to the main specification, I estimate equation \eqref{eq:event} using a local linear regression of the running variable with triangular kernel weights and a five percentage point bandwidth. Standard errors are clustered at the municipality level to account for the serial correlation of political alignment over time \citep{bertrand2004much}. 
 
 Notice that the identifying variation comes from variation in trends among the subset of close elections that took place within a specific election cycle (i.e. cohort). This ensures that my estimates do not suffer from the standard critiques that apply to two-way fixed effects models. This estimator can also be seen as an analog of the identification strategy proposed by \citep{cengiz2019effect} that circumvents problems related to event studies with staggered adoption, which is relevant in this case because the timing of elections is staggered across states. 
 
@@ -71,7 +71,7 @@ Notice that the identifying variation comes from variation in trends among the s
 
 % These municipalities with multiple close elections may represent a problem as long as i) the alignment affects a persistent over the long run, and ii) having a close election during the election cycle $e$ affects the probability of a close election in $e+1$. Table XX shows that successive close elections are only XX\% of our estimates and Appendix XX\% show our main results using only information from the first close election are qualitatively similar.
 
-The identification assumption of this specification is that conditional on the election cycle, the trends among aligned and non-aligned municipalities are continuous at the alignment threshold.\footnote{Notice that this is a weaker identification assumption than the standard parallel trends assumption, which states that aligned and misaligned municipalities would have the same trends in the absence of the treatment. This setting allows these trends to be systematically different as long as they are continuous at the  cut-off.} Although one cannot test this assumption directly, it is possible to perform indirect tests to support their plausibility. Section 5 presents the results of such examinations. 
+The identification assumption of this specification is that conditional on the election cycle, the trends among aligned and non-aligned municipalities are continuous at the alignment threshold.\footnote{Notice that this is a weaker identification assumption than the standard parallel trends assumption, which states that aligned and misaligned municipalities would have the same trends in the absence of the treatment. This setting allows these trends to be systematically different as long as they are continuous at the  cut-off.} Although one cannot test this assumption directly, it is possible to perform indirect tests to support their plausibility. Section \ref{sec:ValResDes} presents the results of such examinations. 
 
 \end{document}
 

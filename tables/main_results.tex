@@ -1,89 +1,59 @@
 
-    \begin{tabular}{lccccc} \hline
+       \begin{tabular}{lccccc} \hline
     \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
-     & (1) & (2) & (3) & (4) & (5) \\
      & t & t+1 & t+2 & t+3 & t+4 \\ 
-     
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
+     & (1) & (2) & (3) & (4) & (5) \\
+    \hline
+    %\cmidrule{1-6}
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    \cmidrule{1-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    \multicolumn{6}{c}{\textit{\textbf{Part 1: Earnings}}} \\ 
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
-
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    &\multicolumn{5}{c}{\textbf{Dep Variable: Earnings}} \\ 
     \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
-    \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+      &  &  &  &  \\
+   
+    \multicolumn{1}{l}{\textbf{Panel A: Aggregate spending}} & & & & \\
+    %\cmidrule{2-6}
     Military Spending & 0.212*** & 0.515*** & 0.561*** & 0.629*** & 0.587*** \\
     & \begin{footnotesize}(0.074)\end{footnotesize} & \begin{footnotesize}(0.152)\end{footnotesize} & \begin{footnotesize}(0.167)\end{footnotesize} & \begin{footnotesize}(0.187)\end{footnotesize} & \begin{footnotesize}(0.168)\end{footnotesize} \\
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+    %\cmidrule{2-6}
     
-    \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
-    \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+   \multicolumn{1}{l}{\textbf{Panel B: spending by category}} & & & & \\ 
+    %\cmidrule{2-6}
+   
     R\&D Spending & 0.305* & 1.326*** & 2.122** & 2.986** & 2.985** \\
-    \vspace{4pt} & \begin{footnotesize}(0.179)\end{footnotesize} & \begin{footnotesize}(0.482)\end{footnotesize} & \begin{footnotesize}(0.869)\end{footnotesize} & \begin{footnotesize}(1.270)\end{footnotesize} & \begin{footnotesize}(1.222)\end{footnotesize} \\
+     & \begin{footnotesize}(0.179)\end{footnotesize} & \begin{footnotesize}(0.482)\end{footnotesize} & \begin{footnotesize}(0.869)\end{footnotesize} & \begin{footnotesize}(1.270)\end{footnotesize} & \begin{footnotesize}(1.222)\end{footnotesize} \\
     Services Spending & 0.345*** & 0.652*** & 0.718*** & 0.831*** & 0.810*** \\
-    \vspace{4pt} & \begin{footnotesize}(0.101)\end{footnotesize} & \begin{footnotesize}(0.168)\end{footnotesize} & \begin{footnotesize}(0.168)\end{footnotesize} & \begin{footnotesize}(0.188)\end{footnotesize} & \begin{footnotesize}(0.186)\end{footnotesize} \\
+     & \begin{footnotesize}(0.101)\end{footnotesize} & \begin{footnotesize}(0.168)\end{footnotesize} & \begin{footnotesize}(0.168)\end{footnotesize} & \begin{footnotesize}(0.188)\end{footnotesize} & \begin{footnotesize}(0.186)\end{footnotesize} \\
     Goods Spending & 0.097 & 0.101 & -0.044 & -0.135 & -0.105 \\
      & \begin{footnotesize}(0.079)\end{footnotesize} & \begin{footnotesize}(0.143)\end{footnotesize} & \begin{footnotesize}(0.153)\end{footnotesize} & \begin{footnotesize}(0.222)\end{footnotesize} & \begin{footnotesize}(0.194)\end{footnotesize} \\
-
-     
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    \cmidrule{1-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    \multicolumn{6}{c}{\textit{\textbf{Part 2: Employment}}} \\ 
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
-
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\\hline
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+   \\
+   Test $\beta^k_g=\beta^k_s=\beta^k_{rd}$  &  [0.1360]  & [0.0113] & [0.0029] & [0.0038] & [0.0025] \\
+   \\
+    \hline
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
+    & \multicolumn{5}{c}{\textit{\textbf{Dep Variable: : Employment}}} \\ 
     \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    & \multicolumn{5}{c}{\textit{\textbf{Panel A: Total Spending}}} \\ 
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
-    \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
+    
+   \multicolumn{1}{l}{\textbf{Panel C: Aggregate spending}} & & & & \\
+
     Military Spending & 0.131*** & 0.284*** & 0.316*** & 0.344*** & 0.322*** \\
     & \begin{footnotesize}(0.043)\end{footnotesize} & \begin{footnotesize}(0.079)\end{footnotesize} & \begin{footnotesize}(0.093)\end{footnotesize} & \begin{footnotesize}(0.103)\end{footnotesize} & \begin{footnotesize}(0.091)\end{footnotesize} \\
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
     
-    \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    & \multicolumn{5}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\ 
-    \cmidrule{2-6}
-    \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
+     \multicolumn{1}{l}{\textbf{Panel D: spending by category}} & & & & \\
     R\&D Spending & 0.167* & 0.572*** & 1.028** & 1.446*** & 1.428*** \\
     \vspace{4pt} & \begin{footnotesize}(0.101)\end{footnotesize} & \begin{footnotesize}(0.201)\end{footnotesize} & \begin{footnotesize}(0.401)\end{footnotesize} & \begin{footnotesize}(0.546)\end{footnotesize} & \begin{footnotesize}(0.548)\end{footnotesize} \\
     Services Spending & 0.190*** & 0.335*** & 0.383*** & 0.426*** & 0.379*** \\
     \vspace{4pt} & \begin{footnotesize}(0.036)\end{footnotesize} & \begin{footnotesize}(0.063)\end{footnotesize} & \begin{footnotesize}(0.058)\end{footnotesize} & \begin{footnotesize}(0.061)\end{footnotesize} & \begin{footnotesize}(0.059)\end{footnotesize} \\
     Goods Spending & 0.080 & 0.096 & 0.009 & -0.021 & 0.012 \\
     & \begin{footnotesize}(0.051)\end{footnotesize} & \begin{footnotesize}(0.091)\end{footnotesize} & \begin{footnotesize}(0.084)\end{footnotesize} & \begin{footnotesize}(0.110)\end{footnotesize} & \begin{footnotesize}(0.103)\end{footnotesize} \\
-
-
-    \vspace{4pt} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} & \begin{footnotesize}\end{footnotesize} \\
+    \\
+    Test $\beta^k_g=\beta^k_s=\beta^k_{rd}$  &  [0.218]  & [0.0563] & [0.0012] & [0.0017] & [0.0078] \\
+   \\
+                                       
+   
+    \hline
+    \vspace{-2pt} &  & & & & \\ 
     Observations & 10,656 & 10,656 & 10,656 & 10,656 & 10,656 \\
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
-    MSA FE & Yes & Yes & Yes & Yes & Yes \\
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
-    Year FE & Yes & Yes & Yes & Yes & Yes \\
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
     Number MSA & 296 & 296 & 296 & 296 & 296 \\
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
-    Instrument Period & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 & 1966-1980 \\
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
-    Analysis Period & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 & 1980-2015 \\ 
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\ \hline
-
-    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt}
-    
+    \hline \hline \\
+    \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
     \end{tabular}

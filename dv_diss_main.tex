@@ -9,6 +9,9 @@
 \usepackage{amssymb}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{csquotes}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % ARR's Added            %
@@ -22,7 +25,7 @@
     linkcolor=black,
     filecolor=gublue,      
     urlcolor=gublue,
-    pdftitle={Essay}, 
+    pdftitle={Thesis_Daniel_Valderrama_PhD_Economics_2022}, 
         %title of the PDF output file, to be displayed in the title bar of the window. 
     pdfpagemode=FullScreen,
     citecolor=gublue,
@@ -36,11 +39,31 @@
 \usepackage{ragged2e} 
         % To set ragged text and to allow hyphenation
 \usepackage{tikz}
-        
+        %ffor figures       
 \usepackage{subcaption}
         % Important so we could use the \begin{subfigures}<->\end{subfigures} command. 
+% Expected value
 
-        %%%
+%-------------------------
+%--------- Expected value 
+%-------------------------
+%%%% for the expected value
+\usepackage{amsthm, amsmath, amsfonts, mathtools, amssymb} %% Math packages 
+%\usepackage{pifont} %% It provides commands for Pi fonts (dingmacro, symbols, etc.)
+\newcommand{\expect}{\operatorname{E}\expectarg}
+\DeclarePairedDelimiterX{\expectarg}[1]{[}{]}{%
+  \ifnum\currentgrouptype=16 \else\begingroup\fi
+  \activatebar#1
+  \ifnum\currentgrouptype=16 \else\endgroup\fi
+}
+\newcommand{\innermid}{\nonscript\;\delimsize\vert\nonscript\;}
+\newcommand{\activatebar}{%
+  \begingroup\lccode`\~=`\|
+  \lowercase{\endgroup\let~}\innermid 
+  \mathcode`|=\string"8000
+}
+
+%%%
 \usepackage[toc]{appendix}
 \usepackage{etoolbox}
         %%% This line of code is used to fix the issue involving the hyperref package not working with the Appendix's TOC. 
@@ -55,12 +78,8 @@
         % Without this, the command \multirow won't work and the online appendix from chapter 3 would give us problems when compiling the document. 
 \usepackage{makecell}
         % Without this, the command \makecell won't work and the online appendix from chapter 3 would give us problems in formatting. 
-
-
-
-
-
-
+\usepackage{comment}
+        % To comment a Full Stack.
 
 % If there are any other \usepackage commands, put them here
 
@@ -75,9 +94,9 @@
 
 
 
-\title{Essays in (we need a title for the whole dissertation)}
+\title{Essays on the Political Economy and Economic Impact of Fiscal Policies}
 
-\author{Daniel Valderrama}
+\author{Daniel Valderrama-Gonzalez}
 
 \previousdegree{M.Sc.}
 
@@ -92,12 +111,12 @@
 \thesismonth{Apr}
 \thesisyear{2022}
 
-\professor{Laurent Bouton}
-%\secondprofessor{First I.\ Last}   % Only if you have 2 major professors!
+\professor{Laurent Bouton, PhD}
+\secondprofessor{Martin Ravallion, PhD}   % Only if you have 2 major professors!
 
 \fulltitle{Full Title}
 
-\indexwords{word1, word2, word3}
+\indexwords{Political Favoritism, Place Based Policies, Infrastructure Earmarks, Defense Spending, Local Fiscal Multiplier, Rent Seeking, Mexico, United States}
 
 \dean{Timothy A.\ Barbari}
 
@@ -109,11 +128,17 @@
 
 \pagenumbering{roman}
 
-\maketitle    % Creates title page, copyright page if any, and approval page.
+\maketitle   
 
 \begin{abstract}
-This is the abstract, a brief summary of the contents of the entire thesis.
-It is limited to 350 words.
+Economists get the opportunity and the responsibility of helping to design public policies. This implies that not only the big picture is necessary but also the details that will make the policy to actually work. This dissertation is all about the details! It shows how the economic efficiency of fiscal policy, measured by the size of the fiscal multiplier, is affected by three overlooked details, namely: political favoritism, elite capture and composition of government purchases. 
+
+In the first chapter, \enquote{\textit{The Unintended Consequences of Politically Motivated Spending: Evidence from Mexico}}, I study the economic effects of politically motivated spending. I use a close-election research design that exploits variation in political alignment, between governors and mayors, during a period when political alignment implied a substantial increase in intergovernmental transfers. I find that political alignment increases intergovernmental transfers and public spending while slowing down private-sector employment. I find suggestive evidence that this slowdown is explained by the opportunity cost of reallocating economic activity toward rent-seeking activities. 
+
+In the second chapter, \enquote{\textit{Distributional Effects of Intergovernmental Transfers in Mexico}}---co-authored with Carlos, Kiyomi, and Laura---,
+we estimate the welfare effects of placed-based policies (PBP) that are targeted at lagging economic areas. We study the case of FAIS in Mexico, one of the largest PBP in the world that provides infrastructure-earmarks to lagging economic areas. We use a simulated instrument research design and find that an increase of FAIS translates into an increase in the coverage of social infrastructure (e.g. electricity, sewerage, piped water). However, the benefits in terms of infrastructure are followed by higher household income nor lower monetary poverty. The missing effect on welfare is explained by the bulk of the economic gains being captured by the non-poor residents of the initially targeted poor places.
+
+In the third chapter, \enquote{\textit{Heterogeneous Spending, Heterogeneous Multipliers}}---co-authored with Pedro and Umberto---, we ask whether the size of the local employment and earnings multipliers depends on the composition of the government purchases. We answer this question by building a panel of military spending at the product-MSA-year level. We use this dataset in a shift-share research design to exploit the heterogeneous sensitivity of local military spending to national military buildups and drawdowns. We find that the goods and services that the government purchases determine the size of the local fiscal multiplier. Local fiscal multipliers are larger when public spending focuses its demand on labor-intensive industries.
 
 
 \end{abstract}
@@ -121,18 +146,30 @@ It is limited to 350 words.
 
 \chapter*{Dedication}
 
-The Dedication is optional.
+Our goals are not our own, are completely bounded to others. I want to dedicate this work to four groups of people. \\
+First, this work is dedicated to Diana also known as zelfi/sanchez/royce/posa. She did not need to read a single line of the thesis to give me the love, courage and spirit that I needed to continue pushing through it. 
 
+Second, I can not imagine a dedication that does not include my family. So, Pa (Jaime), Ma (Estella), Pipe and Kta Gracias! Every single effort and mistake that you made when I was a child brought me here, so the degree is only yours. 
+
+Third, I born in the late 80s, let me emphasize, the very late 80s. Among 3.35 million of people who born in Colombia during that period, only 0.006 has a PhD. Some people may said it was my effort, good luck, I think it was a good God. Thanks God
+
+Finally to Marcelo and Danielle whom I truly expect to meet.
 
 \chapter*{Acknowledgments}
 
-I am indebted to Laurent Bouton for multiple discussions on this project. I am also grateful to Martin
-Ravallion, Garance Genicot and Toshihiko Mukoyama for detailed comments to this document. I also want
-to give special thanks for detailed comments to Carlos Rodriguez-Castellan, Jorge P ́erez P ́erez, Pedro Juarros,
-Mary Ann Bronson, Frank Vella, Maria Hernandez de Benito, Carolina Concha Arraigada, Ana Maria Mayda,
-Andrew Zeitlin, Rodimiro Rodrigo, Umberto Muratori, Juan Margitic, JJ Nadeo, Kevin Ankey, Minji Kim, Lina
-Yu, Deniz Sanin, Carlo Alcaraz, Lorenzo Aldeco, David Jaume, Maria Jos ́e Orraca, Alejandrina Salcedo, Enrico
-Moretti, Dix Carneiro, Vincent Pons, Paul Novosad, Leopoldo Fergusson, Alberto Bisin.
+%I am indebted to Laurent. A man of few words that received me under his wing saying "happy to help". He taught me about the humanity of being a researcher, how important is learning by doing, that there is not a bad idea if we put enough effort on it, and that a blind passion can deceive us but also keep us fighting. Also he fought on my side for this PhD as if it were his. He was patient with me asking for recommendation letters at the eleventh hour, and tried to eradicate the perfectionism from me at all cost. There is no perfect advisor, but he was close to be perfect.
+
+%Thanks to Martin, before joining Georgetown I was seeing impossible to know him. I remember in the first year saying I am a fan while receiving a copy of his book (rally embarrassing). Now, after five years, I cherish the moments when he emailed me to talk about my papers or about his papers. I also will cherish the moments when he pushed me to go farther because of his confidence on me. Also, that in the eleventh our, in my dream job, he did the most he can to help me get it.
+
+%Thanks to Toshihiko, he arrived to Georgetown during my third year. The first professor that create a completely open reading group. We ended up being more than 15 students under your wind, and simultaneously you continued publishing, teaching, mentoring and being DGS. I use to say in the corridor that you were a Samurai, the combination of strength, wisdom and duty. Every time I advance one epsilon for my thesis was thanks to your group. Also, every cell of macro economist that I have, which are few, is because of you. Thanks for that. 
+
+%Garance, thanks for always being willing to talk and receiving me in your office with a smile. I wish i would have go more times to your office. In spite of joining the comitte in the last year, you made feel completely supported. You were worried for every aspect of my market, from the title of the paper, the punch line, to the economic content of it. Thank you for cheering me up during holidays after my mock interview, for telling me to be myself, and do not let that other's opinions discourage me. 
+
+%Finally but not least, I want to thank Carlos. Thanks for believing in me, for encouraging me to start and finish this journey. Thanks for always caring for my career and well being. You define the course of me as a researcher, and believe in me at a level that only Diana does. I own you several of the job offers, articles and prizes I have won. I can not imagine how my research agenda would be if I would have not met you. Thanks you!
+
+%Many classmates and faculty at Georgetown provided invaluable feedback and
+%support. Thank you especially to Pedro, Umberto, Carlos,  all my co-authors, Pedro, Umberto, Pedro and UmbertoDario Sansone and Mike Packard. I would also like to acknowledge Nicola Persico, Philip Marx, Gaurav Bagwe, and Juan Margitic for useful feedback on previous drafts of these chapters
+
 
 
 %\pseudochapter{Preface}
@@ -165,12 +202,12 @@ Evidence From Mexico}\label{chap:c1}
 \subfile{7_Conclusions.tex}
 
 
-\chapter{Distributional Effects of Intergovernmental Transfers in Mexico}\label{chap:c2}
-    \unmarkedfntext{This second chapter of my dissertation is part of a joint research project with Kiyomi Cadena, Laura Moreno-Herrera \& Carlos Rodríguez-Castelán.}
+\chapter{Distributional Effects of Intergovernmental Transfers in Mexico}\unmarkedfntext{This chapter of my dissertation is part of a joint research project with Kiyomi Cadena, Laura Moreno-Herrera \& Carlos Rodríguez-Castelán.}\label{chap:c2}
 
 \subfile{Chapter_2.tex}
 
-\chapter{Heterogeneous Spending, Heterogeneous Multipliers}\label{chap:c3}
+\chapter{Heterogeneous Spending, Heterogeneous Multipliers}\unmarkedfntext{
+This chapter of my dissertation is part of a joint research project with Pedro Juarros and Umberto Muratori.}\label{chap:c3}
 
 \subfile{Chapter_3.tex}
 
