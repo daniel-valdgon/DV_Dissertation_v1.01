@@ -3,7 +3,9 @@
 
 \begin{document}
 
-\subsection{Military Spending Validation}
+\subsection{Data}
+
+\subsubsection{Military Spending Validation}
 \label{sec:app_data}
 
 This section discusses the quality of the DoD military procurement contract microdata, and we compare them with data previously used in the literature. Figure \ref{fig:spend_comparison} compares the aggregate military spending in nominal terms at national level by fiscal years. We compare the aggregate military procurement spending derived from our microdata with the ones calculated by \cite{Nakamura2014}, \cite{Dupor2017}, and \cite{Demyanyk2019}. Overall, we conclude our data match well the trend and the level of aggregate spending used in previous works. 
@@ -16,12 +18,12 @@ This section discusses the quality of the DoD military procurement contract micr
 
     
     \end{tabular}
-     
+    \caption{Military Spending Comparisons}\label{fig:spend_comparison}
     \end{center}
-    \caption{Military Spending Comparisons}
+    
    
     \footnotesize{\textit{Note.} The period for the comparison matches the research design of the comparison studies. Data for the comparison studies have been downloaded from their journal's data repository.}
-    \label{fig:spend_comparison}
+    
 \end{figure}
 
 As our empirical specification uses variation in military spending at local level, we also compare the level of spending at different geographically-disaggregated areas. To this end, we regress
@@ -36,7 +38,7 @@ Table \ref{tab:comp_geo} reports the results of our comparison. In column 1, we 
 \begin{center}
 \caption{Military Spending Comparisons by Geography}
 \label{tab:comp_geo}
-\resizebox{0.9\linewidth}{!}{
+\resizebox{0.95\linewidth}{!}{
     \begin{tabular}{l ccc} \hline 
     \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
     & (1) & (2) & (3) \\
@@ -68,8 +70,14 @@ Table \ref{tab:comp_geo} reports the results of our comparison. In column 1, we 
 
 We focus on two tests to evaluate the quality of the geographic distribution of our data compared to previous studies. First, as there were a one-to-one relationship between the geographic allocation between our data and previously used data, then $\beta$ should be equal or close to one. Second, if there is a strong similarity between our data and the others, then the within-$R^{2}$ should be high. The results show that the value of one is either included in the $95\%$ confidence interval or it is close the either upper or lower bound. The largest discrepancy is between our data and the ones from \cite{Nakamura2014}. This discrepancy, as showed in Figure \ref{fig:spend_comparison}, comes from the years between $2000$ and $2006$. The data collected by \cite{Nakamura2014} underestimate the aggregate spending, while ours are similar to the other sources of comparison. The within-$R^{2}$ are over $0.95$ for the comparison with \cite{Nakamura2014} and \cite{Dupor2017}, and it is a little bit lower in the comparison with \cite{Demyanyk2019}. As our data are constructed until $2006$ using NARA and USASpending after that year and \cite{Demyanyk2019} use only USASpending starting from $2001$, these tests also confirm the comparability between the information provided by NARA and USASpending. Overall, these results suggest our data are highly comparable with the ones used in previous studies.
 
-\subsection{Additional Empirical Results}\label{sec:app_empres}
-\subsubsection{List of Major product Codes in each Category of Spending}\label{tab:cat_list}
+
+\subsubsection{Patent Data}\label{sec:app_patentdata}
+
+We collect patent data from PatentsView at the end of 2019. The PatentsView database contains the universe of granted patents from the US Patent and Trademark Office (USPTO) starting from 1976 until 2019. These data contain patent-level information including application dates, the type of patent, the name of the inventors, and the latitude and longitude of their addresses. We restrict our analysis to utility patents that cover the creation of a new or improved product, process, or machine. Utility patents are also commonly known as ``patents for invention,’’ and they account for about $98\%$ of the universe of patents granted by the USPTO. We also restrict to patents with application year starting from 1976. In the patent data, we do not observe the exact date in which an innovation occurs. As common in the literature, we identify the year when an innovation occurs as the application year, which is the year when the provisional application is considered complete by the USPTO, and a filing date is set. We use the latitude and longitude of the address of an inventor to geolocate the patents ans assign them to MSAs.
+ 
+To study the effect of government spending on private innovation, we impose some additional filters to the sample. First, we remove all MSAs with incomplete histories in granted patents and citations, and with patent growth rates between two consecutive periods greater or smaller than $\pm 150\%$. Second, the truncation bias arises from the fact that patent records are only released at the grant dates when the review process by the USPTO is completed. As a result, the truncation bias causes that the number of patents in the last years of the sample are mechanically fewer. The review process takes essentially $8$ years to be fully completed.\footnote{The USPTO reports:  ``\textit{As of 12/31/2012, utility patent data, as distributed by year of application, are approximately 95\% complete for utility patent applications filed in 2004, 89\% complete for applications filed in 2005, 80\% complete for applications filed in 2006, 67\% complete for applications filed in 2007, 49\% complete for applications filed in 2008, 36\% complete for applications filed in 2009, and 19\% complete for applications filed in 2010.}’’} Thus, to alleviate the truncation bias, we end the sample period in $2011$. 
+
+\subsubsection{List of Major Product Codes in Each Category of Spending}\label{tab:cat_list}
 
 \\
 \\
@@ -88,9 +96,10 @@ B Special Studies \& Analyses - Not R\&D, C Architect \& Engineering Services, D
 
 \newline
 \bigskip
+\vspace{4}
 \noindent\textbf{Products classified as Goods: }
 
-10 Weapons, 11	Nuclear Ordnance, 12	Fire Control Equipment, 13	Ammunition \& Explosives,	14	Guide Missiles		15		Aircraft \& Airframe Structural Components,	16	&	Aircraft Components \& Accessories	,	17	&	Aircraft Launching, Landing \& Ground Handling Equipment	,	18	&	Space Vehicles, 19	Ships, Small Craft, Pontoons Floating Docks	20	Ships \& Marine Equipment,
+10 Weapons, 11	Nuclear Ordnance, 12	Fire Control Equipment, 13	Ammunition \& Explosives,	14	Guide Missiles		15		Aircraft \& Airframe Structural Components,	16	&	Aircraft Components \& Accessories,	17	&	Aircraft Launching, Landing \& Ground Handling Equipment	,	18	&	Space Vehicles, 19	Ships, Small Craft, Pontoons Floating Docks	20	Ships \& Marine Equipment,
 22	&	Railway Equipment,
 23	&	Ground Effect Vehicles, Motor Vehicles, Trailers \& Cycles;
 24	Tractors;
@@ -158,8 +167,9 @@ B Special Studies \& Analyses - Not R\&D, C Architect \& Engineering Services, D
 96		Ores, Minerals \& Their Primary Products	
 99		Miscellaneous	 
 
+\subsection{Additional Empirical Results}\label{sec:app_empres}
+
 %%%%%%%%% LEVEL AND SHARE FOR MSA SAMPLE %%%%%%%%%%
-\newpage 
 Figure \ref{fig:share_comp_sample} replicates Figure \ref{fig:share_comp} only using the $326$ MSAs in the sample. Results are in line with the ones presented in the main body of the paper. There are two minor differences that we would like to pint out. First, the time series for the aggregate spending in Figure \ref{fig:share_comp_sample} is less smooth than the one that includes all contracts. This finding suggests there is between periods some spending reallocation from (or to) the MSAs in our sample to (or from) counties excluded from the analysis. In principle, as we exploit between periods geographic variation in spending, these movements from (and to) the MSAs in our sample might help in identifying the causal effects. 
 
 \begin{figure}[ht]
@@ -172,11 +182,11 @@ Figure \ref{fig:share_comp_sample} replicates Figure \ref{fig:share_comp} only u
     
     
     \end{tabular}
+    \caption{Military Spending - Sample of Analysis}\label{fig:share_comp_sample}
     \end{center}
     
-    \caption{Military Spending - Sample of Analysis}
+    
     \footnotesize{\textit{Note. } The national level statistics are calculated by aggregating the microdata on military procurement contracts available from NARA and USASpending.gov. Spending is in real terms by deflating the nominal value of a contract by the CPI. The classification of the spending into the three categories is based on the Federal supply classification code. The statistics are calculated by using only contracts allocated to the $296$ MSAs in our sample of analysis.}
-    \label{fig:share_comp_sample}
 \end{figure}
 
 The second minor difference to highlight is that in the first couple of decades the contracts awarded to the MSAs in our sample contain a higher share of R\&D spending and a lower share of service spending than the full universe of procurement contracts.
@@ -188,21 +198,21 @@ Table \ref{tab:fm_percapita} carries out a robustness check to the main results 
 
 \begin{table}[H]
     \begin{center}
-    \caption{Fiscal Multipliers - Earnings Per Capita}
-    \resizebox{0.95\columnwidth}{!}{
+    \caption{Fiscal Multipliers - Earnings Per Capita}\label{tab:fm_percapita}
+    \resizebox{0.95\linewidth}{!}{
     \begin{tabular}{lccccc} \hline
     \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
      & t & t+1 & t+2 & t+3 & t+4 \\ 
      & (1) & (2) & (3) & (4) & (5) \\
     \hline
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
-    \multicolumn{1}{l}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \multicolumn{1}{l}{\textbf{Panel A: Total Spending}} \\ 
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
     Military Spending & 0.382** & 0.967*** & 0.997*** & 1.208** & 1.196** \\
     & \begin{footnotesize}(0.179)\end{footnotesize} & \begin{footnotesize}(0.366)\end{footnotesize} & \begin{footnotesize}(0.365)\end{footnotesize} & \begin{footnotesize}(0.482)\end{footnotesize} & \begin{footnotesize}(0.502)\end{footnotesize} \\
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
     
-    \multicolumn{1}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \multicolumn{1}{c}{\textbf{Panel B: Spending by Category}} \\ 
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
     R\&D Spending & 0.367 & 1.613 & 2.793 & 6.169* & 6.088* \\
     \vspace{4pt} & \begin{footnotesize}(0.472)\end{footnotesize} & \begin{footnotesize}(1.321)\end{footnotesize} & \begin{footnotesize}(1.713)\end{footnotesize} & \begin{footnotesize}(3.655)\end{footnotesize} & \begin{footnotesize}(3.447)\end{footnotesize} \\
@@ -218,7 +228,7 @@ Table \ref{tab:fm_percapita} carries out a robustness check to the main results 
     \hline
     \end{tabular}
     }
-    \label{tab:fm_percapita}
+    
     \end{center}
         
     \footnotesize{\textit{Note. }Panel A reports the estimates from equation \eqref{eq:fm_base}. Panel B reports the estimates from equation \eqref{eq:fm_comp}. Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
@@ -230,7 +240,7 @@ Table \ref{tab:fm_restricted} reports the point estimates for a subsample of MSA
 
 \begin{table}[H]
     \begin{center}
-    \caption{Fiscal Multipliers - Removing Zero Spending in Any Category}
+    \caption{Fiscal Multipliers - Removing Zero Spending in Any Category}\label{tab:fm_restricted}
     \resizebox{0.95\columnwidth}{!}{
     \begin{tabular}{lccccc} \hline
      & t & t+1 & t+2 & t+3 & t+4 \\ 
@@ -257,7 +267,7 @@ Table \ref{tab:fm_restricted} reports the point estimates for a subsample of MSA
      & \multicolumn{5}{c}{\textbf{Dep variable: Employment}} \\ 
     \cmidrule{2-6}
     
-     \multicolumn{1}{l}{\textit{\textbf{Panel C: Total Spending}}} \\ 
+     \multicolumn{1}{l}{\textbf{Panel C: Total Spending}} \\ 
     Military Spending & 0.127** & 0.297*** & 0.321*** & 0.380*** & 0.343*** \\
      & \begin{footnotesize}(0.052)\end{footnotesize} & \begin{footnotesize}(0.086)\end{footnotesize} & \begin{footnotesize}(0.096)\end{footnotesize} & \begin{footnotesize}(0.115)\end{footnotesize} & \begin{footnotesize}(0.102)\end{footnotesize} \\
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
@@ -280,7 +290,7 @@ Table \ref{tab:fm_restricted} reports the point estimates for a subsample of MSA
     
     \end{tabular}
     }
-    \label{tab:fm_restricted}
+    
     \end{center}
        
     \footnotesize{\textit{Note. }Panel A reports the estimates from equation \eqref{eq:fm_base}. Panel B reports the estimates from equation \eqref{eq:fm_comp}. Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
@@ -293,7 +303,7 @@ Table \ref{tab:fm_main_cum} reports the point estimates whn both the outcome and
     
     \caption{Estimates of Employment and Earnings Multipliers - Cumulative Specification}\label{tab:fm_main_cum}
 
-	\resizebox*{0.9\textwidth}{!}	{
+	\resizebox*{0.95\textwidth}{!}	{
     \input{tables/main_results_cumulative.tex}
     }
     \end{center}
@@ -396,7 +406,7 @@ Table \ref{tab:fm_main_cum} reports the point estimates whn both the outcome and
 Table \ref{tab:fm_state} reports the point estimates computed by aggregating military spending at state-level rather than MSA-level.
 \begin{table}[H]
     \begin{center}
-    \caption{Fiscal Multipliers - State Aggregation}
+    \caption{Fiscal Multipliers - State Aggregation} \label{tab:fm_state}
     \resizebox{0.95\linewidth}{!}{
     \begin{tabular}{lccccc} \hline
     \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
@@ -444,7 +454,7 @@ Table \ref{tab:fm_state} reports the point estimates computed by aggregating mil
 
     \end{tabular}
     }
-    \label{tab:fm_state}
+   
     \end{center}
         
     \footnotesize{\textit{Note. }Panel A reports the estimates from equation \eqref{eq:fm_base}. Panel B reports the estimates from equation \eqref{eq:fm_comp}. Standard errors are clustered at state level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
@@ -455,7 +465,7 @@ Table \ref{tab:earn_spill} reports the point estimates of the effects of local g
 \begin{table}[H]
 
     \begin{center}
-    \caption{Fiscal Multiplier in the Neighboring Locations - Earnings}
+    \caption{Fiscal Multiplier in the Neighboring Locations - Earnings}\label{tab:earn_spill}
     
     
     \resizebox{0.95\linewidth}{!}{
@@ -465,14 +475,14 @@ Table \ref{tab:earn_spill} reports the point estimates of the effects of local g
      & (1) & (2) & (3) & (4) & (5) \\
     
     \hline
-    \multicolumn{1}{l}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \multicolumn{1}{l}{\textbf{Panel A: Total Spending}} \\ 
     
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt}\\
     Military Spending & 0.010 & 0.002 & 0.003 & 0.007 & 0.014 \\
     & \begin{footnotesize}(0.009)\end{footnotesize} & \begin{footnotesize}(0.012)\end{footnotesize} & \begin{footnotesize}(0.012)\end{footnotesize} & \begin{footnotesize}(0.012)\end{footnotesize} & \begin{footnotesize}(0.014)\end{footnotesize} \\
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
     
-    \multicolumn{1}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \multicolumn{1}{c}{\textbf{Panel B: Spending by Category}} \\ 
     
     R\&D Spending & -0.052** & -0.246 & -0.536* & -1.023 & -0.357 \\
     \vspace{4pt} & \begin{footnotesize}(0.023)\end{footnotesize} & \begin{footnotesize}(0.243)\end{footnotesize} & \begin{footnotesize}(0.280)\end{footnotesize} & \begin{footnotesize}(0.671)\end{footnotesize} & \begin{footnotesize}(0.350)\end{footnotesize} \\
@@ -487,7 +497,7 @@ Table \ref{tab:earn_spill} reports the point estimates of the effects of local g
     \hline
     \end{tabular}
     }
-    \label{tab:earn_spill}
+    
     \end{center}
        
     \footnotesize{\textit{Note. }Estimates are computed from  equation \eqref{eq:fm_spill}. The unit of observations are MSAs in different years. Standard errors are clustered at MSA level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
@@ -500,20 +510,20 @@ Table \ref{tab:crowd_privcons} reports the crowding out effect of government spe
 
 \begin{table}[H]
     \begin{center}
-    \caption{Private Consumption Expenditure Crowding-out Effect}
-    \resizebox{!}{!}{
+    \caption{Private Consumption Expenditure Crowding-out Effect}\label{tab:crowd_privcons}
+    \resizebox{0.95\linewidth}{!}{
     \begin{tabular}{lccccc} \hline
     \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} & \vspace{-2pt} \\
      & t & t+1 & t+2 & t+3 & t+4 \\ 
      & (1) & (2) & (3) & (4) & (5) \\
     
     \hline
-    \multicolumn{1}{l}{\textit{\textbf{Panel A: Total Spending}}} \\ 
+    \multicolumn{1}{l}{\textbf{Panel A: Total Spending}} \\ 
     Military Spending & 0.071 & 0.054 & -0.013 & -0.169 & -0.192 \\
     & \begin{footnotesize}(0.067)\end{footnotesize} & \begin{footnotesize}(0.229)\end{footnotesize} & \begin{footnotesize}(0.299)\end{footnotesize} & \begin{footnotesize}(0.526)\end{footnotesize} & \begin{footnotesize}(0.505)\end{footnotesize} \\
     \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} & \vspace{-1.5pt} \\
     
-    \multicolumn{1}{c}{\textit{\textbf{Panel B: Spending by Category}}} \\ 
+    \multicolumn{1}{c}{\textbf{Panel B: Spending by Category}} \\ 
     R\&D Spending & -0.591 & -0.208 & 0.435 & 0.365 & 0.820 \\
     \vspace{4pt} & \begin{footnotesize}(1.061)\end{footnotesize} & \begin{footnotesize}(1.185)\end{footnotesize} & \begin{footnotesize}(2.178)\end{footnotesize} & \begin{footnotesize}(2.107)\end{footnotesize} & \begin{footnotesize}(2.273)\end{footnotesize} \\
     Services Spending & 0.624 & 0.504 & -0.049 & -0.261 & -0.373 \\
@@ -526,16 +536,11 @@ Table \ref{tab:crowd_privcons} reports the crowding out effect of government spe
     Number State & 51 & 51 & 51 & 51 & 51 \\
      \hline
      \\
-    
-    
     \end{tabular}
     }
-    \label{tab:crowd_privcons}
+    
     \end{center}
-        
     \footnotesize{\textit{Note. }Standard errors are clustered at state-level. The symbols *, **, and *** represent the $10\%$, $5\%$, and $1\%$ significance levels, respectively.}
-
 \end{table}
-
 
 \end{document}

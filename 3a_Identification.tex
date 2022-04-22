@@ -53,11 +53,11 @@ This specification recast the dataset such that the unit of observation is a clo
 %This specification also controls for the running variable. Different to the other specification I allow the  the effect of the running variable to be different for each election-year $k$, which means that each . Also I limit the inference to the subsample of close elections, which make of this estimation a dynamic regression discontinuity design. The dynamic specification I estimate is the following: 
 
 
-\begin{equation}\label{eq:event}
+\begin{equation}
 \begin{split}
 y_{m,e,k}= &\; \alpha + \sum_{j=-3, j\neq -1}^3  \beta^j \; \mathbbm{1}{(k=j)}\times aligned_{m,e} \\
 & + \sum_{j=-3, j\neq -1}^3 \mathbbm{1}{(k=j)} \Big[ \theta^j VM_{m,e} \times aligned_{m,e} +   \gamma^j \; VM_{m,e}\times(1-aligned_{m,e}) \Big] \\
-& +  \delta_{m,e} + \psi_{e,k}  + \epsilon_{m,e,k} \;\; \;\forall \;\; VM_{m,e} \in (-h, h)
+& +  \delta_{m,e} + \psi_{e,k}  + \epsilon_{m,e,k} \;\; \;\forall \;\; VM_{m,e} \in (-h, h) \label{eq:event}
 \end{split}
 \end{equation}
 

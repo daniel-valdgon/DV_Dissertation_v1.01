@@ -5,9 +5,9 @@
 
 
 %\addcontentsline{toc}{subsection}{Online Appendix}
-%\renewcommand{\thesubsubsubsection}{\Alph{subsubsubsection}}
-%\counterwithin{figure}{subsubsubsection}
-%\counterwithin{table}{subsubsubsection}
+%\renewcommand{\thesubsubsection}{\Alph{subsubsection}}
+%\counterwithin{figure}{subsubsection}
+%\counterwithin{table}{subsubsection}
 
 \normalsize
 %\lmr
@@ -17,7 +17,7 @@
 
 \subsection{Fondo de Aportaciones para la Infraestructura Social - FAIS}
 
-\subsubsubsection{FAIS spending rules}\label{ap:faisspending}
+\subsubsection{FAIS Spending Rules}\label{ap:faisspending}
 
 Local governments can use FAIS resources in a wide array of public investment projects. These projects are listed in the operational guideline of the FAIS. The list covers more than 200 different projects under several modalities that are classified in 7 categories: education, health, housing, social assistance, urbanization, water and sanitation and others. 
 
@@ -40,7 +40,8 @@ The following table groups the potential projects by category, modality and asso
 }
 \end{table}
 
-\subsubsubsection{FAIS Allocation Formula} \label{ap:faisformula}
+\newpage
+\subsubsection{FAIS Allocation Formula} \label{ap:faisformula}
 
 This annex describes the details about the formula presented in the Article 34 added to the Fiscal coordination law in December 29 of 1997. The formula computes for every household a deprivation mass index that is based on the nonlinear combination of 5 dimensions indexed by $g=\{1,2,3,4,5\}$. The formula will be computed every year $t$ using the latest available population census indexed by $k$. This implies a one to one mapping between $t$ and $k$ defined by $k(t)$. Although in our identification strategy we use this notation, for simplicity we will drop any time subscript that index the round of population census used for the computations.
 
@@ -127,7 +128,8 @@ To aggregate at municipality level, the formula compute a weighted aggregate of 
 
 $$D_{m} = \sum_{j\in m} D_j^2 \times \;members_{j} \times 1(D_j>0) $$
 
-\subsubsubsection{Sources of Variation in FAIS Formula}\label{ap:overtime}
+\newpage
+\subsubsection{Sources of Variation in FAIS Formula}\label{ap:overtime}
 
 The change of the formula over time is due to three sources of variation: First, the total FAIS pot at national level; second, changes in the poverty line that affects the formula; third, changes in round of the population census used to compute the formula. 
 
@@ -167,9 +169,10 @@ Figure below shows the value of the poverty line updated every year by the Feder
 	
 \end{figure}
 
+\newpage
 \subsection{Public Finance in Mexico}
     
-\subsubsubsection{Revenues and Spending Categories in Public Finance Data} \label{Ap:fiscalcategories}
+\subsubsection{Revenues and Spending Categories in Public Finance Data} \label{Ap:fiscalcategories}
 
 The National Institute of Statistics and Geography (INEGI) compiles all administrative records on the source and use of all financial resources in municipalities. This information is openly available through the State and Municipal System Databases (SIMBAD) on the INEGI website. The Figure below presents the maximum degree of disaggregation of public accounts at the municipal level available in SIMBAD. 
 \begin{figure}[H] 
@@ -197,7 +200,7 @@ In our estimations we control for all other sources of fiscal revenues groped in
 \end{itemize}
 
 
-\subsubsubsection{Intergovernmental Transfers}\label{intertransfer}
+\subsubsection{Intergovernmental Transfers}\label{intertransfer}
 
 Below a short description of how the main intergovernmental transfers work in Mexico. The idea is to provide evidence that the bulk of public spending allocated to municipalities does not follow similar rules than FAIS providing arguments for a exclusion restriction of our the FAIS formula.
 \\
@@ -272,6 +275,7 @@ Allocation of resources to states, based on:
 
 \end{itemize}
 
+\newpage
 \subsection{Pre-trends}\label{ap:c}
 
 %Impact of FAIS on Social Infrastructure
@@ -338,6 +342,8 @@ Allocation of resources to states, based on:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 \subsection{External Validity}\label{ap:D}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -366,19 +372,18 @@ Allocation of resources to states, based on:
 \begin{figure}[H] 
 		\centering 
 		
-		\begin{subfigure}[t]{0.77\textwidth} 
+		\begin{subfigure}[t]{0.6\textwidth} 
 			\centering
 			\includegraphics[width=\linewidth]{figures/obs_res_ols_sc_tr.png}
 			\caption*{\footnotesize A. Observational vs OLS weights} 
 		\end{subfigure} 
 	\vspace{0.1cm} %\hfill
-		\begin{subfigure}[t]{0.77\textwidth} 
+		\begin{subfigure}[t]{0.6\textwidth} 
 			\centering
 			\includegraphics[width=\linewidth]{figures/obs_res_cf_sc_tr.png}
 			\caption*{\footnotesize B. Observational vs IV weights} 
 		\end{subfigure}
 		\caption{Difference in Means of Baseline Characteristics: Observational vs Effective sample}\label{fig:late}
-	
 		\parbox{\textwidth}{\small 
 			\vspace{2eX}
 			\footnotesize	
@@ -387,13 +392,12 @@ Allocation of resources to states, based on:
 \end{figure}
 
 
-
 \begin{table}[H]
 	\centering
 	\small
 	\caption{Descriptive Statistics of Main Sample}
 	\label{poly_inf}
-	\resizebox{\textwidth}{!}{
+	\resizebox{0.8\linewidth}{!}{
 		\input{tables/Out_sample.tex}
 	}		
 	\parbox{\textwidth}{\small 
@@ -402,10 +406,7 @@ Allocation of resources to states, based on:
 		\maintable
 		\polynomial 
 	}
-	
-	
 \end{table}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{MHT}\label{ap:E}
@@ -416,19 +417,14 @@ Allocation of resources to states, based on:
 	\small
 	\caption{FWER p-values: Impact of FAIS on All Outcomes by Family Type}
 	\label{ap:E.1}
-	
-	\resizebox{!}{!}{
-		
-		
+	\resizebox{0.75\linewidth}{!}{
 		\input{tables/9_mht.tex}
-		
 	}		
 	\parbox{\textwidth}{\small 
 		\vspace{2eX}
 		\footnotesize	
 		\mhtnote 
 	}
-	
 \end{table}
 
 
@@ -437,25 +433,20 @@ Allocation of resources to states, based on:
 	\small
 	\caption{Indeces: Impact of FAIS on ICW Index by Family type}
 	\label{ap:E.2}
-	
 	\resizebox{!}{!}{
-		
-		
 		\input{tables/9_index.tex}
-		
 	}		
 	\parbox{\textwidth}{\small 
 		\vspace{2eX}
 		\footnotesize	
 		\indicestables
 	}
-	
 \end{table}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsubsubsection{Migration}
+%\subsubsection{Migration}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\begin{table}[H]
@@ -477,7 +468,7 @@ Allocation of resources to states, based on:
 
 
 
-%\subsubsubsection{Estimates by deciles (upon request)}
+%\subsubsection{Estimates by deciles (upon request)}
 %\begin{table}[H]
 %	\centering
 %	\small
